@@ -1,0 +1,17 @@
+case,expect,observed,result
+T0 基準(異常なし)・罫線,対応率100%・位置誤差0,"matched 18/18 missing 0 extra 0 pos {'n': 18, 'max_pt': 0.0, 'p95_pt': 0.0, 'mean_pt': 0.0, 'max_mm': 0.0}",PASS
+T0 基準(異常なし)・固定文字,対応率100%・位置誤差0、記入文字は除外,matched 66/66 excluded 81 x 0.0 y 0.0,PASS
+T0 基準(異常なし)・欄,罫線干渉0,fields 12 interfering 0,PASS
+T1 フィールドの値の読み戻し,全欄一致,fields 12 mismatch [],PASS
+T2 欄の値が画面に表示される,値のある全欄で描画あり,ink<0.2%: [],PASS
+A1 罫線1本を0.5ptずらす,位置誤差max=0.5pt,"pos {'n': 18, 'max_pt': 0.5, 'p95_pt': 0.5, 'mean_pt': 0.0278, 'max_mm': 0.1764}",PASS
+A2 罫線1本を欠落,原本にあり再生成に無い≥1,missing 1,PASS
+A3 欄が罫線をまたぐ,罫線干渉≥1,interfering 1,PASS
+A4 用紙寸法の違い(595×880),寸法差を検出（別版として安全停止）,"page_size {'orig': [595.0, 880.0], 'gen': [595.0, 842.0], 'd_max_pt': 38.0}",PASS
+A5 座標未確定の欄,フィールドを作らない,skipped ['address'] in_pdf False,PASS
+A6 備考の容量超過,警告を記録し値を入れない（黙って縮小しない）,"issues [['1行の文字数超過: 200 > 40', '欄幅超過: 1800.0pt > 390.0pt (size 9)']] value_len 0",PASS
+A7 固定文字1字を1ptずらす,文字x誤差max=1.0pt,"x {'n': 66, 'max_pt': 1.0, 'p95_pt': 0.0, 'mean_pt': 0.0152, 'max_mm': 0.3528}",PASS
+A8 未知の入力形式,フィールドを作らず理由を記録,"skipped [{'id': 'date_report', 'reason': ""未知の入力形式 '写真'""}]",PASS
+A9 記号欄に許容外の値,許容値外として記録,"issues [{'id': 'judge_1', 'value_len': 1, 'issues': [""許容値外: '良' not in ['○', '×', '／', '△']""]}]",PASS
+A10 罫線1本の太さ+0.5pt,太さ誤差max≈0.5pt,"width {'n': 18, 'max_pt': 0.5, 'p95_pt': 0.5, 'mean_pt': 0.0278, 'max_mm': 0.1764}",PASS
+A11 欄の値が描画されない,描画の無い欄を検出,検出 12 欄,PASS

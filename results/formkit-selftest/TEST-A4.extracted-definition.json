@@ -1,0 +1,818 @@
+{
+ "$comment": "試験用の架空様式。規定様式ではない。formkit の selftest 専用。",
+ "form_id": "TEST-A4",
+ "version": "0.1",
+ "lineage": "test-synthetic",
+ "title": "試験用ダミー様式 TEST-A4",
+ "page_size": [
+  595,
+  842
+ ],
+ "line_style": "stroke",
+ "lines": [
+  [
+   "h",
+   524.0,
+   50.0,
+   545.0,
+   1.0
+  ],
+  [
+   "h",
+   572.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   596.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   620.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   644.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   668.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   692.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   716.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   740.0,
+   50.0,
+   545.0,
+   0.5
+  ],
+  [
+   "h",
+   780.0,
+   50.0,
+   545.0,
+   1.0
+  ],
+  [
+   "v",
+   50.0,
+   524.0,
+   780.0,
+   1.0
+  ],
+  [
+   "v",
+   150.0,
+   524.0,
+   740.0,
+   0.5
+  ],
+  [
+   "v",
+   300.0,
+   620.0,
+   644.0,
+   0.5
+  ],
+  [
+   "v",
+   360.0,
+   620.0,
+   644.0,
+   0.5
+  ],
+  [
+   "v",
+   400.0,
+   572.0,
+   620.0,
+   0.5
+  ],
+  [
+   "v",
+   420.0,
+   620.0,
+   644.0,
+   0.5
+  ],
+  [
+   "v",
+   470.0,
+   620.0,
+   644.0,
+   0.5
+  ],
+  [
+   "v",
+   545.0,
+   524.0,
+   780.0,
+   1.0
+  ]
+ ],
+ "chars": [
+  {
+   "t": "試",
+   "x": 60.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "験",
+   "x": 74.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "用",
+   "x": 88.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "ダ",
+   "x": 102.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "ミ",
+   "x": 116.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "ー",
+   "x": 130.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "様",
+   "x": 144.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "式",
+   "x": 158.0,
+   "y": 755.0,
+   "size": 14.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "T",
+   "x": 300.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "E",
+   "x": 310.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "S",
+   "x": 320.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "T",
+   "x": 330.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "-",
+   "x": 340.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "A",
+   "x": 350.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "4",
+   "x": 360.0,
+   "y": 755.0,
+   "size": 10.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "日",
+   "x": 58.0,
+   "y": 725.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "付",
+   "x": 67.0,
+   "y": 725.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "宛",
+   "x": 58.0,
+   "y": 701.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "先",
+   "x": 67.0,
+   "y": 701.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "所",
+   "x": 58.0,
+   "y": 677.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "在",
+   "x": 67.0,
+   "y": 677.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "地",
+   "x": 76.0,
+   "y": 677.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "名",
+   "x": 58.0,
+   "y": 653.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "称",
+   "x": 67.0,
+   "y": 653.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "用",
+   "x": 58.0,
+   "y": 629.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "途",
+   "x": 67.0,
+   "y": 629.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "設",
+   "x": 58.0,
+   "y": 605.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "備",
+   "x": 67.0,
+   "y": 605.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "設",
+   "x": 58.0,
+   "y": 581.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "備",
+   "x": 67.0,
+   "y": 581.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "備",
+   "x": 58.0,
+   "y": 545.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "考",
+   "x": 67.0,
+   "y": 545.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "階",
+   "x": 310.0,
+   "y": 629.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "数",
+   "x": 319.0,
+   "y": 629.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "面",
+   "x": 428.0,
+   "y": 629.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "積",
+   "x": 437.0,
+   "y": 629.0,
+   "size": 9.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "備",
+   "x": 50.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "考",
+   "x": 58.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "：",
+   "x": 66.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "こ",
+   "x": 74.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "の",
+   "x": 82.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "様",
+   "x": 90.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "式",
+   "x": 98.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "は",
+   "x": 106.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "試",
+   "x": 114.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "験",
+   "x": 122.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "用",
+   "x": 130.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "の",
+   "x": 138.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "架",
+   "x": 146.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "空",
+   "x": 154.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "の",
+   "x": 162.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "配",
+   "x": 170.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "置",
+   "x": 178.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "で",
+   "x": 186.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "あ",
+   "x": 194.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "り",
+   "x": 202.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "、",
+   "x": 210.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "規",
+   "x": 218.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "定",
+   "x": 226.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "様",
+   "x": 234.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "式",
+   "x": 242.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "で",
+   "x": 250.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "は",
+   "x": 258.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "な",
+   "x": 266.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "い",
+   "x": 274.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  },
+  {
+   "t": "。",
+   "x": 282.0,
+   "y": 505.0,
+   "size": 8.0,
+   "font": "AAAAAA+IPAGothic"
+  }
+ ],
+ "fields": [
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "date_report",
+   "label": "報告日",
+   "input_type": "日付",
+   "layer": "L3",
+   "format": "YYYY年M月D日",
+   "rect": [
+    151.0,
+    717.0,
+    544.0,
+    739.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "recipient",
+   "label": "宛先",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    151.0,
+    693.0,
+    544.0,
+    715.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "address",
+   "label": "所在地",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    151.0,
+    669.0,
+    544.0,
+    691.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "name",
+   "label": "名称",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    151.0,
+    645.0,
+    544.0,
+    667.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "usage",
+   "label": "用途",
+   "input_type": "選択式",
+   "layer": "L2",
+   "allowed": [
+    "（1）項イ",
+    "（4）項",
+    "（15）項"
+   ],
+   "rect": [
+    151.0,
+    621.0,
+    299.0,
+    643.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "floors",
+   "label": "階数",
+   "input_type": "数値",
+   "layer": "L2",
+   "unit": "階",
+   "rect": [
+    361.0,
+    621.0,
+    419.0,
+    643.0
+   ],
+   "align": "right"
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "area",
+   "label": "面積",
+   "input_type": "数値",
+   "layer": "L2",
+   "unit": "㎡",
+   "rect": [
+    471.0,
+    621.0,
+    544.0,
+    643.0
+   ],
+   "align": "right"
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "equip_1",
+   "label": "設備1",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "rect": [
+    151.0,
+    597.0,
+    399.0,
+    619.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "judge_1",
+   "label": "設備1 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○",
+    "×",
+    "／",
+    "△"
+   ],
+   "rect": [
+    401.0,
+    597.0,
+    544.0,
+    619.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "equip_2",
+   "label": "設備2",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "rect": [
+    151.0,
+    573.0,
+    399.0,
+    595.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "judge_2",
+   "label": "設備2 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○",
+    "×",
+    "／",
+    "△"
+   ],
+   "rect": [
+    401.0,
+    573.0,
+    544.0,
+    595.0
+   ]
+  },
+  {
+   "coord_status": "確定",
+   "font_size": 9,
+   "id": "remarks",
+   "label": "備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 2,
+    "max_chars_per_line": 40
+   },
+   "rect": [
+    151.0,
+    525.0,
+    544.0,
+    571.0
+   ]
+  }
+ ],
+ "links": [],
+ "geometry_source": {
+  "from": "extract",
+  "page_size": [
+   595.0,
+   842.0
+  ],
+  "chars_in_fields_dropped": 81
+ }
+}
