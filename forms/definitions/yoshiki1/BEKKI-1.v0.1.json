@@ -1,0 +1,220 @@
+{
+ "$comment": "別記様式第1（点検結果報告書の表紙）の帳票定義 初版。欄の意味と入力形式のみ。座標は原本の実測前のため全欄『未確定』で、生成器はフィールドを作らない。",
+ "form_id": "BEKKI-1",
+ "title": "消防用設備等（特殊消防用設備等）点検結果報告書",
+ "version": "0.1",
+ "family": "共通様式",
+ "lineage": "未識別（Print To PDF 系／業務システム生成系のどちらで定義するか未決。議題2 Q3）",
+ "page_size": null,
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ],
+ "geometry_status": "未取得（原本 PDF がクラウド環境に無いため。docs/forms/yoshiki1-first-run.md）",
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "別記様式第１",
+  "消防用設備等（特殊消防用設備等）点検結果報告書",
+  "年",
+  "月",
+  "日",
+  "殿",
+  "届出者",
+  "住所",
+  "氏名",
+  "電話番号",
+  "下記のとおり消防用設備等（特殊消防用設備等）の点検を実施したので、消防法第17条の３の３の規定に基づき報告します。",
+  "記",
+  "防火対象物",
+  "所在地",
+  "名称",
+  "用途",
+  "規模",
+  "地上",
+  "階",
+  "地下",
+  "延べ面積",
+  "㎡",
+  "消防用設備等（特殊消防用設備等）の種類等",
+  "※受付欄",
+  "※経過欄",
+  "※備考",
+  "備考",
+  "この用紙の大きさは、日本産業規格Ａ４とすること。"
+ ],
+ "fields": [
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "report_date",
+   "label": "報告日（年 月 日）",
+   "input_type": "日付",
+   "layer": "L3",
+   "format": "和暦/西暦は系統ごとに要確認",
+   "source": "点検ごとに入力"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "recipient",
+   "label": "宛先（〇〇 殿）",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳（所轄消防の長）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "notifier_address",
+   "label": "届出者 住所",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳（関係者）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "notifier_name",
+   "label": "届出者 氏名",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳（関係者）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "notifier_tel",
+   "label": "届出者 電話番号",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳（関係者）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "site_address",
+   "label": "防火対象物 所在地",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "site_name",
+   "label": "防火対象物 名称",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "site_usage",
+   "label": "防火対象物 用途",
+   "input_type": "選択式",
+   "layer": "L2",
+   "allowed": [
+    "（語彙は令別表第一の項区分。一覧は未作成）"
+   ],
+   "source": "物件台帳",
+   "note": "語彙の正本が未作成のため allowed は仮置き"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "floors_above",
+   "label": "規模 地上 階",
+   "input_type": "数値",
+   "layer": "L2",
+   "unit": "階",
+   "source": "物件台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "floors_below",
+   "label": "規模 地下 階",
+   "input_type": "数値",
+   "layer": "L2",
+   "unit": "階",
+   "source": "物件台帳",
+   "note": "実帳票で「-」記入の例あり。数値欄に「-」を許すか要決定"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "total_area",
+   "label": "延べ面積",
+   "input_type": "数値",
+   "layer": "L2",
+   "unit": "㎡",
+   "source": "物件台帳",
+   "note": "実帳票で空欄の例あり"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "equipment_rows",
+   "label": "消防用設備等（特殊消防用設備等）の種類等",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "repeat": {
+    "min": 1,
+    "max": null,
+    "row_id": "equipment_{n}"
+   },
+   "source": "物件の設備構成から自動",
+   "note": "1行1設備で並べ、各行に設備様式の先頭ページへのリンクを付ける。行数の上限・改行の仕方は原本の実測で決める"
+  }
+ ],
+ "not_fields": [
+  {
+   "label": "※受付欄",
+   "reason": "様式の備考4「※印欄は、記入しないこと」。入力欄にしない"
+  },
+  {
+   "label": "※経過欄",
+   "reason": "同上"
+  },
+  {
+   "label": "※備考",
+   "reason": "同上"
+  }
+ ],
+ "links": [
+  {
+   "id": "equipment_{n}",
+   "from_field": "equipment_rows",
+   "target": "その設備の点検票（その１）の先頭ページ",
+   "rect": null,
+   "target_page": null,
+   "note": "パッケージ組み立て時に、物件の設備構成とページ順から決める（事業側 2026-11-11）"
+  }
+ ]
+}

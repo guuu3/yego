@@ -1,0 +1,107 @@
+{
+ "generate": {
+  "fields_created": 12,
+  "fields_skipped": [],
+  "value_issues": [],
+  "appearance_font": {
+   "embedded_subset": "/YEGOAA+IPAGothic",
+   "missing_glyphs": [],
+   "edit_font_DA": "HeiseiKakuGo-W5（非埋め込み）"
+  }
+ },
+ "measure": {
+  "page_size": {
+   "orig": [
+    595.0,
+    842.0
+   ],
+   "gen": [
+    595.0,
+    842.0
+   ],
+   "d_max_pt": 0.0
+  },
+  "lines": {
+   "orig": 18,
+   "gen": 18,
+   "matched": 18,
+   "missing_in_gen": 0,
+   "extra_in_gen": 0,
+   "pos": {
+    "n": 18,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   },
+   "ends": {
+    "n": 36,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   },
+   "width": {
+    "n": 18,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   }
+  },
+  "chars": {
+   "orig_fixed": 66,
+   "orig_in_fields_excluded": 81,
+   "gen": 66,
+   "matched": 66,
+   "missing_in_gen": 0,
+   "extra_in_gen": 0,
+   "x": {
+    "n": 66,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   },
+   "y": {
+    "n": 66,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   },
+   "size": {
+    "n": 66,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   }
+  },
+  "fields": {
+   "n": 12,
+   "interfering": 0,
+   "rect_vs_definition": {
+    "n": 12,
+    "max_pt": 0.0,
+    "p95_pt": 0.0,
+    "mean_pt": 0.0,
+    "max_mm": 0.0
+   }
+  },
+  "extract_stats": {
+   "orig": {
+    "lines": 0,
+    "rects_thin": 18,
+    "rects_box": 0,
+    "curves_ignored": 0
+   },
+   "gen": {
+    "lines": 18,
+    "rects_thin": 0,
+    "rects_box": 0,
+    "curves_ignored": 0
+   }
+  }
+ }
+}
