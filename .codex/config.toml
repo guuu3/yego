@@ -1,0 +1,15 @@
+# .codex/config.toml — このリポジトリで Codex (ChatGPT) を使うときのプロジェクト設定
+# 注意: プロジェクト側 config.toml は「信頼済みプロジェクト」でのみ読み込まれます。
+#       初回に Codex が信頼確認を出したら許可してください。
+# 個人設定 (モデル等) は ~/.codex/config.toml 側が土台になり、ここが上書きします。
+
+# 承認なしにファイルを変更させない (レビュー/相談用途が主のため)
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+# このリポジトリで GitHub を参照したい場合に使う MCP (Codex 側)
+# 認証は `codex mcp login github` ではなく GitHub App / gh の認証に従います。
+# 不要なら丸ごと削除して構いません。
+# [mcp_servers.github]
+# command = "npx"
+# args = ["-y", "@modelcontextprotocol/server-github"]

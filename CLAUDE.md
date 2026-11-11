@@ -22,6 +22,15 @@
 - 原本PDF・完全版CSV・顧客情報はこのリポジトリに入れない。Git には匿名化した結果のみ
 - 判定基準：未実施・未確認・不合格を「合格」に含めない。条件付き合格は製品全体の合格に転用しない
 
+## Codex との接続（同梱済み）
+
+- このリポジトリには note 運用と同じ接続設定が同梱されている：
+  `.mcp.json`（Codex の MCP 登録）、`.codex/config.toml`、`tools/codex-bridge.mjs`、
+  `/codex-review`・`/codex-ask` コマンド
+- 効くのはユーザーの PC でローカルに開いた場合だけ（PC 側に Codex の
+  ChatGPT ログインが済んでいることが前提）。クラウドセッションでは接続は
+  効かないので、その場合は円卓（roundtable/）で意見を交換すること
+
 ## 円卓（roundtable/）
 
 - 三者（Claude Code / Codex / もち）で意見を出し合う場。進め方は `roundtable/README.md`

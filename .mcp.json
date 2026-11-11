@@ -1,0 +1,1 @@
+{"mcpServers":{"codex":{"args":["mcp-server"],"command":"codex"},"codex-bridge":{"args":["tools/codex-bridge.mjs"],"command":"node"}}}

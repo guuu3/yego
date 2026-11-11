@@ -22,6 +22,8 @@
 
 ## フォルダ
 
+- 接続設定（ルート） — `.mcp.json` など、 Claude Code から Codex を呼ぶための
+  設定一式（note 運用と同一）。ユーザーの PC でローカルに開いた場合に効く
 - `docs/` — 計画書・機能設計書（Claude Code / Codex の成果物）
 - `design/` — 画面設計・操作設計（もちの成果物）
 - `roundtable/` — 三者が意見を出し合う円卓（進め方は roundtable/README.md）
