@@ -23,6 +23,7 @@
 | `fields[]` | 記入欄。`id`・`label`・`input_type`（6種）・`layer`（L2/L3）・`rect`・`coord_status`・`capacity`・`allowed` など |
 | `not_fields[]` | 欄に見えるが入力欄にしないもの（例：様式第1 の ※受付欄）と理由 |
 | `links[]` | PDF 内部リンク（様式第1 の設備行 → 設備様式の先頭ページ） |
+| `sheet_counter` | 台帳系の型の枚数表示（i/n）の位置 `{coord_status, x_right, y, size, format}`。右端そろえ |
 
 入力形式 6種 → PDF の標準フォームフィールドの対応（試作で採用したもの）：
 
@@ -55,6 +56,24 @@ python3 formkit.py selftest --outdir ../../results/formkit-selftest             
 
 `extract --fields-from` を付けると、欄の枠の中の文字（＝記入、顧客情報）を落とし、件数だけを残す。
 付けない出力には記入がそのまま入るので、リポジトリの外に置くこと。
+
+## パッケージ組み立て（`package.py`）
+
+複数の型（シート）を1冊の PDF にまとめる。仕様は JSON（例：`forms/packages/test/TEST-PKG.json`）。
+
+```sh
+python3 package.py <パッケージ仕様.json> -o <出力.pdf>
+```
+
+- **欄名**：シートの `key` を接頭辞にする（例 `ext2.r3_place`）。同じ型を何枚使っても欄名が重ならない
+- **枚数表示（i/n）**：同じ `series` のシートに、型の `sheet_counter` の位置で付ける。n は物件の総数から決まる。
+  `sheet_counter` の座標が未確定なら描かずに記録する
+- **内部リンク**：`links[]` の欄（様式第1 の設備行）から、その `equipment` を持つ最初のシートへ。
+  リンク元が読み取り専用の欄ならリンクを最前面に置く（クリックで移動できる）。編集できる欄と重なる場合は
+  欄を優先し、注意を記録する。リンク先が無い・リンク元の欄が無い場合は作らずに「未解決」と記録する
+- **止まる条件**：シートの `key` の重複
+
+逆方向のリンク（各設備様式 → 様式第1）は、もちの提案として検討中（議題2 追記3）。戻り先の位置が型ごとに決まっていないため未実装。
 
 ## measure が出す数値
 

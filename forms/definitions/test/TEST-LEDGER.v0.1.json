@@ -1,0 +1,924 @@
+{
+ "$comment": "試験用の架空の台帳様式。規定様式ではない。formkit の selftest 専用。",
+ "form_id": "TEST-LEDGER",
+ "version": "0.1",
+ "lineage": "test-synthetic",
+ "title": "試験用ダミー台帳 TEST-LEDGER",
+ "page_size": [
+  595,
+  842
+ ],
+ "line_style": "stroke",
+ "lines": [
+  [
+   "h",
+   780,
+   50,
+   545,
+   1.0
+  ],
+  [
+   "h",
+   510,
+   50,
+   545,
+   1.0
+  ],
+  [
+   "v",
+   50,
+   510,
+   780,
+   1.0
+  ],
+  [
+   "v",
+   545,
+   510,
+   780,
+   1.0
+  ],
+  [
+   "h",
+   750,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   726,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   702,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   678,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   654,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   630,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   606,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   582,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   558,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "h",
+   534,
+   50,
+   545,
+   0.5
+  ],
+  [
+   "v",
+   90,
+   510,
+   780,
+   0.5
+  ],
+  [
+   "v",
+   330,
+   510,
+   780,
+   0.5
+  ]
+ ],
+ "chars": [
+  {
+   "t": "試",
+   "x": 50,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "験",
+   "x": 62,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "用",
+   "x": 74,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "ダ",
+   "x": 86,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "ミ",
+   "x": 98,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "ー",
+   "x": 110,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "台",
+   "x": 122,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "帳",
+   "x": 134,
+   "y": 800,
+   "size": 12
+  },
+  {
+   "t": "番",
+   "x": 58,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "号",
+   "x": 67,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "設",
+   "x": 190,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "置",
+   "x": 199,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "場",
+   "x": 208,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "所",
+   "x": 217,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "判",
+   "x": 420,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "定",
+   "x": 429,
+   "y": 762,
+   "size": 9
+  },
+  {
+   "t": "備",
+   "x": 50,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "考",
+   "x": 58,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "：",
+   "x": 66,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "こ",
+   "x": 74,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "の",
+   "x": 82,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "様",
+   "x": 90,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "式",
+   "x": 98,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "は",
+   "x": 106,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "試",
+   "x": 114,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "験",
+   "x": 122,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "用",
+   "x": 130,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "の",
+   "x": 138,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "架",
+   "x": 146,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "空",
+   "x": 154,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "の",
+   "x": 162,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "配",
+   "x": 170,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "置",
+   "x": 178,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "で",
+   "x": 186,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "あ",
+   "x": 194,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "り",
+   "x": 202,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "、",
+   "x": 210,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "規",
+   "x": 218,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "定",
+   "x": 226,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "様",
+   "x": 234,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "式",
+   "x": 242,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "で",
+   "x": 250,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "は",
+   "x": 258,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "な",
+   "x": 266,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "い",
+   "x": 274,
+   "y": 492,
+   "size": 8
+  },
+  {
+   "t": "。",
+   "x": 282,
+   "y": 492,
+   "size": 8
+  }
+ ],
+ "fields": [
+  {
+   "id": "r1_no",
+   "label": "1行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    727,
+    89,
+    749
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r1_place",
+   "label": "1行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    727,
+    329,
+    749
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r1_judge",
+   "label": "1行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    727,
+    544,
+    749
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r2_no",
+   "label": "2行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    703,
+    89,
+    725
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r2_place",
+   "label": "2行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    703,
+    329,
+    725
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r2_judge",
+   "label": "2行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    703,
+    544,
+    725
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r3_no",
+   "label": "3行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    679,
+    89,
+    701
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r3_place",
+   "label": "3行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    679,
+    329,
+    701
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r3_judge",
+   "label": "3行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    679,
+    544,
+    701
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r4_no",
+   "label": "4行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    655,
+    89,
+    677
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r4_place",
+   "label": "4行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    655,
+    329,
+    677
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r4_judge",
+   "label": "4行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    655,
+    544,
+    677
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r5_no",
+   "label": "5行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    631,
+    89,
+    653
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r5_place",
+   "label": "5行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    631,
+    329,
+    653
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r5_judge",
+   "label": "5行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    631,
+    544,
+    653
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r6_no",
+   "label": "6行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    607,
+    89,
+    629
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r6_place",
+   "label": "6行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    607,
+    329,
+    629
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r6_judge",
+   "label": "6行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    607,
+    544,
+    629
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r7_no",
+   "label": "7行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    583,
+    89,
+    605
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r7_place",
+   "label": "7行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    583,
+    329,
+    605
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r7_judge",
+   "label": "7行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    583,
+    544,
+    605
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r8_no",
+   "label": "8行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    559,
+    89,
+    581
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r8_place",
+   "label": "8行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    559,
+    329,
+    581
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r8_judge",
+   "label": "8行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    559,
+    544,
+    581
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r9_no",
+   "label": "9行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    535,
+    89,
+    557
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r9_place",
+   "label": "9行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    535,
+    329,
+    557
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r9_judge",
+   "label": "9行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    535,
+    544,
+    557
+   ],
+   "font_size": 9
+  },
+  {
+   "id": "r10_no",
+   "label": "10行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    51,
+    511,
+    89,
+    533
+   ],
+   "font_size": 9,
+   "align": "center"
+  },
+  {
+   "id": "r10_place",
+   "label": "10行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "coord_status": "確定",
+   "rect": [
+    91,
+    511,
+    329,
+    533
+   ],
+   "font_size": 9,
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "id": "r10_judge",
+   "label": "10行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "coord_status": "確定",
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "rect": [
+    331,
+    511,
+    544,
+    533
+   ],
+   "font_size": 9
+  }
+ ],
+ "links": [],
+ "sheet_counter": {
+  "coord_status": "確定",
+  "x_right": 545,
+  "y": 800,
+  "size": 10,
+  "format": "（{i}/{n}）"
+ }
+}

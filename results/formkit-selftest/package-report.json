@@ -1,0 +1,78 @@
+{
+ "package_id": "TEST-PKG-0001",
+ "pages": 4,
+ "sheets": [
+  {
+   "key": "cover",
+   "page": 1,
+   "form_id": "TEST-A4",
+   "version": "0.1",
+   "fields_created": 12,
+   "fields_skipped": 0,
+   "value_issues": []
+  },
+  {
+   "key": "ext1",
+   "page": 2,
+   "form_id": "TEST-LEDGER",
+   "version": "0.1",
+   "fields_created": 30,
+   "fields_skipped": 0,
+   "value_issues": []
+  },
+  {
+   "key": "ext2",
+   "page": 3,
+   "form_id": "TEST-LEDGER",
+   "version": "0.1",
+   "fields_created": 30,
+   "fields_skipped": 0,
+   "value_issues": []
+  },
+  {
+   "key": "gl1",
+   "page": 4,
+   "form_id": "TEST-LEDGER",
+   "version": "0.1",
+   "fields_created": 30,
+   "fields_skipped": 0,
+   "value_issues": []
+  }
+ ],
+ "counters": [
+  {
+   "key": "ext1",
+   "text": "（1/2）",
+   "status": "描画"
+  },
+  {
+   "key": "ext2",
+   "text": "（2/2）",
+   "status": "描画"
+  },
+  {
+   "key": "gl1",
+   "text": "（1/1）",
+   "status": "描画"
+  }
+ ],
+ "links": [
+  {
+   "from": "cover",
+   "field": "equip_1",
+   "to_equipment": "消火器具",
+   "status": "作成",
+   "from_page": 1,
+   "to_page": 2
+  },
+  {
+   "from": "cover",
+   "field": "equip_2",
+   "to_equipment": "誘導灯及び誘導標識",
+   "status": "作成",
+   "from_page": 1,
+   "to_page": 4
+  }
+ ],
+ "fields_total": 102
+}
