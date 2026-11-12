@@ -1,0 +1,14 @@
+{
+ "$comment": "匿名のダミーデータ（実在の物件・人物ではない）",
+ "int_body_kind_A": "／",
+ "int_body_kind_C": "／",
+ "int_body_judge": "／",
+ "discharge_kind_A": "○",
+ "discharge_kind_C": "○",
+ "discharge_judge": "○",
+ "remarks": "試験用の備考（ダミー）",
+ "meter1L_name": "秤",
+ "meter1L_model": "0～20kg",
+ "meter1L_calib": "2026.1.1",
+ "meter1L_maker": "架空製作所"
+}

@@ -1,0 +1,22 @@
+{
+ "$comment": "匿名のダミーデータ（実在の物件・人物ではない）",
+ "site_name": "試験ビル（ダミー）",
+ "fire_manager": "試験 太郎",
+ "site_address": "架空県架空市試験町1-2-3",
+ "witness": "試験 花子",
+ "inspect_from": "2026年11月13日",
+ "inspect_to": "2026年11月13日",
+ "inspector_name": "試験 太郎",
+ "company_name": "架空防災株式会社",
+ "company_tel": "000-0000-0000",
+ "company_address": "架空県架空市試験町4-5-6",
+ "place_kind_A": "○",
+ "place_kind_C": "○",
+ "place_judge": "○",
+ "seismic_kind_A": "／",
+ "seismic_kind_C": "／",
+ "seismic_judge": "／",
+ "body_kind_A": "○",
+ "body_judge": "1",
+ "body_defect": "ダミーの不良内容"
+}
