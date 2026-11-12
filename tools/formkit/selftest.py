@@ -25,11 +25,11 @@ def _run_case(name, expect, observed, ok, rows):
     print(f"[{'PASS' if ok else 'FAIL'}] {name}: {observed}")
 
 
-def field_ink(pdf_path: str, defn: dict, dpi: int = 100) -> dict:
+def field_ink(pdf_path: str, defn: dict, dpi: int = 100, page: int = 1) -> dict:
     """pdftoppm で灰色画像にし、各欄の内側の黒い画素の割合を返す（罫線を避けて内側 2pt だけ見る）。"""
     import subprocess, tempfile
     with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["pdftoppm", "-gray", "-r", str(dpi), "-f", "1", "-l", "1", pdf_path, os.path.join(td, "p")],
+        subprocess.run(["pdftoppm", "-gray", "-r", str(dpi), "-f", str(page), "-l", str(page), pdf_path, os.path.join(td, "p")],
                        check=True, capture_output=True)
         fn = [n for n in os.listdir(td) if n.endswith(".pgm")][0]
         raw = open(os.path.join(td, fn), "rb").read()
@@ -61,6 +61,78 @@ def roundtrip_definition(defn: dict, orig_pdf: str) -> dict:
     d["line_style"] = "stroke"
     d["geometry_source"] = {"from": "extract", "page_size": ex["page_size"], "chars_in_fields_dropped": dropped}
     return d
+
+
+PKG_SPEC = os.path.join(REPO, "forms", "packages", "test", "TEST-PKG.json")
+
+
+def run_package(outdir: str, rows: list):
+    """パッケージ組み立ての試験（枚数表示・内部リンク・欄名の重なり・未解決の記録）。"""
+    import pdfplumber
+    import package as pk
+    p = lambda n: os.path.join(outdir, n)
+    base = os.path.dirname(PKG_SPEC)
+    spec = fk.load(PKG_SPEC)
+    rep = pk.assemble(spec, p("package.pdf"), base)
+    json.dump(rep, open(p("package-report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    r = PdfReader(p("package.pdf"))
+    fields = r.get_fields() or {}
+    _run_case("P1 ページ数と欄の数", "4ページ・102欄・欄名の重なり無し", f"pages {len(r.pages)} fields {len(fields)} total {rep['fields_total']}",
+              len(r.pages) == 4 and len(fields) == rep["fields_total"] == 102, rows)
+    v1, v2 = fields.get("ext2.r3_place", {}).get("/V"), fields.get("cover.judge_2", {}).get("/V")
+    _run_case("P2 シートごとの値の読み戻し", "ext2.r3_place と cover.judge_2 が一致", f"{v1!r} {v2!r}",
+              v1 == "2階 消火器 13（ダミー）" and v2 == "×", rows)
+    links = []
+    for a in r.pages[0].get("/Annots", []):
+        o = a.get_object()
+        if o.get("/Subtype") == "/Link":
+            dest = o["/Dest"][0].get_object()
+            links.append(next(i for i, pg in enumerate(r.pages) if pg.get_object() == dest) + 1)
+    last = r.pages[0]["/Annots"][-1].get_object().get("/Subtype")
+    _run_case("P3 様式第1相当の設備行から先頭ページへのリンク", "消火器具→2ページ、誘導灯→4ページ（2枚目の3ページではない）、リンクが最前面",
+              f"links→{links} 最前面 {last}", sorted(links) == [2, 4] and last == "/Link", rows)
+    with pdfplumber.open(p("package.pdf")) as pdf:
+        texts = [pdf.pages[i].extract_text() or "" for i in range(4)]
+    want = {1: "（1/2）", 2: "（2/2）", 3: "（1/1）"}
+    got = {i: w in texts[i] for i, w in want.items()}
+    _run_case("P4 台帳シートの枚数表示（i/n）", "2〜4ページに（1/2）（2/2）（1/1）、表紙には無い", f"{got} 表紙に有り {'/' in texts[0] and '（1/' in texts[0]}",
+              all(got.values()) and "（1/" not in texts[0], rows)
+    led = fk.load(os.path.join(base, spec["sheets"][2]["definition"]))
+    ink = field_ink(p("package.pdf"), led, page=3)
+    filled = [ink[f"r{i}_place"] > 0.002 for i in range(1, 11)]
+    _run_case("P5 2枚目の台帳の表示（値のある行だけに描画）", "1〜3行目に描画、4〜10行目は空", f"{filled}", filled == [True] * 3 + [False] * 7, rows)
+    fk.generate(led, spec["sheets"][2]["data"], p("p6-standalone.pdf"))
+    m = fk.measure(p("package.pdf"), p("p6-standalone.pdf"), orig_page=3)
+    _run_case("P6 組み立てで形が崩れない（3ページ目と単体生成を比較）", "罫線誤差0、差は枚数表示の5字だけ",
+              f"lines matched {m['lines']['matched']}/{m['lines']['orig']} pos {m['lines']['pos'].get('max_pt')} chars missing {m['chars']['missing_in_gen']}",
+              m["lines"]["matched"] == m["lines"]["orig"] == m["lines"]["gen"] and m["lines"]["pos"]["max_pt"] == 0 and m["chars"]["missing_in_gen"] == 5
+              and m["chars"]["extra_in_gen"] == 0, rows)
+    sp = copy.deepcopy(spec); sp["links"].append({"from": "cover", "field": "equip_1", "to_equipment": "自動火災報知設備"})
+    rr = pk.assemble(sp, p("p7.pdf"), base)
+    _run_case("P7 リンク先の設備がパッケージに無い", "リンクを作らず未解決として記録", f"{rr['links'][-1]['status']}",
+              rr["links"][-1]["status"].startswith("未解決") and sum(x["status"].startswith("作成") for x in rr["links"]) == 2, rows)
+    sp = copy.deepcopy(spec); sp["sheets"][2]["key"] = "ext1"
+    try:
+        pk.assemble(sp, p("p8.pdf"), base); ok, obs = False, "例外なし"
+    except pk.PackageError as e:
+        ok, obs = True, str(e)
+    _run_case("P8 シートの key の重複", "組み立てを止める", obs, ok, rows)
+    sp = copy.deepcopy(spec); d = copy.deepcopy(led); d["sheet_counter"]["coord_status"] = "未確定"
+    for s in sp["sheets"][1:]:
+        s["definition"] = d
+    rr = pk.assemble(sp, p("p9.pdf"), base)
+    with pdfplumber.open(p("p9.pdf")) as pdf:
+        t = pdf.pages[1].extract_text() or ""
+    _run_case("P9 枚数表示の座標が未確定", "描かずに記録", f"{[c['status'] for c in rr['counters']]} 描画あり {'（1/2）' in t}",
+              all(c["status"].startswith("未描画") for c in rr["counters"]) and "（1/2）" not in t, rows)
+    sp = copy.deepcopy(spec); cov = copy.deepcopy(fk.load(os.path.join(base, spec["sheets"][0]["definition"])))
+    next(f for f in cov["fields"] if f["id"] == "equip_1")["coord_status"] = "未確定"
+    sp["sheets"][0]["definition"] = cov
+    rr = pk.assemble(sp, p("p10.pdf"), base)
+    _run_case("P10 リンク元の欄が座標未確定", "リンクを作らず未解決として記録", f"{rr['links'][0]['status']}", rr["links"][0]["status"].startswith("未解決"), rows)
+    sp = copy.deepcopy(spec); sp["links"] = [{"from": "cover", "field": "remarks", "to_equipment": "消火器具"}]
+    rr = pk.assemble(sp, p("p11.pdf"), base)
+    _run_case("P11 編集できる欄にリンク", "作成するが注意を記録（欄の編集を優先）", f"{rr['links'][0]['status']}", "注意" in rr["links"][0]["status"], rows)
 
 
 def run(outdir: str) -> int:
@@ -159,10 +231,12 @@ def run(outdir: str) -> int:
     blank = [k for k, v in ink.items() if data.get(k) and v < 0.002]
     _run_case("A11 欄の値が描画されない", "描画の無い欄を検出", f"検出 {len(blank)} 欄", len(blank) >= 10, rows)
 
+    run_package(outdir, rows)
+
     with open(p("selftest-results.csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=["case", "expect", "observed", "result"]); w.writeheader(); w.writerows(rows)
     for n in os.listdir(outdir):  # 異常ケースの中間 PDF は残さない（基準の orig/gen のみ残す）
-        if n.endswith(".pdf") and n not in ("orig.pdf", "gen.pdf"):
+        if n.endswith(".pdf") and n not in ("orig.pdf", "gen.pdf", "package.pdf"):
             os.remove(p(n))
     fails = sum(r["result"] == "FAIL" for r in rows)
     print(f"\n{len(rows) - fails}/{len(rows)} PASS")

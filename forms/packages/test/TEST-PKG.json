@@ -1,0 +1,100 @@
+{
+ "$comment": "試験用のパッケージ仕様（架空の物件・匿名データ）",
+ "package_id": "TEST-PKG-0001",
+ "sheets": [
+  {
+   "key": "cover",
+   "definition": "../../definitions/test/TEST-A4.v0.1.json",
+   "data": "../../data/test/TEST-A4.dummy.json",
+   "equipment": null,
+   "series": null
+  },
+  {
+   "key": "ext1",
+   "definition": "../../definitions/test/TEST-LEDGER.v0.1.json",
+   "data": {
+    "r1_no": "1",
+    "r1_place": "1階 消火器 1（ダミー）",
+    "r1_judge": "○",
+    "r2_no": "2",
+    "r2_place": "1階 消火器 2（ダミー）",
+    "r2_judge": "○",
+    "r3_no": "3",
+    "r3_place": "1階 消火器 3（ダミー）",
+    "r3_judge": "○",
+    "r4_no": "4",
+    "r4_place": "1階 消火器 4（ダミー）",
+    "r4_judge": "○",
+    "r5_no": "5",
+    "r5_place": "1階 消火器 5（ダミー）",
+    "r5_judge": "○",
+    "r6_no": "6",
+    "r6_place": "1階 消火器 6（ダミー）",
+    "r6_judge": "○",
+    "r7_no": "7",
+    "r7_place": "1階 消火器 7（ダミー）",
+    "r7_judge": "○",
+    "r8_no": "8",
+    "r8_place": "1階 消火器 8（ダミー）",
+    "r8_judge": "○",
+    "r9_no": "9",
+    "r9_place": "1階 消火器 9（ダミー）",
+    "r9_judge": "○",
+    "r10_no": "10",
+    "r10_place": "1階 消火器 10（ダミー）",
+    "r10_judge": "○"
+   },
+   "equipment": "消火器具",
+   "series": "ext-ledger"
+  },
+  {
+   "key": "ext2",
+   "definition": "../../definitions/test/TEST-LEDGER.v0.1.json",
+   "data": {
+    "r1_no": "11",
+    "r1_place": "2階 消火器 11（ダミー）",
+    "r1_judge": "○",
+    "r2_no": "12",
+    "r2_place": "2階 消火器 12（ダミー）",
+    "r2_judge": "○",
+    "r3_no": "13",
+    "r3_place": "2階 消火器 13（ダミー）",
+    "r3_judge": "○"
+   },
+   "equipment": "消火器具",
+   "series": "ext-ledger"
+  },
+  {
+   "key": "gl1",
+   "definition": "../../definitions/test/TEST-LEDGER.v0.1.json",
+   "data": {
+    "r1_no": "1",
+    "r1_place": "誘導灯 1（ダミー）",
+    "r1_judge": "○",
+    "r2_no": "2",
+    "r2_place": "誘導灯 2（ダミー）",
+    "r2_judge": "○",
+    "r3_no": "3",
+    "r3_place": "誘導灯 3（ダミー）",
+    "r3_judge": "○",
+    "r4_no": "4",
+    "r4_place": "誘導灯 4（ダミー）",
+    "r4_judge": "○"
+   },
+   "equipment": "誘導灯及び誘導標識",
+   "series": "gl-ledger"
+  }
+ ],
+ "links": [
+  {
+   "from": "cover",
+   "field": "equip_1",
+   "to_equipment": "消火器具"
+  },
+  {
+   "from": "cover",
+   "field": "equip_2",
+   "to_equipment": "誘導灯及び誘導標識"
+  }
+ ]
+}

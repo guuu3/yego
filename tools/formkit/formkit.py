@@ -341,7 +341,9 @@ def _cid_font(writer: PdfWriter):
     }))
 
 
-def generate(defn: dict, data: dict, out_path: str, ttf: str = DEFAULT_TTF, log: list | None = None) -> dict:
+def generate(defn: dict, data: dict, out_path: str, ttf: str = DEFAULT_TTF, log: list | None = None,
+             field_prefix: str = "") -> dict:
+    """field_prefix: パッケージに組み込むとき欄名の重なりを避ける接頭辞（例 "s02."）。"""
     log = log if log is not None else []
     pdfmetrics.registerFont(UnicodeCIDFont(FIELD_FONT))
     tmp = out_path + ".static.pdf"
@@ -378,7 +380,7 @@ def generate(defn: dict, data: dict, out_path: str, ttf: str = DEFAULT_TTF, log:
             flags |= 1 << 12  # Multiline
         widget = DictionaryObject({
             NameObject("/Type"): NameObject("/Annot"), NameObject("/Subtype"): NameObject("/Widget"),
-            NameObject("/T"): TextStringObject(f["id"]), NameObject("/TU"): TextStringObject(f.get("label", "")),
+            NameObject("/T"): TextStringObject(field_prefix + f["id"]), NameObject("/TU"): TextStringObject(f.get("label", "")),
             NameObject("/Rect"): ArrayObject([FloatObject(v) for v in f["rect"]]),
             NameObject("/F"): NumberObject(4), NameObject("/P"): page.indirect_reference,
             NameObject("/DA"): TextStringObject(f"/FJ {f.get('font_size', 9):g} Tf 0 g"),
