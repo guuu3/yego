@@ -1,0 +1,15 @@
+{
+ "$comment": "匿名のダミーデータ（実在の物件・人物ではない）",
+ "report_date": "2026年11月12日",
+ "recipient": "架空市消防長",
+ "notifier_address": "架空市試験町1-2-3",
+ "notifier_name": "試験 太郎",
+ "notifier_tel": "000-0000-0000",
+ "site_address": "架空県架空市試験町1-2-3",
+ "site_name": "試験ビル（ダミー）",
+ "site_usage": "（14）項・（倉庫）",
+ "floors_above": "3",
+ "floors_below": "-",
+ "total_area": "1234.56",
+ "equipment_rows": "消火器具\n屋内消火栓設備"
+}
