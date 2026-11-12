@@ -1,0 +1,1782 @@
+{
+ "form_id": "KOKUJI-11-2",
+ "title": "自動火災報知設備点検票（その２）",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第11（その2）",
+ "family": "設備様式",
+ "equipment": "自動火災報知設備",
+ "links": [],
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決）",
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "$comment": "自動火災報知設備点検票（その２）の帳票定義。初版。原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fields": [
+  {
+   "id": "det_exterior_content",
+   "label": "感知器 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_exterior_judge",
+   "label": "感知器 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_exterior_defect",
+   "label": "感知器 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_exterior_action",
+   "label": "感知器 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_uncovered_content",
+   "label": "感知器 警戒状況 未警戒部分 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_uncovered_judge",
+   "label": "感知器 警戒状況 未警戒部分 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_uncovered_defect",
+   "label": "感知器 警戒状況 未警戒部分 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_uncovered_action",
+   "label": "感知器 警戒状況 未警戒部分 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_coverage_content",
+   "label": "感知器 警戒状況 感知区域 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_coverage_judge",
+   "label": "感知器 警戒状況 感知区域 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_coverage_defect",
+   "label": "感知器 警戒状況 感知区域 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_coverage_action",
+   "label": "感知器 警戒状況 感知区域 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_suitability_content",
+   "label": "感知器 警戒状況 適応性 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_suitability_judge",
+   "label": "感知器 警戒状況 適応性 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_suitability_defect",
+   "label": "感知器 警戒状況 適応性 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_suitability_action",
+   "label": "感知器 警戒状況 適応性 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_obstruction_content",
+   "label": "感知器 警戒状況 機能障害 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_obstruction_judge",
+   "label": "感知器 警戒状況 機能障害 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_obstruction_defect",
+   "label": "感知器 警戒状況 機能障害 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_zone_obstruction_action",
+   "label": "感知器 警戒状況 機能障害 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_spot_content",
+   "label": "熱感知器 スポット型 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_spot_judge",
+   "label": "熱感知器 スポット型 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_spot_defect",
+   "label": "熱感知器 スポット型 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_spot_action",
+   "label": "熱感知器 スポット型 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_air_content",
+   "label": "熱感知器 ※分布型 空気管式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_air_judge",
+   "label": "熱感知器 ※分布型 空気管式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_air_defect",
+   "label": "熱感知器 ※分布型 空気管式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_air_action",
+   "label": "熱感知器 ※分布型 空気管式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_thermo_content",
+   "label": "熱感知器 ※分布型 熱電対式・熱半導体式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_thermo_judge",
+   "label": "熱感知器 ※分布型 熱電対式・熱半導体式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_thermo_defect",
+   "label": "熱感知器 ※分布型 熱電対式・熱半導体式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_dist_thermo_action",
+   "label": "熱感知器 ※分布型 熱電対式・熱半導体式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_line_content",
+   "label": "熱感知器 感知線型 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_line_judge",
+   "label": "熱感知器 感知線型 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_line_defect",
+   "label": "熱感知器 感知線型 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_heat_line_action",
+   "label": "熱感知器 感知線型 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_spot_content",
+   "label": "※煙感知器 スポット型 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_spot_judge",
+   "label": "※煙感知器 スポット型 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_spot_defect",
+   "label": "※煙感知器 スポット型 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_spot_action",
+   "label": "※煙感知器 スポット型 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_separated_content",
+   "label": "※煙感知器 分離型 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_separated_judge",
+   "label": "※煙感知器 分離型 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_separated_defect",
+   "label": "※煙感知器 分離型 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_smoke_separated_action",
+   "label": "※煙感知器 分離型 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_flame_content",
+   "label": "※炎感知器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_flame_judge",
+   "label": "※炎感知器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_flame_defect",
+   "label": "※炎感知器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_flame_action",
+   "label": "※炎感知器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_multi_content",
+   "label": "※多信号感知器・複合式感知器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_multi_judge",
+   "label": "※多信号感知器・複合式感知器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_multi_defect",
+   "label": "※多信号感知器・複合式感知器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_multi_action",
+   "label": "※多信号感知器・複合式感知器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_remote_test_content",
+   "label": "遠隔試験機能を有する感知器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_remote_test_judge",
+   "label": "遠隔試験機能を有する感知器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_remote_test_defect",
+   "label": "遠隔試験機能を有する感知器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "det_remote_test_action",
+   "label": "遠隔試験機能を有する感知器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_surroundings_content",
+   "label": "発信機 周囲の状況 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_surroundings_judge",
+   "label": "発信機 周囲の状況 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_surroundings_defect",
+   "label": "発信機 周囲の状況 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_surroundings_action",
+   "label": "発信機 周囲の状況 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_exterior_content",
+   "label": "発信機 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_exterior_judge",
+   "label": "発信機 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_exterior_defect",
+   "label": "発信機 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_exterior_action",
+   "label": "発信機 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_display_content",
+   "label": "発信機 表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_display_judge",
+   "label": "発信機 表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_display_defect",
+   "label": "発信機 表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_display_action",
+   "label": "発信機 表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_button_content",
+   "label": "発信機 押しボタン・送受話器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_button_judge",
+   "label": "発信機 押しボタン・送受話器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_button_defect",
+   "label": "発信機 押しボタン・送受話器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_button_action",
+   "label": "発信機 押しボタン・送受話器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_lamp_content",
+   "label": "発信機 表示灯 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_lamp_judge",
+   "label": "発信機 表示灯 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_lamp_defect",
+   "label": "発信機 表示灯 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "hatsu_lamp_action",
+   "label": "発信機 表示灯 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_exterior_content",
+   "label": "音響装置 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_exterior_judge",
+   "label": "音響装置 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_exterior_defect",
+   "label": "音響装置 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_exterior_action",
+   "label": "音響装置 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mount_content",
+   "label": "音響装置 取付状態 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mount_judge",
+   "label": "音響装置 取付状態 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mount_defect",
+   "label": "音響装置 取付状態 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mount_action",
+   "label": "音響装置 取付状態 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_pressure_content",
+   "label": "音響装置 音圧等 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_pressure_judge",
+   "label": "音響装置 音圧等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_pressure_defect",
+   "label": "音響装置 音圧等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_pressure_action",
+   "label": "音響装置 音圧等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mode_content",
+   "label": "音響装置 鳴動方式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mode_judge",
+   "label": "音響装置 鳴動方式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mode_defect",
+   "label": "音響装置 鳴動方式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_mode_action",
+   "label": "音響装置 鳴動方式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_accum_content",
+   "label": "音響装置 ※蓄積機能 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_accum_judge",
+   "label": "音響装置 ※蓄積機能 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_accum_defect",
+   "label": "音響装置 ※蓄積機能 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_accum_action",
+   "label": "音響装置 ※蓄積機能 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_2signal_content",
+   "label": "音響装置 ※二信号機能 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_2signal_judge",
+   "label": "音響装置 ※二信号機能 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_2signal_defect",
+   "label": "音響装置 ※二信号機能 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "sound_2signal_action",
+   "label": "音響装置 ※二信号機能 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  }
+ ],
+ "rules": [
+  {
+   "id": "det_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_zone_uncovered-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_zone_uncovered_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_zone_uncovered_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_zone_coverage-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_zone_coverage_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_zone_coverage_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_zone_suitability-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_zone_suitability_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_zone_suitability_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_zone_obstruction-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_zone_obstruction_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_zone_obstruction_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_heat_spot-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_heat_spot_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_heat_spot_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_heat_dist_air-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_heat_dist_air_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_heat_dist_air_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_heat_dist_thermo-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_heat_dist_thermo_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_heat_dist_thermo_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_heat_line-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_heat_line_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_heat_line_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_smoke_spot-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_smoke_spot_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_smoke_spot_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_smoke_separated-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_smoke_separated_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_smoke_separated_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_flame-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_flame_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_flame_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_multi-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_multi_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_multi_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "det_remote_test-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "det_remote_test_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "det_remote_test_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "hatsu_surroundings-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "hatsu_surroundings_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "hatsu_surroundings_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "hatsu_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "hatsu_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "hatsu_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "hatsu_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "hatsu_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "hatsu_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "hatsu_button-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "hatsu_button_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "hatsu_button_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "hatsu_lamp-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "hatsu_lamp_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "hatsu_lamp_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "sound_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "sound_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "sound_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "sound_mount-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "sound_mount_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "sound_mount_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "sound_pressure-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "sound_pressure_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "sound_pressure_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "sound_mode-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "sound_mode_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "sound_mode_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "sound_accum-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "sound_accum_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "sound_accum_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "sound_2signal-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "sound_2signal_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "sound_2signal_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  }
+ ],
+ "not_fields": [
+  {
+   "label": "頭の部分（名称・点検年月日等）",
+   "reason": "その2 には無い。その1 にのみある（原本で確認）"
+  }
+ ],
+ "open_questions": [
+  "内容欄の選択肢（熱感知器スポット型の差動／定温（再）／熱アナログ、煙感知器スポット型のイオン／光電／アナログ、炎感知器の赤外線／紫外線、鳴動方式の一斉／区分／相互と再鳴動）は、印字された選択肢に○を付す方式（備考4）。選択肢の文字は欄内印字として復元した。選ばれた選択肢を欄の値としてどう持つか（選択式の別欄にするか、内容テキストに含めるか）は機能設計の判断が要る",
+  "判定の○・／は原本ではベクタ描画。その1 と同じ論点"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）。もちが様式と実記入から構築"
+  }
+ ],
+ "version": "0.1",
+ "page_size": null,
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "別記様式第11自動火災報知設備（その２）",
+  "外形",
+  "未警戒部分",
+  "警",
+  "感知区域",
+  "戒",
+  "状",
+  "適応性",
+  "感",
+  "況",
+  "機能障害",
+  "スポット型差動定温(再)熱アナログ",
+  "※",
+  "熱",
+  "空気管式",
+  "分",
+  "知感布",
+  "型",
+  "熱電対式・熱半導体式",
+  "知",
+  "器",
+  "感知線型",
+  "※",
+  "イオンアナログ",
+  "スポット型光電",
+  "煙",
+  "感",
+  "器",
+  "知",
+  "分離型",
+  "器",
+  "※炎感知器赤外線紫外線",
+  "※多信号感知器・複合式感知器",
+  "遠隔試験機能を有する感知器",
+  "周囲の状況",
+  "外形",
+  "発",
+  "信表示",
+  "機",
+  "押しボタン・送受話器",
+  "表示灯",
+  "外形",
+  "音",
+  "取付状態",
+  "響",
+  "装",
+  "音圧等",
+  "置",
+  "鳴動方式一斉区分相互再鳴動",
+  "※蓄積機能",
+  "※二信号機能",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２種別・容量等の内容欄は、該当するものについて記入すること。",
+  "３判定欄は、正常の場合は○印、不良の場合は×印を記入し、不良内容欄にその内容を記入すること。",
+  "４選択肢のある欄は、該当事項に○印を付すこと。",
+  "５措置内容欄には、点検の際措置した内容を記入すること。",
+  "６自動試験機能を有するものにあっては、異常の発生状況、異常が発生した箇所の整備状況等を記録した",
+  "書類を添付すること。",
+  "７票中※印の欄は、自動試験機能を有するものにあっては記入不要。"
+ ],
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ]
+}

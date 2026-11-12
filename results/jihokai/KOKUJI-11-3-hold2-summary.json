@@ -1,0 +1,95 @@
+{
+ "page_size": {
+  "orig": [
+   595.32,
+   841.92
+  ],
+  "gen": [
+   595.32,
+   841.92
+  ],
+  "d_max_pt": 0.0
+ },
+ "lines": {
+  "orig": 51,
+  "gen": 40,
+  "matched": 40,
+  "missing_in_gen": 11,
+  "extra_in_gen": 0,
+  "pos": {
+   "n": 40,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  },
+  "ends": {
+   "n": 80,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  },
+  "width": {
+   "n": 40,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  }
+ },
+ "chars": {
+  "orig_fixed": 389,
+  "orig_in_fields_excluded": 137,
+  "gen": 389,
+  "matched": 389,
+  "missing_in_gen": 0,
+  "extra_in_gen": 0,
+  "x": {
+   "n": 389,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  },
+  "y": {
+   "n": 389,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  },
+  "size": {
+   "n": 389,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  }
+ },
+ "fields": {
+  "n": 85,
+  "interfering": 7,
+  "rect_vs_definition": {
+   "n": 85,
+   "max_pt": 0.0,
+   "p95_pt": 0.0,
+   "mean_pt": 0.0,
+   "max_mm": 0.0
+  }
+ },
+ "extract_stats": {
+  "orig": {
+   "lines": 47,
+   "rects_thin": 0,
+   "rects_box": 1,
+   "curves_ignored": 4
+  },
+  "gen": {
+   "lines": 40,
+   "rects_thin": 0,
+   "rects_box": 0,
+   "curves_ignored": 0
+  }
+ }
+}

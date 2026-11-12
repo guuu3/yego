@@ -1,0 +1,2157 @@
+{
+ "form_id": "KOKUJI-11-1",
+ "title": "自動火災報知設備点検票（その１）",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第11（その1）",
+ "family": "設備様式",
+ "equipment": "自動火災報知設備",
+ "links": [],
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決）",
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "$comment": "自動火災報知設備点検票（その１）の帳票定義。初版。原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fields": [
+  {
+   "id": "site_name",
+   "label": "名称",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "fire_manager",
+   "label": "防火管理者",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "site_address",
+   "label": "所在",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "witness",
+   "label": "立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspect_from",
+   "label": "点検年月日（自）",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "format": "年・月・日を欄内印字の位置に記入（split_ymd）。和暦・西暦の両方を実帳票で観測",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "日付欄は「（値）年（値）月（値）日～」の固定スロット並び（実測: 年 x=291.3・月 x=328.1・日 x=364.8・～ x=374.9 が3物件で一致）。矩形は～の手前まで",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspect_to",
+   "label": "点検年月日（至）",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "format": "年・月・日を欄内印字の位置に記入（split_ymd）。和暦・西暦の両方を実帳票で観測",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "日付欄の～から後ろ",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspector_name",
+   "label": "点検者 氏名",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "（点検者台帳から。台帳は未作成）"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "別記様式第3（点検者一覧表）と同じ台帳を参照する。欄の左上に「氏名」が印字されている（固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "company_name_tel",
+   "label": "点検者 所属会社 社名・TEL",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "自社情報",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "原本では社名とＴＥＬの間に仕切り線が無く、1セルに連続して記入される（例: 社名に続けてＴＥＬ番号）。分離するかは open_questions",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "company_address",
+   "label": "点検者 所属会社 住所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "自社情報",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "receiver_maker",
+   "label": "受信機 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "設備台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "receiver_model",
+   "label": "受信機 型式等",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "設備台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "受番号・型式・年製を1欄に連続記入する（原本の記入方式。例: 第○-○号 型式 ○○年製）。「第」は欄内印字として復元。3要素に分割するかは open_questions",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_exterior_content",
+   "label": "予備電源・非常電源（内蔵型） 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_exterior_judge",
+   "label": "予備電源・非常電源（内蔵型） 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_exterior_defect",
+   "label": "予備電源・非常電源（内蔵型） 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_exterior_action",
+   "label": "予備電源・非常電源（内蔵型） 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_display_content",
+   "label": "予備電源・非常電源（内蔵型） 表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_display_judge",
+   "label": "予備電源・非常電源（内蔵型） 表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_display_defect",
+   "label": "予備電源・非常電源（内蔵型） 表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_display_action",
+   "label": "予備電源・非常電源（内蔵型） 表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_voltage_content",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_voltage_judge",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_voltage_defect",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_voltage_action",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_switch_content",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_switch_judge",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_switch_defect",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_switch_action",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_charger_content",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_charger_judge",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_charger_defect",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_charger_action",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_wiring_content",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_wiring_judge",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_wiring_defect",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "battery_wiring_action",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_surroundings_content",
+   "label": "受信機・中継器 周囲の状況 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_surroundings_judge",
+   "label": "受信機・中継器 周囲の状況 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_surroundings_defect",
+   "label": "受信機・中継器 周囲の状況 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_surroundings_action",
+   "label": "受信機・中継器 周囲の状況 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_exterior_content",
+   "label": "受信機・中継器 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_exterior_judge",
+   "label": "受信機・中継器 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_exterior_defect",
+   "label": "受信機・中継器 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_exterior_action",
+   "label": "受信機・中継器 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_display_content",
+   "label": "受信機・中継器 表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_display_judge",
+   "label": "受信機・中継器 表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_display_defect",
+   "label": "受信機・中継器 表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_display_action",
+   "label": "受信機・中継器 表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_zone_display_content",
+   "label": "受信機・中継器 警戒区域の表示装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_zone_display_judge",
+   "label": "受信機・中継器 警戒区域の表示装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_zone_display_defect",
+   "label": "受信機・中継器 警戒区域の表示装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_zone_display_action",
+   "label": "受信機・中継器 警戒区域の表示装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_voltmeter_content",
+   "label": "受信機・中継器 電圧計 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_voltmeter_judge",
+   "label": "受信機・中継器 電圧計 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_voltmeter_defect",
+   "label": "受信機・中継器 電圧計 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_voltmeter_action",
+   "label": "受信機・中継器 電圧計 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_switches_content",
+   "label": "受信機・中継器 スイッチ類 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_switches_judge",
+   "label": "受信機・中継器 スイッチ類 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_switches_defect",
+   "label": "受信機・中継器 スイッチ類 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_switches_action",
+   "label": "受信機・中継器 スイッチ類 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fuses_content",
+   "label": "受信機・中継器 ヒューズ類 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fuses_judge",
+   "label": "受信機・中継器 ヒューズ類 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fuses_defect",
+   "label": "受信機・中継器 ヒューズ類 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fuses_action",
+   "label": "受信機・中継器 ヒューズ類 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_relay_content",
+   "label": "受信機・中継器 ※継電器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_relay_judge",
+   "label": "受信機・中継器 ※継電器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_relay_defect",
+   "label": "受信機・中継器 ※継電器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_relay_action",
+   "label": "受信機・中継器 ※継電器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_lamps_content",
+   "label": "受信機・中継器 表示灯 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_lamps_judge",
+   "label": "受信機・中継器 表示灯 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_lamps_defect",
+   "label": "受信機・中継器 表示灯 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_lamps_action",
+   "label": "受信機・中継器 表示灯 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_intercom_content",
+   "label": "受信機・中継器 通話装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_intercom_judge",
+   "label": "受信機・中継器 通話装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_intercom_defect",
+   "label": "受信機・中継器 通話装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_intercom_action",
+   "label": "受信機・中継器 通話装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_wiring_content",
+   "label": "受信機・中継器 ※結線接続 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_wiring_judge",
+   "label": "受信機・中継器 ※結線接続 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_wiring_defect",
+   "label": "受信機・中継器 ※結線接続 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_wiring_action",
+   "label": "受信機・中継器 ※結線接続 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_grounding_content",
+   "label": "受信機・中継器 接地 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_grounding_judge",
+   "label": "受信機・中継器 接地 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_grounding_defect",
+   "label": "受信機・中継器 接地 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_grounding_action",
+   "label": "受信機・中継器 接地 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_auxiliary_content",
+   "label": "受信機・中継器 附属装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_auxiliary_judge",
+   "label": "受信機・中継器 附属装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_auxiliary_defect",
+   "label": "受信機・中継器 附属装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_auxiliary_action",
+   "label": "受信機・中継器 附属装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_accum_content",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_accum_judge",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_accum_defect",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_accum_action",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_analog_content",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_analog_judge",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_analog_defect",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_analog_action",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_2signal_content",
+   "label": "受信機・中継器 ※火災表示等 二信号式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_2signal_judge",
+   "label": "受信機・中継器 ※火災表示等 二信号式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_2signal_defect",
+   "label": "受信機・中継器 ※火災表示等 二信号式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_2signal_action",
+   "label": "受信機・中継器 ※火災表示等 二信号式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_other_content",
+   "label": "受信機・中継器 ※火災表示等 その他 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_other_judge",
+   "label": "受信機・中継器 ※火災表示等 その他 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_other_defect",
+   "label": "受信機・中継器 ※火災表示等 その他 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_fire_other_action",
+   "label": "受信機・中継器 ※火災表示等 その他 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_caution_content",
+   "label": "受信機・中継器 ※注意表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_caution_judge",
+   "label": "受信機・中継器 ※注意表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_caution_defect",
+   "label": "受信機・中継器 ※注意表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_caution_action",
+   "label": "受信機・中継器 ※注意表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_circuit_content",
+   "label": "受信機・中継器 回路導通 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_circuit_judge",
+   "label": "受信機・中継器 回路導通 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_circuit_defect",
+   "label": "受信機・中継器 回路導通 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_circuit_action",
+   "label": "受信機・中継器 回路導通 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_temp_setting_content",
+   "label": "受信機・中継器 設定表示温度等 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_temp_setting_judge",
+   "label": "受信機・中継器 設定表示温度等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_temp_setting_defect",
+   "label": "受信機・中継器 設定表示温度等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_temp_setting_action",
+   "label": "受信機・中継器 設定表示温度等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_detector_display_content",
+   "label": "受信機・中継器 感知器作動等の表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_detector_display_judge",
+   "label": "受信機・中継器 感知器作動等の表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_detector_display_defect",
+   "label": "受信機・中継器 感知器作動等の表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_detector_display_action",
+   "label": "受信機・中継器 感知器作動等の表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_spares_content",
+   "label": "受信機・中継器 予備品等 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_spares_judge",
+   "label": "受信機・中継器 予備品等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_spares_defect",
+   "label": "受信機・中継器 予備品等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "rcv_spares_action",
+   "label": "受信機・中継器 予備品等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  }
+ ],
+ "rules": [
+  {
+   "id": "battery_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_voltage-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_voltage_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_voltage_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_switch-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_switch_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_switch_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_charger-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_charger_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_charger_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_wiring-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_wiring_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_wiring_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_surroundings-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_surroundings_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_surroundings_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_zone_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_zone_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_zone_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_voltmeter-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_voltmeter_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_voltmeter_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_switches-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_switches_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_switches_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fuses-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fuses_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fuses_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_relay-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_relay_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_relay_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_lamps-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_lamps_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_lamps_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_intercom-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_intercom_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_intercom_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_wiring-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_wiring_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_wiring_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_grounding-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_grounding_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_grounding_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_auxiliary-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_auxiliary_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_auxiliary_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_accum-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_accum_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_accum_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_analog-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_analog_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_analog_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_2signal-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_2signal_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_2signal_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_other-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_other_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_other_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_caution-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_caution_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_caution_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_circuit-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_circuit_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_circuit_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_temp_setting-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_temp_setting_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_temp_setting_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_detector_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_detector_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_detector_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_spares-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_spares_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_spares_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  }
+ ],
+ "not_fields": [
+  {
+   "label": "点検種別（機器・総合）",
+   "reason": "全42件で「機器・総合」が同一位置に印字され値として変動しないため、固定文字として扱う。機器のみ・総合のみの帳票が現れたら欄化が必要（open_questions）"
+  },
+  {
+   "label": "点検設備名（受信機）",
+   "reason": "この票の対象設備は受信機で固定。印字済みの見出しとして扱う"
+  }
+ ],
+ "open_questions": [
+  "受信機の型式等欄（受番号・型式・年製）: 原本は1欄に連続記入。台帳の持ち方に合わせて3欄に分割するか",
+  "点検種別: 実帳票は全件「機器・総合」。機器点検のみ・総合点検のみの帳票が現れたら欄化が要る",
+  "社名・TEL: 原本は仕切り無く1セル。消火器具（KOKUJI-01-1）では仕切り線があり2欄だった。この型は1欄のままにするか",
+  "判定の○・／は原本ではベクタ描画（○は曲線、／は罫線状の断片）。再生成では欄の値（文字）として描く前提でよいか（位置の実測は判定欄の矩形で担保）"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）。もちが様式と実記入から構築"
+  }
+ ],
+ "version": "0.1",
+ "page_size": null,
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "別記様式第11（その１）",
+  "自動火災報知設備点検票",
+  "防火",
+  "名称",
+  "管理者",
+  "所在立会者",
+  "点検種別機器・総合点検年月日年月日～年月日",
+  "氏名社名ＴＥＬ",
+  "点検者",
+  "点検者",
+  "住所",
+  "所属会社",
+  "点検製造者名",
+  "受信機",
+  "設備名",
+  "型式等受第",
+  "点検結果",
+  "措置内容",
+  "点検項目",
+  "種別・容量等の内容判定不良内容",
+  "機器点検",
+  "予",
+  "外形",
+  "備",
+  "表示",
+  "電（",
+  "源",
+  "内",
+  "※端子電圧Ｖ",
+  "・",
+  "蔵",
+  "※切替装置",
+  "非",
+  "型",
+  "常",
+  "）",
+  "※充電装置",
+  "電",
+  "源",
+  "※結線接続",
+  "周囲の状況",
+  "外形",
+  "表示",
+  "警戒区域の表示装置",
+  "電圧計Ｖ",
+  "受",
+  "スイッチ類",
+  "ヒューズ類Ａ",
+  "信",
+  "※継電器",
+  "表示灯",
+  "機",
+  "通話装置",
+  "※結線接続",
+  "・",
+  "接地",
+  "附属装置",
+  "中",
+  "蓄積式",
+  "アナログ式",
+  "継※火災表示等",
+  "二信号式",
+  "その他",
+  "器",
+  "※注意表示",
+  "回路導通",
+  "設定表示温度等",
+  "感知器作動等の表示",
+  "予備品等",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２種別・容量等の内容欄は、該当するものについて記入すること。",
+  "３判定欄は、正常の場合は○印、不良の場合は×印を記入し、不良内容欄にその内容を記入すること。",
+  "４選択肢のある欄は、該当事項に○印を付すこと。",
+  "５措置内容欄には、点検の際措置した内容を記入すること。",
+  "６票中※印の欄は、自動試験機能を有するものにあっては記入不要。"
+ ],
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ]
+}

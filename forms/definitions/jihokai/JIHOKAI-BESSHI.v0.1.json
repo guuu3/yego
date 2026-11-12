@@ -1,0 +1,3730 @@
+{
+ "form_id": "JIHOKAI-BESSHI",
+ "title": "自動火災報知設備（別紙）感知器の警戒区域別個数表",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第11（別紙）",
+ "family": "設備様式",
+ "equipment": "自動火災報知設備",
+ "links": [],
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決）",
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "$comment": "自動火災報知設備点検票（別紙）の帳票定義。台帳系（警戒区域ごとに1行、シート数だけ増える）。初版。原本の実測で座標を確定（Microsoft Print To PDF 系・配置A 多数派 geometry、2物件で照合）座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fields": [
+  {
+   "id": "zone1_no",
+   "label": "1行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_name",
+   "label": "1行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_air",
+   "label": "1行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_thermo",
+   "label": "1行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_semi",
+   "label": "1行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_diff_spot",
+   "label": "1行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_fixed_spot",
+   "label": "1行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_line",
+   "label": "1行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_analog",
+   "label": "1行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_ion_nonstor",
+   "label": "1行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_ion_stor",
+   "label": "1行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_photo_nonstor",
+   "label": "1行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_photo_stor",
+   "label": "1行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_ion_analog",
+   "label": "1行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_photo_analog",
+   "label": "1行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_sep_photo_nonstor",
+   "label": "1行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_sep_photo_stor",
+   "label": "1行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_sep_photo_analog",
+   "label": "1行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_bell",
+   "label": "1行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_hatsu",
+   "label": "1行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone1_result",
+   "label": "1行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_no",
+   "label": "2行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_name",
+   "label": "2行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_air",
+   "label": "2行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_thermo",
+   "label": "2行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_semi",
+   "label": "2行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_diff_spot",
+   "label": "2行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_fixed_spot",
+   "label": "2行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_line",
+   "label": "2行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_analog",
+   "label": "2行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_ion_nonstor",
+   "label": "2行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_ion_stor",
+   "label": "2行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_photo_nonstor",
+   "label": "2行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_photo_stor",
+   "label": "2行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_ion_analog",
+   "label": "2行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_photo_analog",
+   "label": "2行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_sep_photo_nonstor",
+   "label": "2行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_sep_photo_stor",
+   "label": "2行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_sep_photo_analog",
+   "label": "2行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_bell",
+   "label": "2行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_hatsu",
+   "label": "2行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone2_result",
+   "label": "2行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_no",
+   "label": "3行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_name",
+   "label": "3行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_air",
+   "label": "3行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_thermo",
+   "label": "3行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_semi",
+   "label": "3行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_diff_spot",
+   "label": "3行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_fixed_spot",
+   "label": "3行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_line",
+   "label": "3行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_analog",
+   "label": "3行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_ion_nonstor",
+   "label": "3行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_ion_stor",
+   "label": "3行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_photo_nonstor",
+   "label": "3行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_photo_stor",
+   "label": "3行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_ion_analog",
+   "label": "3行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_photo_analog",
+   "label": "3行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_sep_photo_nonstor",
+   "label": "3行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_sep_photo_stor",
+   "label": "3行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_sep_photo_analog",
+   "label": "3行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_bell",
+   "label": "3行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_hatsu",
+   "label": "3行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone3_result",
+   "label": "3行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_no",
+   "label": "4行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_name",
+   "label": "4行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_air",
+   "label": "4行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_thermo",
+   "label": "4行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_semi",
+   "label": "4行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_diff_spot",
+   "label": "4行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_fixed_spot",
+   "label": "4行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_line",
+   "label": "4行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_analog",
+   "label": "4行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_ion_nonstor",
+   "label": "4行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_ion_stor",
+   "label": "4行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_photo_nonstor",
+   "label": "4行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_photo_stor",
+   "label": "4行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_ion_analog",
+   "label": "4行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_photo_analog",
+   "label": "4行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_sep_photo_nonstor",
+   "label": "4行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_sep_photo_stor",
+   "label": "4行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_sep_photo_analog",
+   "label": "4行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_bell",
+   "label": "4行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_hatsu",
+   "label": "4行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone4_result",
+   "label": "4行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_no",
+   "label": "5行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_name",
+   "label": "5行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_air",
+   "label": "5行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_thermo",
+   "label": "5行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_semi",
+   "label": "5行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_diff_spot",
+   "label": "5行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_fixed_spot",
+   "label": "5行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_line",
+   "label": "5行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_analog",
+   "label": "5行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_ion_nonstor",
+   "label": "5行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_ion_stor",
+   "label": "5行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_photo_nonstor",
+   "label": "5行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_photo_stor",
+   "label": "5行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_ion_analog",
+   "label": "5行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_photo_analog",
+   "label": "5行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_sep_photo_nonstor",
+   "label": "5行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_sep_photo_stor",
+   "label": "5行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_sep_photo_analog",
+   "label": "5行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_bell",
+   "label": "5行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_hatsu",
+   "label": "5行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone5_result",
+   "label": "5行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_no",
+   "label": "6行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_name",
+   "label": "6行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_air",
+   "label": "6行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_thermo",
+   "label": "6行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_semi",
+   "label": "6行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_diff_spot",
+   "label": "6行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_fixed_spot",
+   "label": "6行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_line",
+   "label": "6行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_analog",
+   "label": "6行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_ion_nonstor",
+   "label": "6行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_ion_stor",
+   "label": "6行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_photo_nonstor",
+   "label": "6行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_photo_stor",
+   "label": "6行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_ion_analog",
+   "label": "6行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_photo_analog",
+   "label": "6行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_sep_photo_nonstor",
+   "label": "6行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_sep_photo_stor",
+   "label": "6行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_sep_photo_analog",
+   "label": "6行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_bell",
+   "label": "6行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_hatsu",
+   "label": "6行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone6_result",
+   "label": "6行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_no",
+   "label": "7行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_name",
+   "label": "7行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_air",
+   "label": "7行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_thermo",
+   "label": "7行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_semi",
+   "label": "7行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_diff_spot",
+   "label": "7行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_fixed_spot",
+   "label": "7行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_line",
+   "label": "7行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_analog",
+   "label": "7行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_ion_nonstor",
+   "label": "7行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_ion_stor",
+   "label": "7行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_photo_nonstor",
+   "label": "7行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_photo_stor",
+   "label": "7行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_ion_analog",
+   "label": "7行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_photo_analog",
+   "label": "7行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_sep_photo_nonstor",
+   "label": "7行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_sep_photo_stor",
+   "label": "7行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_sep_photo_analog",
+   "label": "7行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_bell",
+   "label": "7行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_hatsu",
+   "label": "7行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone7_result",
+   "label": "7行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_no",
+   "label": "8行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_name",
+   "label": "8行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_air",
+   "label": "8行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_thermo",
+   "label": "8行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_semi",
+   "label": "8行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_diff_spot",
+   "label": "8行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_fixed_spot",
+   "label": "8行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_line",
+   "label": "8行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_analog",
+   "label": "8行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_ion_nonstor",
+   "label": "8行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_ion_stor",
+   "label": "8行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_photo_nonstor",
+   "label": "8行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_photo_stor",
+   "label": "8行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_ion_analog",
+   "label": "8行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_photo_analog",
+   "label": "8行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_sep_photo_nonstor",
+   "label": "8行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_sep_photo_stor",
+   "label": "8行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_sep_photo_analog",
+   "label": "8行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_bell",
+   "label": "8行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_hatsu",
+   "label": "8行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone8_result",
+   "label": "8行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_no",
+   "label": "9行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_name",
+   "label": "9行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_air",
+   "label": "9行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_thermo",
+   "label": "9行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_semi",
+   "label": "9行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_diff_spot",
+   "label": "9行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_fixed_spot",
+   "label": "9行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_line",
+   "label": "9行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_analog",
+   "label": "9行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_ion_nonstor",
+   "label": "9行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_ion_stor",
+   "label": "9行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_photo_nonstor",
+   "label": "9行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_photo_stor",
+   "label": "9行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_ion_analog",
+   "label": "9行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_photo_analog",
+   "label": "9行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_sep_photo_nonstor",
+   "label": "9行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_sep_photo_stor",
+   "label": "9行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_sep_photo_analog",
+   "label": "9行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_bell",
+   "label": "9行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_hatsu",
+   "label": "9行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone9_result",
+   "label": "9行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_no",
+   "label": "10行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_name",
+   "label": "10行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_air",
+   "label": "10行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_thermo",
+   "label": "10行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_semi",
+   "label": "10行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_diff_spot",
+   "label": "10行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_fixed_spot",
+   "label": "10行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_line",
+   "label": "10行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_analog",
+   "label": "10行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_ion_nonstor",
+   "label": "10行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_ion_stor",
+   "label": "10行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_photo_nonstor",
+   "label": "10行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_photo_stor",
+   "label": "10行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_ion_analog",
+   "label": "10行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_photo_analog",
+   "label": "10行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_sep_photo_nonstor",
+   "label": "10行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_sep_photo_stor",
+   "label": "10行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_sep_photo_analog",
+   "label": "10行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_bell",
+   "label": "10行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_hatsu",
+   "label": "10行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone10_result",
+   "label": "10行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_no",
+   "label": "11行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_name",
+   "label": "11行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_air",
+   "label": "11行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_thermo",
+   "label": "11行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_semi",
+   "label": "11行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_diff_spot",
+   "label": "11行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_fixed_spot",
+   "label": "11行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_line",
+   "label": "11行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_analog",
+   "label": "11行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_ion_nonstor",
+   "label": "11行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_ion_stor",
+   "label": "11行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_photo_nonstor",
+   "label": "11行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_photo_stor",
+   "label": "11行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_ion_analog",
+   "label": "11行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_photo_analog",
+   "label": "11行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_sep_photo_nonstor",
+   "label": "11行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_sep_photo_stor",
+   "label": "11行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_sep_photo_analog",
+   "label": "11行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_bell",
+   "label": "11行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_hatsu",
+   "label": "11行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone11_result",
+   "label": "11行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_no",
+   "label": "12行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_name",
+   "label": "12行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_air",
+   "label": "12行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_thermo",
+   "label": "12行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_semi",
+   "label": "12行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_diff_spot",
+   "label": "12行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_fixed_spot",
+   "label": "12行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_line",
+   "label": "12行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_analog",
+   "label": "12行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_ion_nonstor",
+   "label": "12行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_ion_stor",
+   "label": "12行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_photo_nonstor",
+   "label": "12行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_photo_stor",
+   "label": "12行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_ion_analog",
+   "label": "12行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_photo_analog",
+   "label": "12行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_sep_photo_nonstor",
+   "label": "12行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_sep_photo_stor",
+   "label": "12行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_sep_photo_analog",
+   "label": "12行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_bell",
+   "label": "12行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_hatsu",
+   "label": "12行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone12_result",
+   "label": "12行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_no",
+   "label": "13行目 番号",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力（連番）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_name",
+   "label": "13行目 警戒区域名称",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "物件台帳（警戒区域）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_air",
+   "label": "13行目 空気管式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_thermo",
+   "label": "13行目 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_semi",
+   "label": "13行目 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_diff_spot",
+   "label": "13行目 差動式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_fixed_spot",
+   "label": "13行目 定温式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_line",
+   "label": "13行目 ※感知線型（定温式） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_analog",
+   "label": "13行目 熱アナログ式 スポット型 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_ion_nonstor",
+   "label": "13行目 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_ion_stor",
+   "label": "13行目 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_photo_nonstor",
+   "label": "13行目 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_photo_stor",
+   "label": "13行目 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_ion_analog",
+   "label": "13行目 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_photo_analog",
+   "label": "13行目 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_sep_photo_nonstor",
+   "label": "13行目 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_sep_photo_stor",
+   "label": "13行目 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_sep_photo_analog",
+   "label": "13行目 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_bell",
+   "label": "13行目 地区音響装置 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_hatsu",
+   "label": "13行目 発信機 個数",
+   "input_type": "数値",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "zone13_result",
+   "label": "13行目 点検結果",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考2: 受信機の表示番号又は警戒区域ごとに個数を記入し、点検結果を記す",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_air",
+   "label": "合計 空気管式（差動式 ※分布型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_thermo",
+   "label": "合計 熱電対式（差動式 ※分布型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_semi",
+   "label": "合計 熱半導体式（差動式 ※分布型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_diff_spot",
+   "label": "合計 差動式 スポット型 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_fixed_spot",
+   "label": "合計 定温式 スポット型 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_line",
+   "label": "合計 ※感知線型（定温式） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_analog",
+   "label": "合計 熱アナログ式 スポット型 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_ion_nonstor",
+   "label": "合計 イオン化式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_ion_stor",
+   "label": "合計 イオン化式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_photo_nonstor",
+   "label": "合計 光電式 非蓄積（※煙式 スポット型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_photo_stor",
+   "label": "合計 光電式 蓄積（※煙式 スポット型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_ion_analog",
+   "label": "合計 イオン化アナログ式（※煙式 スポット型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_photo_analog",
+   "label": "合計 光電アナログ式（※煙式 スポット型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_sep_photo_nonstor",
+   "label": "合計 光電式 非蓄積（※煙式 分離型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_sep_photo_stor",
+   "label": "合計 光電式 蓄積（※煙式 分離型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_sep_photo_analog",
+   "label": "合計 光電アナログ式（※煙式 分離型） 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "再生成時に各列の合計を自動計算する想定。formkit のルール種別に集計が無いため、定義には計算式を持たない（機能設計の単位）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_bell",
+   "label": "合計 地区音響装置 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "total_hatsu",
+   "label": "合計 発信機 個数",
+   "input_type": "固定・自動",
+   "layer": "L3",
+   "source": "自動集計（各行の合計）",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "remarks",
+   "label": "備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 10,
+    "max_chars_per_line": 44
+   },
+   "rect": null,
+   "note": "備考欄の実寸は 460.08×133.56pt（多数派 geometry）。少数派系統（SANKEILOGI 系、14/75枚）では下端が 234.96 で 19.44pt 短い（open_questions）",
+   "coord_status": "未確定"
+  }
+ ],
+ "rules": [],
+ "not_fields": [
+  {
+   "label": "合計行の警戒区域名称セル",
+   "reason": "「合計」の印字（固定文字）があるだけのセル。欄は置かない"
+  },
+  {
+   "label": "合計行の点検結果セル",
+   "reason": "多数派の系統では無地。欄は置かない（少数派系統では短い横線の断片が観測される。系統差として report に記録）"
+  },
+  {
+   "label": "枚数表示（(x/y)）",
+   "reason": "原本の別紙に枚数表示は無い（全75枚で確認）。付けるかは package 生成側の決定事項（消火器管理票と同じ論点）"
+  }
+ ],
+ "open_questions": [
+  "備考欄の高さが系統で異なる（多数派は下端 215.52、SANKEILOGI 系 14/75枚は 234.96 で 19.44pt 短い。備考の見出し文字と下の注記も連動してずれる）。配置B の原点ずらしでは吸収できない（平行移動ではなく高さの差）。系統ごとの扱いは議題2 Q3 の方針に準ずる想定",
+  "合計行は自動集計にする想定だが、formkit のルール種別に集計が無い。実装は機能設計の単位",
+  "行が13行を超える警戒区域がある物件ではシートが増える（原本は1〜17シート/物件）。シート分割と合計行の置き方（最終シートのみか各シートか）は package 生成側の設計が要る。原本では合計は各シートの最終行に現れる"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3。座標は全欄未確定）。もちが様式と実記入から構築"
+  }
+ ],
+ "version": "0.1",
+ "page_size": null,
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "自動火災報知設備（別紙）",
+  "別記様式第11",
+  "※発",
+  "感知器点",
+  "警戒区域",
+  "熱※煙式",
+  "差動式定温式地",
+  "ア",
+  "番",
+  "※分布型スポット型分離型",
+  "ナ",
+  "スス※区",
+  "検",
+  "ロ",
+  "イ光",
+  "イ光",
+  "光光",
+  "空熱熱",
+  "グ",
+  "ポポ感音信",
+  "オ",
+  "オ",
+  "電",
+  "電",
+  "ン",
+  "号式",
+  "名称ン電電",
+  "半",
+  "ア",
+  "ア",
+  "気電化",
+  "ス",
+  "ッッ知化響結",
+  "アナ",
+  "ナ",
+  "導式式",
+  "式",
+  "ポ",
+  "ナ",
+  "ロ",
+  "ロ",
+  "管対ッ",
+  "トト線装",
+  "ロ蓄",
+  "非蓄非蓄非",
+  "体",
+  "№",
+  "グ",
+  "トグ",
+  "蓄蓄グ蓄",
+  "型",
+  "式式式型型型積積積積式式積積式置機果",
+  "合計",
+  "備",
+  "考",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２受信機の表示番号又は警戒区域ごとに個数を記入すること。",
+  "３※印のあるもので不良のものは、（その７）に機器ごとの点検結果を記入すること。",
+  "４点検結果欄は、正常の場合は○印、不良の場合は×印を記入し、点検の際措置した内容は",
+  "備考欄に記入すること。",
+  "５警戒区域内の感知器の個数が１の場合、階ごとに感知器の個数を記入すること。"
+ ],
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ]
+}

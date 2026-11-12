@@ -1,0 +1,6070 @@
+{
+ "form_id": "KOKUJI-11-1",
+ "title": "自動火災報知設備点検票（その１）",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第11（その1）",
+ "family": "設備様式",
+ "equipment": "自動火災報知設備",
+ "links": [],
+ "lineage": "Microsoft Print To PDF 系・配置A（枠左端 x=36.48、用紙 595.32×841.92）。42件中: 配置A 34件（+pdf-lib 事前記入版1件が同 geometry）、配置B（全体が x -8.40pt 平行移動）4件、PDFlib 系（用紙 595.44×880.2）2件、近傍（x -0.563pt）1件。系統の識別値としての確定は議題2 Q3",
+ "geometry_status": "取得済み（2026-11-13、もちが VM 内サンプルで実測。§4 の手順）。配置A の3物件で罫線が一致（判定印の断片を除く）。詳細は results/jihokai/report.md",
+ "$comment": "自動火災報知設備点検票（その１）の帳票定義。v0.2：原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）",
+ "fields": [
+  {
+   "id": "site_name",
+   "label": "名称",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    87.24,
+    739.56,
+    380.28,
+    761.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "fire_manager",
+   "label": "防火管理者",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    422.04,
+    739.56,
+    533.64,
+    761.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "site_address",
+   "label": "所在",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    87.24,
+    716.88,
+    380.28,
+    739.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "witness",
+   "label": "立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    422.04,
+    716.88,
+    533.64,
+    739.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "inspect_from",
+   "label": "点検年月日（自）",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "format": "年・月・日を欄内印字の位置に記入（split_ymd）。和暦・西暦の両方を実帳票で観測",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    246.72,
+    699.6,
+    374.9,
+    716.88
+   ],
+   "note": "日付欄は「（値）年（値）月（値）日～」の固定スロット並び（実測: 年 x=291.3・月 x=328.1・日 x=364.8・～ x=374.9 が3物件で一致）。矩形は～の手前まで",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "inspect_to",
+   "label": "点検年月日（至）",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "format": "年・月・日を欄内印字の位置に記入（split_ymd）。和暦・西暦の両方を実帳票で観測",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    384.98,
+    699.6,
+    533.64,
+    716.88
+   ],
+   "note": "日付欄の～から後ろ",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "inspector_name",
+   "label": "点検者 氏名",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "（点検者台帳から。台帳は未作成）"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    87.24,
+    654.24,
+    185.52,
+    699.6
+   ],
+   "note": "別記様式第3（点検者一覧表）と同じ台帳を参照する。欄の左上に「氏名」が印字されている（固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "company_name_tel",
+   "label": "点検者 所属会社 社名・TEL",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "自社情報",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    246.72,
+    676.92,
+    533.64,
+    699.6
+   ],
+   "note": "原本では社名とＴＥＬの間に仕切り線が無く、1セルに連続して記入される（例: 社名に続けてＴＥＬ番号）。分離するかは open_questions",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "company_address",
+   "label": "点検者 所属会社 住所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "自社情報",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    246.72,
+    654.24,
+    533.64,
+    676.92
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "receiver_maker",
+   "label": "受信機 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "設備台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    246.72,
+    637.32,
+    533.64,
+    654.24
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "receiver_model",
+   "label": "受信機 型式等",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "設備台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    246.72,
+    621.84,
+    533.64,
+    637.32
+   ],
+   "note": "受番号・型式・年製を1欄に連続記入する（原本の記入方式。例: 第○-○号 型式 ○○年製）。「第」は欄内印字として復元。3要素に分割するかは open_questions",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_exterior_content",
+   "label": "予備電源・非常電源（内蔵型） 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    563.88,
+    314.76,
+    578.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_exterior_judge",
+   "label": "予備電源・非常電源（内蔵型） 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    563.88,
+    354.0,
+    578.64
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_exterior_defect",
+   "label": "予備電源・非常電源（内蔵型） 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    563.88,
+    442.56,
+    578.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_exterior_action",
+   "label": "予備電源・非常電源（内蔵型） 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    563.88,
+    533.64,
+    578.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_display_content",
+   "label": "予備電源・非常電源（内蔵型） 表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    549.12,
+    314.76,
+    563.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_display_judge",
+   "label": "予備電源・非常電源（内蔵型） 表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    549.12,
+    354.0,
+    563.88
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_display_defect",
+   "label": "予備電源・非常電源（内蔵型） 表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    549.12,
+    442.56,
+    563.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_display_action",
+   "label": "予備電源・非常電源（内蔵型） 表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    549.12,
+    533.64,
+    563.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_voltage_content",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    534.72,
+    314.76,
+    549.12
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_voltage_judge",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    534.72,
+    354.0,
+    549.12
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_voltage_defect",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    534.72,
+    442.56,
+    549.12
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_voltage_action",
+   "label": "予備電源・非常電源（内蔵型） ※端子電圧 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    534.72,
+    533.64,
+    549.12
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_switch_content",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    519.96,
+    314.76,
+    534.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_switch_judge",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    519.96,
+    354.0,
+    534.72
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_switch_defect",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    519.96,
+    442.56,
+    534.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_switch_action",
+   "label": "予備電源・非常電源（内蔵型） ※切替装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    519.96,
+    533.64,
+    534.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_charger_content",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    505.56,
+    314.76,
+    519.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_charger_judge",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    505.56,
+    354.0,
+    519.96
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_charger_defect",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    505.56,
+    442.56,
+    519.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_charger_action",
+   "label": "予備電源・非常電源（内蔵型） ※充電装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    505.56,
+    533.64,
+    519.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_wiring_content",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    490.8,
+    314.76,
+    505.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_wiring_judge",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    490.8,
+    354.0,
+    505.56
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_wiring_defect",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    490.8,
+    442.56,
+    505.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "battery_wiring_action",
+   "label": "予備電源・非常電源（内蔵型） ※結線接続 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    490.8,
+    533.64,
+    505.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_surroundings_content",
+   "label": "受信機・中継器 周囲の状況 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    476.04,
+    314.76,
+    490.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_surroundings_judge",
+   "label": "受信機・中継器 周囲の状況 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    476.04,
+    354.0,
+    490.8
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_surroundings_defect",
+   "label": "受信機・中継器 周囲の状況 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    476.04,
+    442.56,
+    490.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_surroundings_action",
+   "label": "受信機・中継器 周囲の状況 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    476.04,
+    533.64,
+    490.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_exterior_content",
+   "label": "受信機・中継器 外形 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    461.64,
+    314.76,
+    476.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_exterior_judge",
+   "label": "受信機・中継器 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    461.64,
+    354.0,
+    476.04
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_exterior_defect",
+   "label": "受信機・中継器 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    461.64,
+    442.56,
+    476.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_exterior_action",
+   "label": "受信機・中継器 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    461.64,
+    533.64,
+    476.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_display_content",
+   "label": "受信機・中継器 表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    446.88,
+    314.76,
+    461.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_display_judge",
+   "label": "受信機・中継器 表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    446.88,
+    354.0,
+    461.64
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_display_defect",
+   "label": "受信機・中継器 表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    446.88,
+    442.56,
+    461.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_display_action",
+   "label": "受信機・中継器 表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    446.88,
+    533.64,
+    461.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_zone_display_content",
+   "label": "受信機・中継器 警戒区域の表示装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    432.48,
+    314.76,
+    446.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_zone_display_judge",
+   "label": "受信機・中継器 警戒区域の表示装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    432.48,
+    354.0,
+    446.88
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_zone_display_defect",
+   "label": "受信機・中継器 警戒区域の表示装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    432.48,
+    442.56,
+    446.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_zone_display_action",
+   "label": "受信機・中継器 警戒区域の表示装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    432.48,
+    533.64,
+    446.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_voltmeter_content",
+   "label": "受信機・中継器 電圧計 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    417.72,
+    314.76,
+    432.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_voltmeter_judge",
+   "label": "受信機・中継器 電圧計 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    417.72,
+    354.0,
+    432.48
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_voltmeter_defect",
+   "label": "受信機・中継器 電圧計 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    417.72,
+    442.56,
+    432.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_voltmeter_action",
+   "label": "受信機・中継器 電圧計 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    417.72,
+    533.64,
+    432.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_switches_content",
+   "label": "受信機・中継器 スイッチ類 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    402.96,
+    314.76,
+    417.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_switches_judge",
+   "label": "受信機・中継器 スイッチ類 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    402.96,
+    354.0,
+    417.72
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_switches_defect",
+   "label": "受信機・中継器 スイッチ類 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    402.96,
+    442.56,
+    417.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_switches_action",
+   "label": "受信機・中継器 スイッチ類 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    402.96,
+    533.64,
+    417.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fuses_content",
+   "label": "受信機・中継器 ヒューズ類 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    388.56,
+    314.76,
+    402.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fuses_judge",
+   "label": "受信機・中継器 ヒューズ類 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    388.56,
+    354.0,
+    402.96
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fuses_defect",
+   "label": "受信機・中継器 ヒューズ類 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    388.56,
+    442.56,
+    402.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fuses_action",
+   "label": "受信機・中継器 ヒューズ類 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    388.56,
+    533.64,
+    402.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_relay_content",
+   "label": "受信機・中継器 ※継電器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    373.8,
+    314.76,
+    388.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_relay_judge",
+   "label": "受信機・中継器 ※継電器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    373.8,
+    354.0,
+    388.56
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_relay_defect",
+   "label": "受信機・中継器 ※継電器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    373.8,
+    442.56,
+    388.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_relay_action",
+   "label": "受信機・中継器 ※継電器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    373.8,
+    533.64,
+    388.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_lamps_content",
+   "label": "受信機・中継器 表示灯 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    359.04,
+    314.76,
+    373.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_lamps_judge",
+   "label": "受信機・中継器 表示灯 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    359.04,
+    354.0,
+    373.8
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_lamps_defect",
+   "label": "受信機・中継器 表示灯 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    359.04,
+    442.56,
+    373.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_lamps_action",
+   "label": "受信機・中継器 表示灯 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    359.04,
+    533.64,
+    373.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_intercom_content",
+   "label": "受信機・中継器 通話装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    344.64,
+    314.76,
+    359.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_intercom_judge",
+   "label": "受信機・中継器 通話装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    344.64,
+    354.0,
+    359.04
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_intercom_defect",
+   "label": "受信機・中継器 通話装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    344.64,
+    442.56,
+    359.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_intercom_action",
+   "label": "受信機・中継器 通話装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    344.64,
+    533.64,
+    359.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_wiring_content",
+   "label": "受信機・中継器 ※結線接続 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    329.88,
+    314.76,
+    344.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_wiring_judge",
+   "label": "受信機・中継器 ※結線接続 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    329.88,
+    354.0,
+    344.64
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_wiring_defect",
+   "label": "受信機・中継器 ※結線接続 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    329.88,
+    442.56,
+    344.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_wiring_action",
+   "label": "受信機・中継器 ※結線接続 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    329.88,
+    533.64,
+    344.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_grounding_content",
+   "label": "受信機・中継器 接地 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    315.48,
+    314.76,
+    329.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_grounding_judge",
+   "label": "受信機・中継器 接地 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    315.48,
+    354.0,
+    329.88
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_grounding_defect",
+   "label": "受信機・中継器 接地 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    315.48,
+    442.56,
+    329.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_grounding_action",
+   "label": "受信機・中継器 接地 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    315.48,
+    533.64,
+    329.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_auxiliary_content",
+   "label": "受信機・中継器 附属装置 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    300.72,
+    314.76,
+    315.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_auxiliary_judge",
+   "label": "受信機・中継器 附属装置 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    300.72,
+    354.0,
+    315.48
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_auxiliary_defect",
+   "label": "受信機・中継器 附属装置 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    300.72,
+    442.56,
+    315.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_auxiliary_action",
+   "label": "受信機・中継器 附属装置 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    300.72,
+    533.64,
+    315.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_accum_content",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    285.96,
+    314.76,
+    300.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_accum_judge",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    285.96,
+    354.0,
+    300.72
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_accum_defect",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    285.96,
+    442.56,
+    300.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_accum_action",
+   "label": "受信機・中継器 ※火災表示等 蓄積式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    285.96,
+    533.64,
+    300.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_analog_content",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    271.56,
+    314.76,
+    285.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_analog_judge",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    271.56,
+    354.0,
+    285.96
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_analog_defect",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    271.56,
+    442.56,
+    285.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_analog_action",
+   "label": "受信機・中継器 ※火災表示等 アナログ式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    271.56,
+    533.64,
+    285.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_2signal_content",
+   "label": "受信機・中継器 ※火災表示等 二信号式 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    256.8,
+    314.76,
+    271.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_2signal_judge",
+   "label": "受信機・中継器 ※火災表示等 二信号式 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    256.8,
+    354.0,
+    271.56
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_2signal_defect",
+   "label": "受信機・中継器 ※火災表示等 二信号式 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    256.8,
+    442.56,
+    271.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_2signal_action",
+   "label": "受信機・中継器 ※火災表示等 二信号式 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    256.8,
+    533.64,
+    271.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_other_content",
+   "label": "受信機・中継器 ※火災表示等 その他 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    242.4,
+    314.76,
+    256.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_other_judge",
+   "label": "受信機・中継器 ※火災表示等 その他 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    242.4,
+    354.0,
+    256.8
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_other_defect",
+   "label": "受信機・中継器 ※火災表示等 その他 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    242.4,
+    442.56,
+    256.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_fire_other_action",
+   "label": "受信機・中継器 ※火災表示等 その他 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    242.4,
+    533.64,
+    256.8
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_caution_content",
+   "label": "受信機・中継器 ※注意表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    227.64,
+    314.76,
+    242.4
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_caution_judge",
+   "label": "受信機・中継器 ※注意表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    227.64,
+    354.0,
+    242.4
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_caution_defect",
+   "label": "受信機・中継器 ※注意表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    227.64,
+    442.56,
+    242.4
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_caution_action",
+   "label": "受信機・中継器 ※注意表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    227.64,
+    533.64,
+    242.4
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_circuit_content",
+   "label": "受信機・中継器 回路導通 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    212.88,
+    314.76,
+    227.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_circuit_judge",
+   "label": "受信機・中継器 回路導通 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    212.88,
+    354.0,
+    227.64
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_circuit_defect",
+   "label": "受信機・中継器 回路導通 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    212.88,
+    442.56,
+    227.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_circuit_action",
+   "label": "受信機・中継器 回路導通 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    212.88,
+    533.64,
+    227.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_temp_setting_content",
+   "label": "受信機・中継器 設定表示温度等 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    198.48,
+    314.76,
+    212.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_temp_setting_judge",
+   "label": "受信機・中継器 設定表示温度等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    198.48,
+    354.0,
+    212.88
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_temp_setting_defect",
+   "label": "受信機・中継器 設定表示温度等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    198.48,
+    442.56,
+    212.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_temp_setting_action",
+   "label": "受信機・中継器 設定表示温度等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    198.48,
+    533.64,
+    212.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_detector_display_content",
+   "label": "受信機・中継器 感知器作動等の表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    183.72,
+    314.76,
+    198.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_detector_display_judge",
+   "label": "受信機・中継器 感知器作動等の表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    183.72,
+    354.0,
+    198.48
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_detector_display_defect",
+   "label": "受信機・中継器 感知器作動等の表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    183.72,
+    442.56,
+    198.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_detector_display_action",
+   "label": "受信機・中継器 感知器作動等の表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    183.72,
+    533.64,
+    198.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_spares_content",
+   "label": "受信機・中継器 予備品等 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    206.04,
+    168.6,
+    314.76,
+    183.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_spares_judge",
+   "label": "受信機・中継器 予備品等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    314.76,
+    168.6,
+    354.0,
+    183.72
+   ],
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_spares_defect",
+   "label": "受信機・中継器 予備品等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    354.0,
+    168.6,
+    442.56,
+    183.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "rcv_spares_action",
+   "label": "受信機・中継器 予備品等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    442.56,
+    168.6,
+    533.64,
+    183.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  }
+ ],
+ "rules": [
+  {
+   "id": "battery_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_voltage-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_voltage_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_voltage_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_switch-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_switch_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_switch_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_charger-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_charger_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_charger_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "battery_wiring-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "battery_wiring_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "battery_wiring_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_surroundings-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_surroundings_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_surroundings_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_exterior_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_exterior_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_zone_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_zone_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_zone_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_voltmeter-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_voltmeter_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_voltmeter_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_switches-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_switches_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_switches_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fuses-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fuses_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fuses_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_relay-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_relay_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_relay_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_lamps-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_lamps_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_lamps_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_intercom-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_intercom_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_intercom_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_wiring-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_wiring_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_wiring_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_grounding-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_grounding_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_grounding_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_auxiliary-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_auxiliary_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_auxiliary_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_accum-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_accum_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_accum_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_analog-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_analog_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_analog_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_2signal-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_2signal_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_2signal_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_fire_other-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_fire_other_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_fire_other_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_caution-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_caution_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_caution_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_circuit-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_circuit_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_circuit_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_temp_setting-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_temp_setting_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_temp_setting_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_detector_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_detector_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_detector_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "rcv_spares-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "rcv_spares_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "rcv_spares_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  }
+ ],
+ "not_fields": [
+  {
+   "label": "点検種別（機器・総合）",
+   "reason": "全42件で「機器・総合」が同一位置に印字され値として変動しないため、固定文字として扱う。機器のみ・総合のみの帳票が現れたら欄化が必要（open_questions）"
+  },
+  {
+   "label": "点検設備名（受信機）",
+   "reason": "この票の対象設備は受信機で固定。印字済みの見出しとして扱う"
+  }
+ ],
+ "open_questions": [
+  "受信機の型式等欄（受番号・型式・年製）: 原本は1欄に連続記入。台帳の持ち方に合わせて3欄に分割するか",
+  "点検種別: 実帳票は全件「機器・総合」。機器点検のみ・総合点検のみの帳票が現れたら欄化が要る",
+  "社名・TEL: 原本は仕切り無く1セル。消火器具（KOKUJI-01-1）では仕切り線があり2欄だった。この型は1欄のままにするか",
+  "判定の○・／は原本ではベクタ描画（○は曲線、／は罫線状の断片）。再生成では欄の値（文字）として描く前提でよいか（位置の実測は判定欄の矩形で担保）"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）。もちが様式と実記入から構築"
+  },
+  {
+   "version": "0.2",
+   "date": "2026-11-13",
+   "change": "実測で座標を確定（もち、VM 内サンプルで §4 を実施）: 用紙・罫線・固定文字・全欄の rect と coord_status。配置A（多数派）の座標。判定欄の allowed に×と／を設定（備考3・6と実記入から）。点検種別は固定文字扱いと確定"
+  }
+ ],
+ "version": "0.2",
+ "page_size": [
+  595.32,
+  841.92
+ ],
+ "lines": [
+  [
+   "h",
+   168.6,
+   36.48,
+   533.64,
+   0.72
+  ],
+  [
+   "h",
+   183.72,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   198.48,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   212.88,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   227.64,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   242.4,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   256.8,
+   136.2,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   271.56,
+   136.2,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   285.96,
+   136.2,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   300.72,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   315.48,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   329.88,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   344.64,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   359.04,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   373.8,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   388.56,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   402.96,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   417.72,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   432.48,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   446.88,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   461.64,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   476.04,
+   56.64,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   490.8,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   505.56,
+   76.44,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   519.96,
+   76.44,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   534.72,
+   76.44,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   549.12,
+   76.44,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   563.88,
+   76.44,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   578.64,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   593.04,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   607.44,
+   206.04,
+   442.56,
+   0.36
+  ],
+  [
+   "h",
+   620.76,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   621.84,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   637.32,
+   186.96,
+   533.28,
+   0.36
+  ],
+  [
+   "h",
+   654.24,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   676.92,
+   246.72,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   699.6,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   716.88,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   739.56,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   761.88,
+   36.48,
+   533.64,
+   0.36
+  ],
+  [
+   "h",
+   791.04,
+   36.48,
+   533.64,
+   0.72
+  ],
+  [
+   "v",
+   36.48,
+   168.6,
+   791.04,
+   0.72
+  ],
+  [
+   "v",
+   56.64,
+   168.6,
+   490.8,
+   0.36
+  ],
+  [
+   "v",
+   76.44,
+   490.8,
+   578.64,
+   0.36
+  ],
+  [
+   "v",
+   87.24,
+   621.84,
+   761.88,
+   0.36
+  ],
+  [
+   "v",
+   136.2,
+   242.4,
+   300.72,
+   0.36
+  ],
+  [
+   "v",
+   185.52,
+   654.24,
+   716.88,
+   0.36
+  ],
+  [
+   "v",
+   186.6,
+   621.84,
+   716.88,
+   0.36
+  ],
+  [
+   "v",
+   206.04,
+   168.6,
+   578.64,
+   0.36
+  ],
+  [
+   "v",
+   206.04,
+   593.04,
+   620.76,
+   0.36
+  ],
+  [
+   "v",
+   246.72,
+   654.24,
+   716.88,
+   0.36
+  ],
+  [
+   "v",
+   314.76,
+   168.6,
+   578.64,
+   0.36
+  ],
+  [
+   "v",
+   314.76,
+   593.04,
+   607.44,
+   0.36
+  ],
+  [
+   "v",
+   354.0,
+   168.6,
+   578.64,
+   0.36
+  ],
+  [
+   "v",
+   354.0,
+   593.04,
+   607.44,
+   0.36
+  ],
+  [
+   "v",
+   380.28,
+   716.88,
+   761.88,
+   0.36
+  ],
+  [
+   "v",
+   381.36,
+   716.88,
+   761.88,
+   0.36
+  ],
+  [
+   "v",
+   422.04,
+   716.88,
+   761.88,
+   0.36
+  ],
+  [
+   "v",
+   442.56,
+   168.6,
+   578.64,
+   0.36
+  ],
+  [
+   "v",
+   442.56,
+   593.04,
+   620.76,
+   0.36
+  ],
+  [
+   "v",
+   533.64,
+   168.6,
+   791.04,
+   0.72
+  ]
+ ],
+ "chars": [
+  {
+   "t": "受",
+   "x": 242.393,
+   "y": 626.539,
+   "size": 10.08
+  },
+  {
+   "t": "別",
+   "x": 37.564,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "記",
+   "x": 47.644,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "様",
+   "x": 57.724,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "式",
+   "x": 68.207,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 78.287,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "1",
+   "x": 88.367,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "1",
+   "x": 93.709,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "（",
+   "x": 487.187,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "そ",
+   "x": 496.864,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "の",
+   "x": 506.641,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "１",
+   "x": 516.318,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "）",
+   "x": 526.096,
+   "y": 793.922,
+   "size": 10.08
+  },
+  {
+   "t": "自",
+   "x": 167.535,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "動",
+   "x": 189.884,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "火",
+   "x": 212.233,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "災",
+   "x": 234.466,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "報",
+   "x": 256.815,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "知",
+   "x": 279.164,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "設",
+   "x": 301.513,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "備",
+   "x": 323.746,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "点",
+   "x": 346.095,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "検",
+   "x": 368.444,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "票",
+   "x": 390.793,
+   "y": 772.218,
+   "size": 11.88
+  },
+  {
+   "t": "名",
+   "x": 42.249,
+   "y": 747.105,
+   "size": 10.08
+  },
+  {
+   "t": "称",
+   "x": 72.489,
+   "y": 747.105,
+   "size": 10.08
+  },
+  {
+   "t": "防",
+   "x": 385.324,
+   "y": 752.145,
+   "size": 10.08
+  },
+  {
+   "t": "火",
+   "x": 407.601,
+   "y": 752.145,
+   "size": 10.08
+  },
+  {
+   "t": "管",
+   "x": 385.324,
+   "y": 742.065,
+   "size": 10.08
+  },
+  {
+   "t": "理",
+   "x": 396.513,
+   "y": 742.065,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 407.601,
+   "y": 742.065,
+   "size": 10.08
+  },
+  {
+   "t": "所",
+   "x": 42.249,
+   "y": 724.425,
+   "size": 10.08
+  },
+  {
+   "t": "在",
+   "x": 72.489,
+   "y": 724.425,
+   "size": 10.08
+  },
+  {
+   "t": "立",
+   "x": 385.373,
+   "y": 724.425,
+   "size": 10.08
+  },
+  {
+   "t": "会",
+   "x": 396.461,
+   "y": 724.425,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 407.649,
+   "y": 724.425,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 42.249,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 52.329,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 62.409,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "別",
+   "x": 72.489,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "機",
+   "x": 97.286,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "器",
+   "x": 114.624,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 131.861,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "総",
+   "x": 149.198,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "合",
+   "x": 166.435,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 189.821,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 200.304,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 211.089,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 221.573,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 232.358,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 42.249,
+   "y": 673.316,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 57.369,
+   "y": 673.316,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 72.489,
+   "y": 673.316,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 191.638,
+   "y": 680.876,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 211.093,
+   "y": 680.876,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 230.547,
+   "y": 680.876,
+   "size": 10.08
+  },
+  {
+   "t": "所",
+   "x": 191.638,
+   "y": 666.111,
+   "size": 10.08
+  },
+  {
+   "t": "属",
+   "x": 204.641,
+   "y": 666.111,
+   "size": 10.08
+  },
+  {
+   "t": "会",
+   "x": 217.544,
+   "y": 666.111,
+   "size": 10.08
+  },
+  {
+   "t": "社",
+   "x": 230.547,
+   "y": 666.111,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 42.249,
+   "y": 641.659,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 71.784,
+   "y": 641.659,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 42.249,
+   "y": 627.956,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 56.966,
+   "y": 627.956,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 71.784,
+   "y": 627.956,
+   "size": 10.08
+  },
+  {
+   "t": "受",
+   "x": 93.004,
+   "y": 634.808,
+   "size": 10.08
+  },
+  {
+   "t": "信",
+   "x": 132.215,
+   "y": 634.808,
+   "size": 10.08
+  },
+  {
+   "t": "機",
+   "x": 171.527,
+   "y": 634.808,
+   "size": 10.08
+  },
+  {
+   "t": "製",
+   "x": 193.453,
+   "y": 642.243,
+   "size": 9.72
+  },
+  {
+   "t": "造",
+   "x": 203.468,
+   "y": 642.243,
+   "size": 9.72
+  },
+  {
+   "t": "者",
+   "x": 213.577,
+   "y": 642.243,
+   "size": 9.72
+  },
+  {
+   "t": "名",
+   "x": 223.685,
+   "y": 642.243,
+   "size": 9.72
+  },
+  {
+   "t": "型",
+   "x": 193.449,
+   "y": 626.539,
+   "size": 10.08
+  },
+  {
+   "t": "式",
+   "x": 208.166,
+   "y": 626.539,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 222.984,
+   "y": 626.539,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 85.089,
+   "y": 603.465,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 105.955,
+   "y": 603.465,
+   "size": 10.08
+  },
+  {
+   "t": "項",
+   "x": 126.821,
+   "y": 603.465,
+   "size": 10.08
+  },
+  {
+   "t": "目",
+   "x": 147.686,
+   "y": 603.465,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 261.135,
+   "y": 611.025,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 300.044,
+   "y": 611.025,
+   "size": 10.08
+  },
+  {
+   "t": "結",
+   "x": 338.852,
+   "y": 611.025,
+   "size": 10.08
+  },
+  {
+   "t": "果",
+   "x": 377.761,
+   "y": 611.025,
+   "size": 10.08
+  },
+  {
+   "t": "措",
+   "x": 457.301,
+   "y": 603.859,
+   "size": 10.08
+  },
+  {
+   "t": "置",
+   "x": 474.538,
+   "y": 603.859,
+   "size": 10.08
+  },
+  {
+   "t": "内",
+   "x": 491.876,
+   "y": 603.859,
+   "size": 10.08
+  },
+  {
+   "t": "容",
+   "x": 509.112,
+   "y": 603.859,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 213.609,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "別",
+   "x": 224.093,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 234.475,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "容",
+   "x": 244.958,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "量",
+   "x": 255.341,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 265.824,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "の",
+   "x": 276.206,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "内",
+   "x": 286.689,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "容",
+   "x": 297.475,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "判",
+   "x": 322.373,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "定",
+   "x": 336.686,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "不",
+   "x": 367.329,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "良",
+   "x": 384.566,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "内",
+   "x": 401.904,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "容",
+   "x": 419.141,
+   "y": 596.653,
+   "size": 10.08
+  },
+  {
+   "t": "機",
+   "x": 211.089,
+   "y": 581.888,
+   "size": 10.08
+  },
+  {
+   "t": "器",
+   "x": 260.784,
+   "y": 581.888,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 310.478,
+   "y": 581.888,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 360.173,
+   "y": 581.888,
+   "size": 10.08
+  },
+  {
+   "t": "予",
+   "x": 44.888,
+   "y": 567.971,
+   "size": 8.64
+  },
+  {
+   "t": "備",
+   "x": 44.888,
+   "y": 558.986,
+   "size": 8.64
+  },
+  {
+   "t": "電",
+   "x": 44.888,
+   "y": 550.0,
+   "size": 8.64
+  },
+  {
+   "t": "源",
+   "x": 44.888,
+   "y": 540.582,
+   "size": 8.64
+  },
+  {
+   "t": "・",
+   "x": 44.888,
+   "y": 531.597,
+   "size": 8.64
+  },
+  {
+   "t": "非",
+   "x": 44.888,
+   "y": 522.611,
+   "size": 8.64
+  },
+  {
+   "t": "常",
+   "x": 44.888,
+   "y": 513.28,
+   "size": 8.64
+  },
+  {
+   "t": "電",
+   "x": 44.888,
+   "y": 504.208,
+   "size": 8.64
+  },
+  {
+   "t": "源",
+   "x": 44.888,
+   "y": 494.877,
+   "size": 8.64
+  },
+  {
+   "t": "（",
+   "x": 60.008,
+   "y": 549.836,
+   "size": 10.08
+  },
+  {
+   "t": "内",
+   "x": 60.008,
+   "y": 540.159,
+   "size": 10.08
+  },
+  {
+   "t": "蔵",
+   "x": 60.008,
+   "y": 530.785,
+   "size": 10.08
+  },
+  {
+   "t": "型",
+   "x": 60.008,
+   "y": 521.411,
+   "size": 10.08
+  },
+  {
+   "t": "）",
+   "x": 60.008,
+   "y": 512.036,
+   "size": 10.08
+  },
+  {
+   "t": "外",
+   "x": 82.215,
+   "y": 567.476,
+   "size": 10.08
+  },
+  {
+   "t": "形",
+   "x": 190.575,
+   "y": 567.476,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 82.215,
+   "y": 552.711,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 190.575,
+   "y": 552.711,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 81.821,
+   "y": 537.945,
+   "size": 10.08
+  },
+  {
+   "t": "端",
+   "x": 92.304,
+   "y": 537.945,
+   "size": 10.08
+  },
+  {
+   "t": "子",
+   "x": 125.064,
+   "y": 537.945,
+   "size": 10.08
+  },
+  {
+   "t": "電",
+   "x": 157.824,
+   "y": 537.945,
+   "size": 10.08
+  },
+  {
+   "t": "圧",
+   "x": 190.584,
+   "y": 537.945,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 81.821,
+   "y": 523.573,
+   "size": 10.08
+  },
+  {
+   "t": "切",
+   "x": 92.304,
+   "y": 523.573,
+   "size": 10.08
+  },
+  {
+   "t": "替",
+   "x": 125.064,
+   "y": 523.573,
+   "size": 10.08
+  },
+  {
+   "t": "装",
+   "x": 157.824,
+   "y": 523.573,
+   "size": 10.08
+  },
+  {
+   "t": "置",
+   "x": 190.584,
+   "y": 523.573,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 81.821,
+   "y": 508.808,
+   "size": 10.08
+  },
+  {
+   "t": "充",
+   "x": 92.304,
+   "y": 508.808,
+   "size": 10.08
+  },
+  {
+   "t": "電",
+   "x": 125.064,
+   "y": 508.808,
+   "size": 10.08
+  },
+  {
+   "t": "装",
+   "x": 157.824,
+   "y": 508.808,
+   "size": 10.08
+  },
+  {
+   "t": "置",
+   "x": 190.584,
+   "y": 508.808,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 81.821,
+   "y": 494.396,
+   "size": 10.08
+  },
+  {
+   "t": "結",
+   "x": 92.304,
+   "y": 494.396,
+   "size": 10.08
+  },
+  {
+   "t": "線",
+   "x": 125.064,
+   "y": 494.396,
+   "size": 10.08
+  },
+  {
+   "t": "接",
+   "x": 157.824,
+   "y": 494.396,
+   "size": 10.08
+  },
+  {
+   "t": "続",
+   "x": 190.584,
+   "y": 494.396,
+   "size": 10.08
+  },
+  {
+   "t": "受",
+   "x": 41.659,
+   "y": 413.363,
+   "size": 10.08
+  },
+  {
+   "t": "信",
+   "x": 41.659,
+   "y": 384.534,
+   "size": 10.08
+  },
+  {
+   "t": "機",
+   "x": 41.659,
+   "y": 355.403,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 41.659,
+   "y": 326.271,
+   "size": 10.08
+  },
+  {
+   "t": "中",
+   "x": 41.659,
+   "y": 297.039,
+   "size": 10.08
+  },
+  {
+   "t": "継",
+   "x": 41.659,
+   "y": 267.908,
+   "size": 10.08
+  },
+  {
+   "t": "器",
+   "x": 41.659,
+   "y": 239.079,
+   "size": 10.08
+  },
+  {
+   "t": "周",
+   "x": 62.409,
+   "y": 479.631,
+   "size": 10.08
+  },
+  {
+   "t": "囲",
+   "x": 94.464,
+   "y": 479.631,
+   "size": 10.08
+  },
+  {
+   "t": "の",
+   "x": 126.518,
+   "y": 479.631,
+   "size": 10.08
+  },
+  {
+   "t": "状",
+   "x": 158.573,
+   "y": 479.631,
+   "size": 10.08
+  },
+  {
+   "t": "況",
+   "x": 190.526,
+   "y": 479.631,
+   "size": 10.08
+  },
+  {
+   "t": "外",
+   "x": 62.409,
+   "y": 464.865,
+   "size": 10.08
+  },
+  {
+   "t": "形",
+   "x": 190.526,
+   "y": 464.865,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 62.409,
+   "y": 450.493,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 190.526,
+   "y": 450.493,
+   "size": 10.08
+  },
+  {
+   "t": "警",
+   "x": 62.409,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "戒",
+   "x": 78.235,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "区",
+   "x": 94.464,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "域",
+   "x": 110.289,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "の",
+   "x": 126.518,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 142.344,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 158.573,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "装",
+   "x": 174.398,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "置",
+   "x": 190.526,
+   "y": 435.728,
+   "size": 10.08
+  },
+  {
+   "t": "電",
+   "x": 62.409,
+   "y": 421.316,
+   "size": 10.08
+  },
+  {
+   "t": "圧",
+   "x": 126.518,
+   "y": 421.316,
+   "size": 10.08
+  },
+  {
+   "t": "計",
+   "x": 190.526,
+   "y": 421.316,
+   "size": 10.08
+  },
+  {
+   "t": "ス",
+   "x": 62.409,
+   "y": 406.551,
+   "size": 10.08
+  },
+  {
+   "t": "イ",
+   "x": 94.464,
+   "y": 406.551,
+   "size": 10.08
+  },
+  {
+   "t": "ッ",
+   "x": 126.518,
+   "y": 406.551,
+   "size": 10.08
+  },
+  {
+   "t": "チ",
+   "x": 158.573,
+   "y": 406.551,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 190.526,
+   "y": 406.551,
+   "size": 10.08
+  },
+  {
+   "t": "ヒ",
+   "x": 62.409,
+   "y": 391.785,
+   "size": 10.08
+  },
+  {
+   "t": "ュ",
+   "x": 94.464,
+   "y": 391.785,
+   "size": 10.08
+  },
+  {
+   "t": "ー",
+   "x": 126.518,
+   "y": 391.785,
+   "size": 10.08
+  },
+  {
+   "t": "ズ",
+   "x": 158.573,
+   "y": 391.785,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 190.526,
+   "y": 391.785,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 61.661,
+   "y": 377.413,
+   "size": 10.08
+  },
+  {
+   "t": "継",
+   "x": 72.144,
+   "y": 377.413,
+   "size": 10.08
+  },
+  {
+   "t": "電",
+   "x": 131.112,
+   "y": 377.413,
+   "size": 10.08
+  },
+  {
+   "t": "器",
+   "x": 190.584,
+   "y": 377.413,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 62.409,
+   "y": 362.648,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 126.518,
+   "y": 362.648,
+   "size": 10.08
+  },
+  {
+   "t": "灯",
+   "x": 190.526,
+   "y": 362.648,
+   "size": 10.08
+  },
+  {
+   "t": "通",
+   "x": 62.409,
+   "y": 347.882,
+   "size": 10.08
+  },
+  {
+   "t": "話",
+   "x": 104.846,
+   "y": 347.882,
+   "size": 10.08
+  },
+  {
+   "t": "装",
+   "x": 147.686,
+   "y": 347.882,
+   "size": 10.08
+  },
+  {
+   "t": "置",
+   "x": 190.224,
+   "y": 347.882,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 61.661,
+   "y": 333.471,
+   "size": 10.08
+  },
+  {
+   "t": "結",
+   "x": 72.144,
+   "y": 333.471,
+   "size": 10.08
+  },
+  {
+   "t": "線",
+   "x": 111.356,
+   "y": 333.471,
+   "size": 10.08
+  },
+  {
+   "t": "接",
+   "x": 150.97,
+   "y": 333.471,
+   "size": 10.08
+  },
+  {
+   "t": "続",
+   "x": 190.181,
+   "y": 333.471,
+   "size": 10.08
+  },
+  {
+   "t": "接",
+   "x": 62.409,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "地",
+   "x": 190.526,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "附",
+   "x": 62.409,
+   "y": 304.333,
+   "size": 10.08
+  },
+  {
+   "t": "属",
+   "x": 104.846,
+   "y": 304.333,
+   "size": 10.08
+  },
+  {
+   "t": "装",
+   "x": 147.686,
+   "y": 304.333,
+   "size": 10.08
+  },
+  {
+   "t": "置",
+   "x": 190.224,
+   "y": 304.333,
+   "size": 10.08
+  },
+  {
+   "t": "火",
+   "x": 72.844,
+   "y": 267.596,
+   "size": 10.08
+  },
+  {
+   "t": "災",
+   "x": 84.738,
+   "y": 267.596,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 96.633,
+   "y": 267.596,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 108.527,
+   "y": 267.596,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 120.724,
+   "y": 267.596,
+   "size": 10.08
+  },
+  {
+   "t": "蓄",
+   "x": 141.947,
+   "y": 289.568,
+   "size": 10.08
+  },
+  {
+   "t": "積",
+   "x": 166.038,
+   "y": 289.568,
+   "size": 10.08
+  },
+  {
+   "t": "式",
+   "x": 190.532,
+   "y": 289.568,
+   "size": 10.08
+  },
+  {
+   "t": "ア",
+   "x": 141.947,
+   "y": 274.802,
+   "size": 10.08
+  },
+  {
+   "t": "ナ",
+   "x": 153.841,
+   "y": 274.802,
+   "size": 10.08
+  },
+  {
+   "t": "ロ",
+   "x": 166.038,
+   "y": 274.802,
+   "size": 10.08
+  },
+  {
+   "t": "グ",
+   "x": 178.336,
+   "y": 274.802,
+   "size": 10.08
+  },
+  {
+   "t": "式",
+   "x": 190.532,
+   "y": 274.802,
+   "size": 10.08
+  },
+  {
+   "t": "二",
+   "x": 141.947,
+   "y": 260.391,
+   "size": 10.08
+  },
+  {
+   "t": "信",
+   "x": 158.176,
+   "y": 260.391,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 174.304,
+   "y": 260.391,
+   "size": 10.08
+  },
+  {
+   "t": "式",
+   "x": 190.532,
+   "y": 260.391,
+   "size": 10.08
+  },
+  {
+   "t": "そ",
+   "x": 141.947,
+   "y": 245.625,
+   "size": 10.08
+  },
+  {
+   "t": "の",
+   "x": 166.038,
+   "y": 245.625,
+   "size": 10.08
+  },
+  {
+   "t": "他",
+   "x": 190.532,
+   "y": 245.625,
+   "size": 10.08
+  },
+  {
+   "t": "※",
+   "x": 61.661,
+   "y": 231.253,
+   "size": 10.08
+  },
+  {
+   "t": "注",
+   "x": 72.144,
+   "y": 231.253,
+   "size": 10.08
+  },
+  {
+   "t": "意",
+   "x": 111.356,
+   "y": 231.253,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 150.97,
+   "y": 231.253,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 190.181,
+   "y": 231.253,
+   "size": 10.08
+  },
+  {
+   "t": "回",
+   "x": 62.409,
+   "y": 216.488,
+   "size": 10.08
+  },
+  {
+   "t": "路",
+   "x": 104.846,
+   "y": 216.488,
+   "size": 10.08
+  },
+  {
+   "t": "導",
+   "x": 147.686,
+   "y": 216.488,
+   "size": 10.08
+  },
+  {
+   "t": "通",
+   "x": 190.224,
+   "y": 216.488,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 62.409,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "定",
+   "x": 83.678,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 104.846,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 126.518,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "温",
+   "x": 147.686,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "度",
+   "x": 168.955,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 190.526,
+   "y": 201.722,
+   "size": 10.08
+  },
+  {
+   "t": "感",
+   "x": 62.409,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "知",
+   "x": 78.235,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "器",
+   "x": 94.464,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "作",
+   "x": 110.289,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "動",
+   "x": 126.518,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 142.344,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "の",
+   "x": 158.573,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "表",
+   "x": 174.398,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "示",
+   "x": 190.526,
+   "y": 187.311,
+   "size": 10.08
+  },
+  {
+   "t": "予",
+   "x": 62.409,
+   "y": 172.545,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 104.846,
+   "y": 172.545,
+   "size": 10.08
+  },
+  {
+   "t": "品",
+   "x": 147.686,
+   "y": 172.545,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 190.224,
+   "y": 172.545,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 36.112,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "考",
+   "x": 45.53,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "１",
+   "x": 64.97,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 83.978,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 93.741,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "用",
+   "x": 103.418,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "紙",
+   "x": 113.181,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 122.858,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "大",
+   "x": 132.276,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "き",
+   "x": 141.952,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "さ",
+   "x": 151.716,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 161.392,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 171.156,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "日",
+   "x": 180.487,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "本",
+   "x": 190.25,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "産",
+   "x": 199.927,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "業",
+   "x": 209.69,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "規",
+   "x": 219.367,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "格",
+   "x": 228.698,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "Ａ",
+   "x": 238.461,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "４",
+   "x": 248.138,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 257.901,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 267.578,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 276.996,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 286.672,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 296.436,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 306.112,
+   "y": 154.791,
+   "size": 9.0
+  },
+  {
+   "t": "２",
+   "x": 64.97,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 83.978,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "別",
+   "x": 93.741,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "・",
+   "x": 103.418,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "容",
+   "x": 113.181,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "量",
+   "x": 122.858,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "等",
+   "x": 132.276,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 141.952,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "内",
+   "x": 151.716,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "容",
+   "x": 161.392,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 171.156,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 180.487,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 190.25,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "該",
+   "x": 199.927,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "当",
+   "x": 209.69,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 219.367,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 228.698,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "も",
+   "x": 238.461,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 248.138,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 257.901,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "つ",
+   "x": 267.578,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "い",
+   "x": 276.996,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "て",
+   "x": 286.672,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 296.436,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "入",
+   "x": 306.112,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 315.876,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 325.207,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 334.97,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 344.647,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 354.41,
+   "y": 142.205,
+   "size": 9.0
+  },
+  {
+   "t": "３",
+   "x": 64.97,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "判",
+   "x": 83.978,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "定",
+   "x": 93.741,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 103.418,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 113.181,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 122.858,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "正",
+   "x": 132.276,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "常",
+   "x": 141.952,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 151.716,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "場",
+   "x": 161.392,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "合",
+   "x": 171.156,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 180.487,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "○",
+   "x": 190.25,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "印",
+   "x": 199.927,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 209.69,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "不",
+   "x": 219.367,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "良",
+   "x": 228.698,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 238.461,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "場",
+   "x": 248.138,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "合",
+   "x": 257.901,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 267.578,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "×",
+   "x": 276.996,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "印",
+   "x": 286.672,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 296.436,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 306.112,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "入",
+   "x": 315.876,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "し",
+   "x": 325.207,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 334.97,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "不",
+   "x": 344.647,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "良",
+   "x": 354.41,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "内",
+   "x": 364.087,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "容",
+   "x": 373.418,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 383.181,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 392.858,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "そ",
+   "x": 402.621,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 412.298,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "内",
+   "x": 421.716,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "容",
+   "x": 431.392,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 441.156,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 450.832,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "入",
+   "x": 460.596,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 469.927,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 479.69,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 489.367,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 499.13,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 508.807,
+   "y": 129.584,
+   "size": 9.0
+  },
+  {
+   "t": "４",
+   "x": 64.97,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "選",
+   "x": 83.978,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "択",
+   "x": 93.741,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "肢",
+   "x": 103.418,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 113.181,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "あ",
+   "x": 122.858,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 132.276,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 141.952,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 151.716,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 161.392,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "該",
+   "x": 171.156,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "当",
+   "x": 180.487,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "事",
+   "x": 190.25,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "項",
+   "x": 199.927,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 209.69,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "○",
+   "x": 219.367,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "印",
+   "x": 228.698,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 238.461,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 248.138,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 257.901,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 267.578,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 276.996,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 286.672,
+   "y": 116.998,
+   "size": 9.0
+  },
+  {
+   "t": "５",
+   "x": 64.97,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "措",
+   "x": 83.978,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "置",
+   "x": 93.741,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "内",
+   "x": 103.418,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "容",
+   "x": 113.181,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 122.858,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 132.276,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 141.952,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 151.716,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "点",
+   "x": 161.392,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "検",
+   "x": 171.156,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 180.487,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "際",
+   "x": 190.25,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "措",
+   "x": 199.927,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "置",
+   "x": 209.69,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "し",
+   "x": 219.367,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "た",
+   "x": 228.698,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "内",
+   "x": 238.461,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "容",
+   "x": 248.138,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 257.901,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 267.578,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "入",
+   "x": 276.996,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 286.672,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 296.436,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 306.112,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 315.876,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 325.207,
+   "y": 104.412,
+   "size": 9.0
+  },
+  {
+   "t": "６",
+   "x": 64.97,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "票",
+   "x": 83.978,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "中",
+   "x": 93.741,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "※",
+   "x": 103.418,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "印",
+   "x": 113.181,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 122.858,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 132.276,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 141.952,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 151.716,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "自",
+   "x": 161.392,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "動",
+   "x": 171.156,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "試",
+   "x": 180.487,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "験",
+   "x": 190.25,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "機",
+   "x": 199.927,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "能",
+   "x": 209.69,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 219.367,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "有",
+   "x": 228.698,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 238.461,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 248.138,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "も",
+   "x": 257.901,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 267.578,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 276.996,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "あ",
+   "x": 286.672,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "っ",
+   "x": 296.436,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "て",
+   "x": 306.112,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 315.876,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 325.207,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "入",
+   "x": 334.97,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "不",
+   "x": 344.647,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "要",
+   "x": 354.41,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 364.087,
+   "y": 91.791,
+   "size": 9.0
+  },
+  {
+   "t": "※",
+   "x": 61.661,
+   "y": 267.596,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 252.473,
+   "y": 626.539,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 291.326,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 328.118,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 364.809,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "～",
+   "x": 374.889,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 432.144,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 468.835,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 505.929,
+   "y": 705.013,
+   "size": 10.08
+  },
+  {
+   "t": "社",
+   "x": 251.764,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 261.844,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "Ｔ",
+   "x": 409.415,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "Ｅ",
+   "x": 419.495,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "Ｌ",
+   "x": 429.575,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "氏",
+   "x": 93.712,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 103.792,
+   "y": 690.248,
+   "size": 10.08
+  },
+  {
+   "t": "住",
+   "x": 251.764,
+   "y": 667.568,
+   "size": 10.08
+  },
+  {
+   "t": "所",
+   "x": 261.844,
+   "y": 667.568,
+   "size": 10.08
+  },
+  {
+   "t": "Ｖ",
+   "x": 300.356,
+   "y": 537.945,
+   "size": 10.08
+  },
+  {
+   "t": "Ｖ",
+   "x": 300.398,
+   "y": 421.316,
+   "size": 10.08
+  },
+  {
+   "t": "Ａ",
+   "x": 300.398,
+   "y": 391.785,
+   "size": 10.08
+  }
+ ],
+ "fixed_text_vocabulary": [
+  "別記様式第11（その１）",
+  "自動火災報知設備点検票",
+  "防火",
+  "名称",
+  "管理者",
+  "所在立会者",
+  "点検種別機器・総合点検年月日年月日～年月日",
+  "氏名社名ＴＥＬ",
+  "点検者",
+  "点検者",
+  "住所",
+  "所属会社",
+  "点検製造者名",
+  "受信機",
+  "設備名",
+  "型式等受第",
+  "点検結果",
+  "措置内容",
+  "点検項目",
+  "種別・容量等の内容判定不良内容",
+  "機器点検",
+  "予",
+  "外形",
+  "備",
+  "表示",
+  "電（",
+  "源",
+  "内",
+  "※端子電圧Ｖ",
+  "・",
+  "蔵",
+  "※切替装置",
+  "非",
+  "型",
+  "常",
+  "）",
+  "※充電装置",
+  "電",
+  "源",
+  "※結線接続",
+  "周囲の状況",
+  "外形",
+  "表示",
+  "警戒区域の表示装置",
+  "電圧計Ｖ",
+  "受",
+  "スイッチ類",
+  "ヒューズ類Ａ",
+  "信",
+  "※継電器",
+  "表示灯",
+  "機",
+  "通話装置",
+  "※結線接続",
+  "・",
+  "接地",
+  "附属装置",
+  "中",
+  "蓄積式",
+  "アナログ式",
+  "継※火災表示等",
+  "二信号式",
+  "その他",
+  "器",
+  "※注意表示",
+  "回路導通",
+  "設定表示温度等",
+  "感知器作動等の表示",
+  "予備品等",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２種別・容量等の内容欄は、該当するものについて記入すること。",
+  "３判定欄は、正常の場合は○印、不良の場合は×印を記入し、不良内容欄にその内容を記入すること。",
+  "４選択肢のある欄は、該当事項に○印を付すこと。",
+  "５措置内容欄には、点検の際措置した内容を記入すること。",
+  "６票中※印の欄は、自動試験機能を有するものにあっては記入不要。"
+ ]
+}

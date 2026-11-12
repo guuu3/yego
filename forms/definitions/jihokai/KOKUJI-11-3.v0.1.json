@@ -1,0 +1,1357 @@
+{
+ "form_id": "KOKUJI-11-3",
+ "title": "自動火災報知設備点検票（その３）",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第11（その3）",
+ "family": "設備様式",
+ "equipment": "自動火災報知設備",
+ "links": [],
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決）",
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "$comment": "自動火災報知設備点検票（その３）の帳票定義。初版。原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fields": [
+  {
+   "id": "auto_battery_content",
+   "label": "自動試験機能 予備電源・非常電源 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_battery_judge",
+   "label": "自動試験機能 予備電源・非常電源 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_battery_defect",
+   "label": "自動試験機能 予備電源・非常電源 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_battery_action",
+   "label": "自動試験機能 予備電源・非常電源 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_fire_display_content",
+   "label": "自動試験機能 受信機の火災表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_fire_display_judge",
+   "label": "自動試験機能 受信機の火災表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_fire_display_defect",
+   "label": "自動試験機能 受信機の火災表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_fire_display_action",
+   "label": "自動試験機能 受信機の火災表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_caution_display_content",
+   "label": "自動試験機能 受信機の注意表示 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_caution_display_judge",
+   "label": "自動試験機能 受信機の注意表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_caution_display_defect",
+   "label": "自動試験機能 受信機の注意表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_caution_display_action",
+   "label": "自動試験機能 受信機の注意表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_control_content",
+   "label": "自動試験機能 受信機・中継器の制御機能・電路 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_control_judge",
+   "label": "自動試験機能 受信機・中継器の制御機能・電路 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_control_defect",
+   "label": "自動試験機能 受信機・中継器の制御機能・電路 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_control_action",
+   "label": "自動試験機能 受信機・中継器の制御機能・電路 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_detector_content",
+   "label": "自動試験機能 感知器 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_detector_judge",
+   "label": "自動試験機能 感知器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_detector_defect",
+   "label": "自動試験機能 感知器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_detector_action",
+   "label": "自動試験機能 感知器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_circuit_content",
+   "label": "自動試験機能 感知器回路・ベル回路 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_circuit_judge",
+   "label": "自動試験機能 感知器回路・ベル回路 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_circuit_defect",
+   "label": "自動試験機能 感知器回路・ベル回路 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_circuit_action",
+   "label": "自動試験機能 感知器回路・ベル回路 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_wireless_content",
+   "label": "自動試験機能 無線機能 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_wireless_judge",
+   "label": "自動試験機能 無線機能 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_wireless_defect",
+   "label": "自動試験機能 無線機能 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "auto_wireless_action",
+   "label": "自動試験機能 無線機能 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_simultaneous_content",
+   "label": "総合点検 同時作動 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_simultaneous_judge",
+   "label": "総合点検 同時作動 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_simultaneous_defect",
+   "label": "総合点検 同時作動 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_simultaneous_action",
+   "label": "総合点検 同時作動 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sensitivity_content",
+   "label": "総合点検 ※煙感知器等の感度 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sensitivity_judge",
+   "label": "総合点検 ※煙感知器等の感度 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sensitivity_defect",
+   "label": "総合点検 ※煙感知器等の感度 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sensitivity_action",
+   "label": "総合点検 ※煙感知器等の感度 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sound_pressure_content",
+   "label": "総合点検 地区音響装置の音圧 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sound_pressure_judge",
+   "label": "総合点検 地区音響装置の音圧 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sound_pressure_defect",
+   "label": "総合点検 地区音響装置の音圧 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_sound_pressure_action",
+   "label": "総合点検 地区音響装置の音圧 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_overall_content",
+   "label": "総合点検 ※総合作動 内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_overall_judge",
+   "label": "総合点検 ※総合作動 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×",
+    "／"
+   ],
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "様式の備考3: 正常は○印、不良は×印。／は該当なし（備考6: ※印の欄は自動試験機能を有するものは記入不要で、実帳票では／が記入される)",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_overall_defect",
+   "label": "総合点検 ※総合作動 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "comp_overall_action",
+   "label": "総合点検 ※総合作動 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "remarks",
+   "label": "備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 13,
+    "max_chars_per_line": 47
+   },
+   "rect": null,
+   "note": "備考欄の実寸は 477.36×190.08pt。実帳票の記入は最大1行（42件で観測）。容量は欄の実寸から設定（10.08pt、行高14.04pt で13行、1行47字）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1L_name",
+   "label": "測定機器 1行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1L_model",
+   "label": "測定機器 1行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1L_calib",
+   "label": "測定機器 1行目左 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1L_maker",
+   "label": "測定機器 1行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1R_name",
+   "label": "測定機器 1行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1R_model",
+   "label": "測定機器 1行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1R_calib",
+   "label": "測定機器 1行目右 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter1R_maker",
+   "label": "測定機器 1行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2L_name",
+   "label": "測定機器 2行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2L_model",
+   "label": "測定機器 2行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2L_calib",
+   "label": "測定機器 2行目左 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2L_maker",
+   "label": "測定機器 2行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2R_name",
+   "label": "測定機器 2行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2R_model",
+   "label": "測定機器 2行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2R_calib",
+   "label": "測定機器 2行目右 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter2R_maker",
+   "label": "測定機器 2行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3L_name",
+   "label": "測定機器 3行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3L_model",
+   "label": "測定機器 3行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3L_calib",
+   "label": "測定機器 3行目左 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3L_maker",
+   "label": "測定機器 3行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3R_name",
+   "label": "測定機器 3行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3R_model",
+   "label": "測定機器 3行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3R_calib",
+   "label": "測定機器 3行目右 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter3R_maker",
+   "label": "測定機器 3行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4L_name",
+   "label": "測定機器 4行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4L_model",
+   "label": "測定機器 4行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4L_calib",
+   "label": "測定機器 4行目左 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4L_maker",
+   "label": "測定機器 4行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4R_name",
+   "label": "測定機器 4行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4R_model",
+   "label": "測定機器 4行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4R_calib",
+   "label": "測定機器 4行目右 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter4R_maker",
+   "label": "測定機器 4行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5L_name",
+   "label": "測定機器 5行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5L_model",
+   "label": "測定機器 5行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5L_calib",
+   "label": "測定機器 5行目左 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5L_maker",
+   "label": "測定機器 5行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5R_name",
+   "label": "測定機器 5行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5R_model",
+   "label": "測定機器 5行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5R_calib",
+   "label": "測定機器 5行目右 校正年月日",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "meter5R_maker",
+   "label": "測定機器 5行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "機器名（加熱試験器・加煙試験器等）も記入値として扱う（消火器具その2 と同方式）。実帳票では長い型式等が小さい字（9.72〜6.12pt）で記入されることがある。formkit は縮小しない方針",
+   "coord_status": "未確定"
+  }
+ ],
+ "rules": [
+  {
+   "id": "auto_battery-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_battery_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_battery_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "auto_fire_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_fire_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_fire_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "auto_caution_display-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_caution_display_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_caution_display_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "auto_control-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_control_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_control_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "auto_detector-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_detector_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_detector_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "auto_circuit-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_circuit_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_circuit_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "auto_wireless-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "auto_wireless_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "auto_wireless_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "comp_simultaneous-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "comp_simultaneous_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "comp_simultaneous_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "comp_sensitivity-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "comp_sensitivity_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "comp_sensitivity_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "comp_sound_pressure-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "comp_sound_pressure_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "comp_sound_pressure_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "comp_overall-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "comp_overall_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "comp_overall_defect",
+   "reason": "判定が×（不良）のため、不良内容が必須（様式の備考3）"
+  }
+ ],
+ "not_fields": [
+  {
+   "label": "総合点検の見出し行",
+   "reason": "表の中の見出し行（y 588.72..614.64）。欄ではない"
+  },
+  {
+   "label": "頭の部分（名称・点検年月日等）",
+   "reason": "その3 には無い。その1 にのみある（原本で確認）"
+  }
+ ],
+ "open_questions": [
+  "測定機器表は5行×左右で全42件共通か（座標源・ホールドアウト2物件では一致）",
+  "判定の○・／は原本ではベクタ描画。その1 と同じ論点"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）。もちが様式と実記入から構築"
+  }
+ ],
+ "version": "0.1",
+ "page_size": null,
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "別記様式第11自動火災報知設備（その３）",
+  "予備電源・非常電源",
+  "自",
+  "受信機の火災表示",
+  "動",
+  "受信機の注意表示",
+  "試",
+  "験",
+  "受信機・中継器の制御機能・電路",
+  "機",
+  "感知器",
+  "能",
+  "感知器回路・ベル回路",
+  "無線機能",
+  "総合点検",
+  "同時作動",
+  "※煙感知器等の感度",
+  "地区音響装置の音圧",
+  "※総合作動",
+  "備",
+  "考",
+  "機器名型式校正年月日製造者名機器名型式校正年月日製造者名",
+  "測",
+  "定",
+  "機",
+  "器",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２種別・容量等の内容欄は、該当するものについて記入すること。",
+  "３判定欄は、正常の場合は○印、不良の場合は×印を記入し、不良内容欄にその内容を記入すること。",
+  "４選択肢のある欄は、該当事項に○印を付すこと。",
+  "５措置内容欄には、点検の際措置した内容を記入すること。",
+  "６自動試験機能を有するものにあっては、異常の発生状況、異常が発生した箇所の整備状況等を記録した",
+  "書類を添付すること。",
+  "７票中※印の欄は、自動試験機能を有するものにあっては記入不要。"
+ ],
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ]
+}

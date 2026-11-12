@@ -1,0 +1,23 @@
+{
+ "remarks": "ダミーの備考",
+ "auto_battery_judge": "○",
+ "auto_fire_display_judge": "○",
+ "auto_caution_display_judge": "○",
+ "auto_control_judge": "○",
+ "auto_detector_judge": "○",
+ "auto_circuit_judge": "○",
+ "auto_wireless_judge": "○",
+ "comp_simultaneous_judge": "○",
+ "comp_sensitivity_judge": "○",
+ "comp_sound_pressure_judge": "○",
+ "comp_overall_judge": "○",
+ "auto_battery_content": "DC 24V",
+ "meter1L_name": "加熱試験器",
+ "meter1L_model": "HK-3",
+ "meter1L_calib": "次期2031,8",
+ "meter1L_maker": "保守協会",
+ "meter1R_name": "加煙試験器",
+ "meter1R_model": "FT-000",
+ "meter1R_calib": "次期2033,12",
+ "meter1R_maker": "架空防災"
+}
