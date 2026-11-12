@@ -1,0 +1,2937 @@
+{
+ "form_id": "KOKUJI-01-2",
+ "title": "消火器具点検票（その２）",
+ "version": "0.1",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第1（その2）",
+ "family": "設備様式",
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決。観察は1物件のみ）",
+ "page_size": null,
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ],
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "lines": [],
+ "chars": [],
+ "links": [],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-12",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）"
+  }
+ ],
+ "$comment": "消火器具点検票（その２）の帳票定義 初版。座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fixed_text_vocabulary": [
+  "別記様式第１",
+  "消火器具（その２）",
+  "消火器の内部等・機能",
+  "本体容器・内筒等",
+  "消火薬剤",
+  "簡易消火用具",
+  "備考",
+  "測定機器",
+  "機器名",
+  "型式",
+  "校正年月日",
+  "製造者名",
+  "本体容器（内部）",
+  "内筒等",
+  "液面表示",
+  "消火薬剤 性状",
+  "消火薬剤量",
+  "加圧用ガス容器",
+  "カッター・押し金具",
+  "ホース（内部等）",
+  "開閉式ノズル・切替式ノズル",
+  "指示圧力計（内部等）",
+  "使用済みの表示装置（内部等）",
+  "圧力調整器（内部等）",
+  "安全弁・減圧孔（排圧栓を含む。）",
+  "粉上り防止用封板",
+  "パッキン",
+  "サイホン管・ガス導入管",
+  "ろ過網",
+  "放射能力",
+  "消火器の耐圧性能",
+  "簡易消火用具 外形",
+  "簡易消火用具 水量等",
+  "この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "消火器の種別欄は、該当するものについて記入すること。Ａは粉末消火器、Ｂは泡消火器、Ｃは強化液消火器、Ｄは二酸化炭素消火器、Ｅはハロゲン化物消火器、Ｆは水消火器をいう。",
+  "判定欄は、正常の場合は○印、不良の場合は不良個数を記入し、不良内容欄にその内容を記入すること。",
+  "選択肢のある欄は、該当事項に○印を付すこと。",
+  "措置内容欄には、点検の際措置した内容を記入すること。"
+ ],
+ "fields": [
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_kind_A",
+   "label": "本体容器（内部） 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_kind_B",
+   "label": "本体容器（内部） 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_kind_C",
+   "label": "本体容器（内部） 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_kind_D",
+   "label": "本体容器（内部） 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_kind_E",
+   "label": "本体容器（内部） 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_kind_F",
+   "label": "本体容器（内部） 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_judge",
+   "label": "本体容器（内部） 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_defect",
+   "label": "本体容器（内部） 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_body_action",
+   "label": "本体容器（内部） 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_kind_A",
+   "label": "内筒等 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_kind_B",
+   "label": "内筒等 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_kind_C",
+   "label": "内筒等 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_kind_D",
+   "label": "内筒等 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_kind_E",
+   "label": "内筒等 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_kind_F",
+   "label": "内筒等 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_judge",
+   "label": "内筒等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_defect",
+   "label": "内筒等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_inner_action",
+   "label": "内筒等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_kind_A",
+   "label": "液面表示 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_kind_B",
+   "label": "液面表示 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_kind_C",
+   "label": "液面表示 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_kind_D",
+   "label": "液面表示 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_kind_E",
+   "label": "液面表示 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_kind_F",
+   "label": "液面表示 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_judge",
+   "label": "液面表示 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_defect",
+   "label": "液面表示 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_level_action",
+   "label": "液面表示 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_kind_A",
+   "label": "消火薬剤 性状 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_kind_B",
+   "label": "消火薬剤 性状 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_kind_C",
+   "label": "消火薬剤 性状 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_kind_D",
+   "label": "消火薬剤 性状 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_kind_E",
+   "label": "消火薬剤 性状 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_kind_F",
+   "label": "消火薬剤 性状 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_judge",
+   "label": "消火薬剤 性状 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_defect",
+   "label": "消火薬剤 性状 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_state_action",
+   "label": "消火薬剤 性状 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_kind_A",
+   "label": "消火薬剤量 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_kind_B",
+   "label": "消火薬剤量 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_kind_C",
+   "label": "消火薬剤量 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_kind_D",
+   "label": "消火薬剤量 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_kind_E",
+   "label": "消火薬剤量 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_kind_F",
+   "label": "消火薬剤量 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_judge",
+   "label": "消火薬剤量 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_defect",
+   "label": "消火薬剤量 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "agent_amount_action",
+   "label": "消火薬剤量 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_kind_A",
+   "label": "加圧用ガス容器 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_kind_B",
+   "label": "加圧用ガス容器 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_kind_C",
+   "label": "加圧用ガス容器 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_kind_D",
+   "label": "加圧用ガス容器 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_kind_E",
+   "label": "加圧用ガス容器 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_kind_F",
+   "label": "加圧用ガス容器 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_judge",
+   "label": "加圧用ガス容器 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_defect",
+   "label": "加圧用ガス容器 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "gas_cylinder_action",
+   "label": "加圧用ガス容器 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_kind_A",
+   "label": "カッター・押し金具 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_kind_B",
+   "label": "カッター・押し金具 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_kind_C",
+   "label": "カッター・押し金具 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_kind_D",
+   "label": "カッター・押し金具 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_kind_E",
+   "label": "カッター・押し金具 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_kind_F",
+   "label": "カッター・押し金具 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_judge",
+   "label": "カッター・押し金具 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_defect",
+   "label": "カッター・押し金具 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "cutter_action",
+   "label": "カッター・押し金具 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_kind_A",
+   "label": "ホース（内部等） 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_kind_B",
+   "label": "ホース（内部等） 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_kind_C",
+   "label": "ホース（内部等） 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_kind_D",
+   "label": "ホース（内部等） 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_kind_E",
+   "label": "ホース（内部等） 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_kind_F",
+   "label": "ホース（内部等） 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_judge",
+   "label": "ホース（内部等） 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_defect",
+   "label": "ホース（内部等） 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_hose_action",
+   "label": "ホース（内部等） 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_kind_A",
+   "label": "開閉式ノズル・切替式ノズル 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_kind_B",
+   "label": "開閉式ノズル・切替式ノズル 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_kind_C",
+   "label": "開閉式ノズル・切替式ノズル 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_kind_D",
+   "label": "開閉式ノズル・切替式ノズル 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_kind_E",
+   "label": "開閉式ノズル・切替式ノズル 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_kind_F",
+   "label": "開閉式ノズル・切替式ノズル 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_judge",
+   "label": "開閉式ノズル・切替式ノズル 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_defect",
+   "label": "開閉式ノズル・切替式ノズル 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "open_nozzle_action",
+   "label": "開閉式ノズル・切替式ノズル 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_kind_A",
+   "label": "指示圧力計（内部等） 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_kind_B",
+   "label": "指示圧力計（内部等） 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_kind_C",
+   "label": "指示圧力計（内部等） 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_kind_D",
+   "label": "指示圧力計（内部等） 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_kind_E",
+   "label": "指示圧力計（内部等） 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_kind_F",
+   "label": "指示圧力計（内部等） 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_judge",
+   "label": "指示圧力計（内部等） 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_defect",
+   "label": "指示圧力計（内部等） 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_gauge_action",
+   "label": "指示圧力計（内部等） 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_kind_A",
+   "label": "使用済みの表示装置（内部等） 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_kind_B",
+   "label": "使用済みの表示装置（内部等） 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_kind_C",
+   "label": "使用済みの表示装置（内部等） 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_kind_D",
+   "label": "使用済みの表示装置（内部等） 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_kind_E",
+   "label": "使用済みの表示装置（内部等） 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_kind_F",
+   "label": "使用済みの表示装置（内部等） 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_judge",
+   "label": "使用済みの表示装置（内部等） 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_defect",
+   "label": "使用済みの表示装置（内部等） 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_used_indicator_action",
+   "label": "使用済みの表示装置（内部等） 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_kind_A",
+   "label": "圧力調整器（内部等） 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_kind_B",
+   "label": "圧力調整器（内部等） 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_kind_C",
+   "label": "圧力調整器（内部等） 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_kind_D",
+   "label": "圧力調整器（内部等） 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_kind_E",
+   "label": "圧力調整器（内部等） 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_kind_F",
+   "label": "圧力調整器（内部等） 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_judge",
+   "label": "圧力調整器（内部等） 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_defect",
+   "label": "圧力調整器（内部等） 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "int_regulator_action",
+   "label": "圧力調整器（内部等） 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_kind_A",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_kind_B",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_kind_C",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_kind_D",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_kind_E",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_kind_F",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_judge",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_defect",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "relief_action",
+   "label": "安全弁・減圧孔（排圧栓を含む。） 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_kind_A",
+   "label": "粉上り防止用封板 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_kind_B",
+   "label": "粉上り防止用封板 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_kind_C",
+   "label": "粉上り防止用封板 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_kind_D",
+   "label": "粉上り防止用封板 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_kind_E",
+   "label": "粉上り防止用封板 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_kind_F",
+   "label": "粉上り防止用封板 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_judge",
+   "label": "粉上り防止用封板 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_defect",
+   "label": "粉上り防止用封板 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "powder_seal_action",
+   "label": "粉上り防止用封板 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_kind_A",
+   "label": "パッキン 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_kind_B",
+   "label": "パッキン 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_kind_C",
+   "label": "パッキン 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_kind_D",
+   "label": "パッキン 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_kind_E",
+   "label": "パッキン 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_kind_F",
+   "label": "パッキン 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_judge",
+   "label": "パッキン 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_defect",
+   "label": "パッキン 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "packing_action",
+   "label": "パッキン 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_kind_A",
+   "label": "サイホン管・ガス導入管 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_kind_B",
+   "label": "サイホン管・ガス導入管 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_kind_C",
+   "label": "サイホン管・ガス導入管 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_kind_D",
+   "label": "サイホン管・ガス導入管 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_kind_E",
+   "label": "サイホン管・ガス導入管 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_kind_F",
+   "label": "サイホン管・ガス導入管 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_judge",
+   "label": "サイホン管・ガス導入管 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_defect",
+   "label": "サイホン管・ガス導入管 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "siphon_action",
+   "label": "サイホン管・ガス導入管 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_kind_A",
+   "label": "ろ過網 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_kind_B",
+   "label": "ろ過網 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_kind_C",
+   "label": "ろ過網 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_kind_D",
+   "label": "ろ過網 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_kind_E",
+   "label": "ろ過網 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_kind_F",
+   "label": "ろ過網 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_judge",
+   "label": "ろ過網 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_defect",
+   "label": "ろ過網 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "strainer_action",
+   "label": "ろ過網 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_kind_A",
+   "label": "放射能力 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_kind_B",
+   "label": "放射能力 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_kind_C",
+   "label": "放射能力 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_kind_D",
+   "label": "放射能力 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_kind_E",
+   "label": "放射能力 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_kind_F",
+   "label": "放射能力 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_judge",
+   "label": "放射能力 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_defect",
+   "label": "放射能力 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "discharge_action",
+   "label": "放射能力 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_kind_A",
+   "label": "消火器の耐圧性能 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_kind_B",
+   "label": "消火器の耐圧性能 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_kind_C",
+   "label": "消火器の耐圧性能 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_kind_D",
+   "label": "消火器の耐圧性能 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_kind_E",
+   "label": "消火器の耐圧性能 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_kind_F",
+   "label": "消火器の耐圧性能 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_judge",
+   "label": "消火器の耐圧性能 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_defect",
+   "label": "消火器の耐圧性能 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "pressure_test_action",
+   "label": "消火器の耐圧性能 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_kind_A",
+   "label": "簡易消火用具 外形 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_kind_B",
+   "label": "簡易消火用具 外形 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_kind_C",
+   "label": "簡易消火用具 外形 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_kind_D",
+   "label": "簡易消火用具 外形 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_kind_E",
+   "label": "簡易消火用具 外形 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_kind_F",
+   "label": "簡易消火用具 外形 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_judge",
+   "label": "簡易消火用具 外形 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_defect",
+   "label": "簡易消火用具 外形 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_exterior_action",
+   "label": "簡易消火用具 外形 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_kind_A",
+   "label": "簡易消火用具 水量等 種別A（粉末消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_kind_B",
+   "label": "簡易消火用具 水量等 種別B（泡消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_kind_C",
+   "label": "簡易消火用具 水量等 種別C（強化液消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_kind_D",
+   "label": "簡易消火用具 水量等 種別D（二酸化炭素消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_kind_E",
+   "label": "簡易消火用具 水量等 種別E（ハロゲン化物消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_kind_F",
+   "label": "簡易消火用具 水量等 種別F（水消火器）",
+   "input_type": "記号",
+   "layer": "L3",
+   "allowed": [
+    "○"
+   ],
+   "source": "点検ごとに入力（設置されている種別に○）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_judge",
+   "label": "簡易消火用具 水量等 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "／"
+   ],
+   "allowed_count": {
+    "min": 1,
+    "max": 999
+   },
+   "note": "様式の備考3：正常は○、不良は不良個数を記入。「／」（該当なし）を許すかは実帳票で要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_defect",
+   "label": "簡易消火用具 水量等 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "simple_water_action",
+   "label": "簡易消火用具 水量等 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   },
+   "note": "措置内容は空欄を原則とする（Gate A Q10）"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "remarks",
+   "label": "備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": null,
+    "max_chars_per_line": null
+   },
+   "note": "実帳票では、未確認の理由（例：客先都合により未確認）や器種別の集計（設置数・点検数・合格数・要修理数・廃棄数）がここに書かれている。集計は点検結果から自動で作れる（手入力にしない）候補。容量は原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1L_name",
+   "label": "測定機器 1行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1L_model",
+   "label": "測定機器 1行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1L_calib",
+   "label": "測定機器 1行目左 校正年月日",
+   "input_type": "日付",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1L_maker",
+   "label": "測定機器 1行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1R_name",
+   "label": "測定機器 1行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1R_model",
+   "label": "測定機器 1行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1R_calib",
+   "label": "測定機器 1行目右 校正年月日",
+   "input_type": "日付",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter1R_maker",
+   "label": "測定機器 1行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2L_name",
+   "label": "測定機器 2行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2L_model",
+   "label": "測定機器 2行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2L_calib",
+   "label": "測定機器 2行目左 校正年月日",
+   "input_type": "日付",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2L_maker",
+   "label": "測定機器 2行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2R_name",
+   "label": "測定機器 2行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2R_model",
+   "label": "測定機器 2行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2R_calib",
+   "label": "測定機器 2行目右 校正年月日",
+   "input_type": "日付",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter2R_maker",
+   "label": "測定機器 2行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3L_name",
+   "label": "測定機器 3行目左 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3L_model",
+   "label": "測定機器 3行目左 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3L_calib",
+   "label": "測定機器 3行目左 校正年月日",
+   "input_type": "日付",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3L_maker",
+   "label": "測定機器 3行目左 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3R_name",
+   "label": "測定機器 3行目右 機器名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3R_model",
+   "label": "測定機器 3行目右 型式",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3R_calib",
+   "label": "測定機器 3行目右 校正年月日",
+   "input_type": "日付",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "meter3R_maker",
+   "label": "測定機器 3行目右 製造者名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "自社の測定機器台帳",
+   "note": "行数（3行×左右）は仮。原本で実測する"
+  }
+ ],
+ "rules": [
+  {
+   "id": "int_body-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_body_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_body_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "int_inner-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_inner_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_inner_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "int_level-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_level_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_level_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "agent_state-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "agent_state_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "agent_state_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "agent_amount-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "agent_amount_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "agent_amount_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "gas_cylinder-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "gas_cylinder_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "gas_cylinder_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "cutter-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "cutter_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "cutter_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "int_hose-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_hose_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_hose_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "open_nozzle-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "open_nozzle_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "open_nozzle_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "int_gauge-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_gauge_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_gauge_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "int_used_indicator-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_used_indicator_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_used_indicator_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "int_regulator-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "int_regulator_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "int_regulator_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "relief-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "relief_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "relief_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "powder_seal-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "powder_seal_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "powder_seal_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "packing-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "packing_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "packing_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "siphon-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "siphon_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "siphon_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "strainer-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "strainer_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "strainer_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "discharge-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "discharge_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "discharge_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "pressure_test-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "pressure_test_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "pressure_test_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "simple_exterior-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "simple_exterior_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "simple_exterior_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  },
+  {
+   "id": "simple_water-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "simple_water_judge",
+    "in": [],
+    "count": true
+   },
+   "then": "simple_water_defect",
+   "reason": "不良個数が記入されたため、不良内容が必須（様式の備考3）"
+  }
+ ],
+ "equipment": "消火器具",
+ "open_questions": [
+  "その2 に頭の部分（名称・点検年月日など）があるか",
+  "備考欄の器種別集計を自動生成にするか（議題に出す）"
+ ]
+}

@@ -135,6 +135,60 @@ def run_package(outdir: str, rows: list):
     _run_case("P11 編集できる欄にリンク", "作成するが注意を記録（欄の編集を優先）", f"{rr['links'][0]['status']}", "注意" in rr["links"][0]["status"], rows)
 
 
+def run_rules(outdir: str, rows: list, d2: dict, data: dict):
+    """判定（個数）・連動ルール・未確認の数え方・判定保留・完了可否の試験。"""
+    p = lambda n: os.path.join(outdir, n)
+    d = copy.deepcopy(d2)
+    j1 = next(f for f in d["fields"] if f["id"] == "judge_1"); j1.update(judgment=True, allowed_count={"min": 1, "max": 99})
+    j2 = next(f for f in d["fields"] if f["id"] == "judge_2"); j2.update(judgment=True)
+    next(f for f in d["fields"] if f["id"] == "usage")["allowed_pending"] = ["（6）項ロ・（施設名で記入）"]
+    d["rules"] = [
+        {"id": "j1-defect", "kind": "required_if", "if": {"field": "judge_1", "in": ["×"], "count": True}, "then": "remarks",
+         "reason": "不良個数が記入されたため、不良内容が必須"},
+        {"id": "j2-unconf", "kind": "unconfirmed_if", "field": "judge_2", "marker_field": "remarks", "contains": "未確認",
+         "reason": "未確認として数える", "conflict_reason": "未確認なのに判定が入っている"}]
+    assert not fk.validate_definition(d), fk.validate_definition(d)
+
+    def gen(name, **over):
+        return fk.generate(d, dict(data, **over), p(name))
+
+    r = gen("r-a12.pdf", judge_1="3", remarks="消火器3本 圧力低下（ダミー）")
+    w = (PdfReader(p("r-a12.pdf")).get_fields() or {}).get("judge_1", {})
+    _run_case("A12 判定欄に不良個数（正常は○、不良は個数）", "受け付ける・個数入力可・不良として数える",
+              f"issues {[x for x in r['value_issues'] if x['id'] == 'judge_1']} V {w.get('/V')!r} Edit {bool(int(w.get('/Ff', 0)) & (1 << 18))} 集計 {r['judgments']}",
+              not r["value_issues"] and w.get("/V") == "3" and int(w.get("/Ff", 0)) & (1 << 18) and r["judgments"]["不良"] == 2 and r["finalizable"], rows)
+    r = gen("r-a13.pdf", judge_1="0", remarks="ダミー")
+    _run_case("A13 判定欄に個数の範囲外（0）", "許容値外として記録", f"{[x['issues'] for x in r['value_issues']]}",
+              any(x["id"] == "judge_1" for x in r["value_issues"]), rows)
+    r = gen("r-r1.pdf", judge_1="2", remarks="")
+    _run_case("R1 不良個数ありで不良内容が空", "ルール違反を理由の文言つきで記録し、完了不可", f"{r['rule_issues']} finalizable {r['finalizable']}",
+              r["rule_issues"] and r["rule_issues"][0]["reason"].startswith("不良個数") and not r["finalizable"], rows)
+    r = gen("r-r2.pdf", judge_1="○", judge_2="", remarks="2階 客先都合により未確認（ダミー）")
+    _run_case("R2 未確認の数え方", "合格1・未確認1（未確認を合格に含めない）", f"{r['judgments']} issues {r['rule_issues']}",
+              r["judgments"]["合格"] == 1 and r["judgments"]["未確認"] == 1 and not r["rule_issues"], rows)
+    r = gen("r-r3.pdf", judge_1="○", judge_2="○", remarks="客先都合により未確認（ダミー）")
+    _run_case("R3 未確認なのに判定あり", "矛盾として記録し、完了不可", f"{r['rule_issues']} finalizable {r['finalizable']}",
+              any(x["field"] == "judge_2" for x in r["rule_issues"]) and not r["finalizable"], rows)
+    r = gen("r-r4.pdf", judge_1="", judge_2="")
+    _run_case("R4 判定が空欄", "未入力として数え、合格に含めない", f"{r['judgments']}", r["judgments"]["未入力"] == 2 and r["judgments"]["合格"] == 0, rows)
+    r = gen("r-h1.pdf", usage="（6）項ロ・（施設名で記入）")
+    v = (PdfReader(p("r-h1.pdf")).get_fields() or {}).get("usage", {}).get("/V")
+    _run_case("H1 暫定の用途区分（allowed_pending）", "判定保留として記録・値は入れない・完了不可", f"holds {r['holds']} V {v!r} finalizable {r['finalizable']}",
+              r["holds"] and not v and not r["finalizable"], rows)
+    bad = copy.deepcopy(d); bad["rules"].append({"id": "x", "kind": "required_if", "if": {"field": "nope"}, "then": "remarks"})
+    errs = fk.validate_definition(bad)
+    _run_case("V1 ルールの形式チェック", "存在しない欄と理由の文言の欠落を検出", f"{errs}",
+              any("存在しない欄" in e for e in errs) and any("reason" in e for e in errs), rows)
+    sk = os.path.join(REPO, "forms", "definitions", "shokaki")
+    res = []
+    for n in sorted(os.listdir(sk)):
+        dd = fk.load(os.path.join(sk, n)); dd["page_size"] = [595, 842]
+        rr = fk.generate(dd, {}, p("r-s1.pdf"))
+        res.append((n, rr["fields_created"], len(rr["fields_skipped"]), rr["finalizable"]))
+    _run_case("S1 消火器具の型 v0.1（座標未確定）", "欄を1つも作らず、全欄を理由つきで記録、完了不可", f"{res}",
+              all(c == 0 and sk_n > 100 and not fin for _, c, sk_n, fin in res), rows)
+
+
 def run(outdir: str) -> int:
     os.makedirs(outdir, exist_ok=True)
     defn = fk.load(DUMMY_DEF)
@@ -232,6 +286,7 @@ def run(outdir: str) -> int:
     _run_case("A11 欄の値が描画されない", "描画の無い欄を検出", f"検出 {len(blank)} 欄", len(blank) >= 10, rows)
 
     run_package(outdir, rows)
+    run_rules(outdir, rows, d2, data)
 
     with open(p("selftest-results.csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=["case", "expect", "observed", "result"]); w.writeheader(); w.writerows(rows)

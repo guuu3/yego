@@ -3,6 +3,17 @@
   "fields_created": 12,
   "fields_skipped": [],
   "value_issues": [],
+  "holds": [],
+  "rule_issues": [],
+  "judgments": {
+   "合格": 0,
+   "不良": 0,
+   "該当なし": 0,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 0
+  },
+  "finalizable": true,
   "appearance_font": {
    "embedded_subset": "/YEGOAA+IPAGothic",
    "missing_glyphs": [],
