@@ -91,6 +91,19 @@ def run_package(outdir: str, rows: list):
     last = r.pages[0]["/Annots"][-1].get_object().get("/Subtype")
     _run_case("P3 様式第1相当の設備行から先頭ページへのリンク", "消火器具→2ページ、誘導灯→4ページ（2枚目の3ページではない）、リンクが最前面",
               f"links→{links} 最前面 {last}", sorted(links) == [2, 4] and last == "/Link", rows)
+
+    # P3b: リンク領域＝設備名の文字本体の範囲（議題2 追記8）。欄の枠全体ではない
+    cov = fk.load(os.path.join(base, spec["sheets"][0]["definition"]))
+    frect = next(f for f in cov["fields"] if f["id"] == "equip_1")["rect"]
+    lk = next(x for x in rep["links"] if x["field"] == "equip_1")
+    lo = next(a.get_object() for a in r.pages[0]["/Annots"] if a.get_object().get("/Subtype") == "/Link"
+              and [round(float(v), 3) for v in a.get_object()["/Rect"]] == lk["rect"])
+    lr = lk["rect"]; width = lr[2] - lr[0]; height = lr[3] - lr[1]
+    want_w = 4 * 9  # 「消火器具」4字 × 9pt（全角は 1em）
+    inside = frect[0] <= lr[0] and lr[2] <= frect[2] and frect[1] <= lr[1] and lr[3] <= frect[3]
+    _run_case("P3b リンク領域は設備名の文字本体の範囲（追記8）", f"欄の内側・幅≈{want_w}pt（欄幅 {frect[2]-frect[0]:.0f}pt ではない）・高さ≤字の大きさ程度・強調表示なし",
+              f"rect {lr} 幅 {width:.2f} 高さ {height:.2f} 内側 {inside} H {lo.get('/H')} Border {list(lo.get('/Border'))}",
+              inside and abs(width - want_w) < 0.5 and 7 <= height <= 11 and lo.get("/H") == "/N" and all(int(v) == 0 for v in lo["/Border"]), rows)
     with pdfplumber.open(p("package.pdf")) as pdf:
         texts = [pdf.pages[i].extract_text() or "" for i in range(4)]
     want = {1: "（1/2）", 2: "（2/2）", 3: "（1/1）"}
@@ -107,6 +120,24 @@ def run_package(outdir: str, rows: list):
               f"lines matched {m['lines']['matched']}/{m['lines']['orig']} pos {m['lines']['pos'].get('max_pt')} chars missing {m['chars']['missing_in_gen']}",
               m["lines"]["matched"] == m["lines"]["orig"] == m["lines"]["gen"] and m["lines"]["pos"]["max_pt"] == 0 and m["chars"]["missing_in_gen"] == 5
               and m["chars"]["extra_in_gen"] == 0, rows)
+    # P12: 設備名が空ならリンクを作らない（文字本体の範囲が無い）
+    sp = copy.deepcopy(spec); cd = dict(fk.load(os.path.join(base, spec["sheets"][0]["data"])), equip_2="")
+    sp["sheets"][0]["data"] = cd
+    rr = pk.assemble(sp, p("p12.pdf"), base)
+    st = next(x["status"] for x in rr["links"] if x["field"] == "equip_2")
+    _run_case("P12 設備名が空", "リンクを作らず未解決として記録", st, st.startswith("未解決（設備名の文字が無い"), rows)
+
+    # P13: リンクを付けても見た目は変わらない（見える要素を足さない：追記7）。表紙を画素で比べる
+    import subprocess, tempfile
+    fk.generate(cov, fk.load(os.path.join(base, spec["sheets"][0]["data"])), p("p13-standalone.pdf"), field_prefix="cover.")
+    with tempfile.TemporaryDirectory() as td:
+        imgs = []
+        for src, nm in ((p("package.pdf"), "a"), (p("p13-standalone.pdf"), "b")):
+            subprocess.run(["pdftoppm", "-gray", "-r", "100", "-f", "1", "-l", "1", src, os.path.join(td, nm)], check=True, capture_output=True)
+            imgs.append(open(os.path.join(td, [n for n in os.listdir(td) if n.startswith(nm)][0]), "rb").read())
+    diff = sum(1 for x, y in zip(imgs[0], imgs[1]) if x != y) + abs(len(imgs[0]) - len(imgs[1]))
+    _run_case("P13 リンクを付けても表紙の見た目が変わらない", "画素の差 0", f"差 {diff} 画素", diff == 0, rows)
+
     sp = copy.deepcopy(spec); sp["links"].append({"from": "cover", "field": "equip_1", "to_equipment": "自動火災報知設備"})
     rr = pk.assemble(sp, p("p7.pdf"), base)
     _run_case("P7 リンク先の設備がパッケージに無い", "リンクを作らず未解決として記録", f"{rr['links'][-1]['status']}",
@@ -133,6 +164,60 @@ def run_package(outdir: str, rows: list):
     sp = copy.deepcopy(spec); sp["links"] = [{"from": "cover", "field": "remarks", "to_equipment": "消火器具"}]
     rr = pk.assemble(sp, p("p11.pdf"), base)
     _run_case("P11 編集できる欄にリンク", "作成するが注意を記録（欄の編集を優先）", f"{rr['links'][0]['status']}", "注意" in rr["links"][0]["status"], rows)
+
+
+def run_rules(outdir: str, rows: list, d2: dict, data: dict):
+    """判定（個数）・連動ルール・未確認の数え方・判定保留・完了可否の試験。"""
+    p = lambda n: os.path.join(outdir, n)
+    d = copy.deepcopy(d2)
+    j1 = next(f for f in d["fields"] if f["id"] == "judge_1"); j1.update(judgment=True, allowed_count={"min": 1, "max": 99})
+    j2 = next(f for f in d["fields"] if f["id"] == "judge_2"); j2.update(judgment=True)
+    next(f for f in d["fields"] if f["id"] == "usage")["allowed_pending"] = ["（6）項ロ・（施設名で記入）"]
+    d["rules"] = [
+        {"id": "j1-defect", "kind": "required_if", "if": {"field": "judge_1", "in": ["×"], "count": True}, "then": "remarks",
+         "reason": "不良個数が記入されたため、不良内容が必須"},
+        {"id": "j2-unconf", "kind": "unconfirmed_if", "field": "judge_2", "marker_field": "remarks", "contains": "未確認",
+         "reason": "未確認として数える", "conflict_reason": "未確認なのに判定が入っている"}]
+    assert not fk.validate_definition(d), fk.validate_definition(d)
+
+    def gen(name, **over):
+        return fk.generate(d, dict(data, **over), p(name))
+
+    r = gen("r-a12.pdf", judge_1="3", remarks="消火器3本 圧力低下（ダミー）")
+    w = (PdfReader(p("r-a12.pdf")).get_fields() or {}).get("judge_1", {})
+    _run_case("A12 判定欄に不良個数（正常は○、不良は個数）", "受け付ける・個数入力可・不良として数える",
+              f"issues {[x for x in r['value_issues'] if x['id'] == 'judge_1']} V {w.get('/V')!r} Edit {bool(int(w.get('/Ff', 0)) & (1 << 18))} 集計 {r['judgments']}",
+              not r["value_issues"] and w.get("/V") == "3" and int(w.get("/Ff", 0)) & (1 << 18) and r["judgments"]["不良"] == 2 and r["finalizable"], rows)
+    r = gen("r-a13.pdf", judge_1="0", remarks="ダミー")
+    _run_case("A13 判定欄に個数の範囲外（0）", "許容値外として記録", f"{[x['issues'] for x in r['value_issues']]}",
+              any(x["id"] == "judge_1" for x in r["value_issues"]), rows)
+    r = gen("r-r1.pdf", judge_1="2", remarks="")
+    _run_case("R1 不良個数ありで不良内容が空", "ルール違反を理由の文言つきで記録し、完了不可", f"{r['rule_issues']} finalizable {r['finalizable']}",
+              r["rule_issues"] and r["rule_issues"][0]["reason"].startswith("不良個数") and not r["finalizable"], rows)
+    r = gen("r-r2.pdf", judge_1="○", judge_2="", remarks="2階 客先都合により未確認（ダミー）")
+    _run_case("R2 未確認の数え方", "合格1・未確認1（未確認を合格に含めない）", f"{r['judgments']} issues {r['rule_issues']}",
+              r["judgments"]["合格"] == 1 and r["judgments"]["未確認"] == 1 and not r["rule_issues"], rows)
+    r = gen("r-r3.pdf", judge_1="○", judge_2="○", remarks="客先都合により未確認（ダミー）")
+    _run_case("R3 未確認なのに判定あり", "矛盾として記録し、完了不可", f"{r['rule_issues']} finalizable {r['finalizable']}",
+              any(x["field"] == "judge_2" for x in r["rule_issues"]) and not r["finalizable"], rows)
+    r = gen("r-r4.pdf", judge_1="", judge_2="")
+    _run_case("R4 判定が空欄", "未入力として数え、合格に含めない", f"{r['judgments']}", r["judgments"]["未入力"] == 2 and r["judgments"]["合格"] == 0, rows)
+    r = gen("r-h1.pdf", usage="（6）項ロ・（施設名で記入）")
+    v = (PdfReader(p("r-h1.pdf")).get_fields() or {}).get("usage", {}).get("/V")
+    _run_case("H1 暫定の用途区分（allowed_pending）", "判定保留として記録・値は入れない・完了不可", f"holds {r['holds']} V {v!r} finalizable {r['finalizable']}",
+              r["holds"] and not v and not r["finalizable"], rows)
+    bad = copy.deepcopy(d); bad["rules"].append({"id": "x", "kind": "required_if", "if": {"field": "nope"}, "then": "remarks"})
+    errs = fk.validate_definition(bad)
+    _run_case("V1 ルールの形式チェック", "存在しない欄と理由の文言の欠落を検出", f"{errs}",
+              any("存在しない欄" in e for e in errs) and any("reason" in e for e in errs), rows)
+    sk = os.path.join(REPO, "forms", "definitions", "shokaki")
+    res = []
+    for n in sorted(os.listdir(sk)):
+        dd = fk.load(os.path.join(sk, n)); dd["page_size"] = [595, 842]
+        rr = fk.generate(dd, {}, p("r-s1.pdf"))
+        res.append((n, rr["fields_created"], len(rr["fields_skipped"]), rr["finalizable"]))
+    _run_case("S1 消火器具の型 v0.1（座標未確定）", "欄を1つも作らず、全欄を理由つきで記録、完了不可", f"{res}",
+              all(c == 0 and sk_n > 100 and not fin for _, c, sk_n, fin in res), rows)
 
 
 def run(outdir: str) -> int:
@@ -232,6 +317,7 @@ def run(outdir: str) -> int:
     _run_case("A11 欄の値が描画されない", "描画の無い欄を検出", f"検出 {len(blank)} 欄", len(blank) >= 10, rows)
 
     run_package(outdir, rows)
+    run_rules(outdir, rows, d2, data)
 
     with open(p("selftest-results.csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=["case", "expect", "observed", "result"]); w.writeheader(); w.writerows(rows)

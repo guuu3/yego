@@ -63,7 +63,13 @@
    "to_equipment": "消火器具",
    "status": "作成",
    "from_page": 1,
-   "to_page": 2
+   "to_page": 2,
+   "rect": [
+    152.5,
+    603.499,
+    188.5,
+    612.499
+   ]
   },
   {
    "from": "cover",
@@ -71,7 +77,13 @@
    "to_equipment": "誘導灯及び誘導標識",
    "status": "作成",
    "from_page": 1,
-   "to_page": 4
+   "to_page": 4,
+   "rect": [
+    152.5,
+    579.499,
+    233.5,
+    588.499
+   ]
   }
  ],
  "fields_total": 102

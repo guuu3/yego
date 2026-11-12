@@ -1,0 +1,1371 @@
+{
+ "form_id": "SHOKAKI-KANRI",
+ "title": "消火器管理票",
+ "version": "0.1",
+ "legal_basis": "法定様式ではない（点検票の別紙。業界・社内の様式）",
+ "family": "台帳系（設備様式の別紙）",
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決。観察は1物件のみ）",
+ "page_size": null,
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ],
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "lines": [],
+ "chars": [],
+ "links": [],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-12",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）"
+  }
+ ],
+ "$comment": "消火器管理票（別紙）の帳票定義 初版。台帳系：様式を変えずシートの枚数が増え、右上に（i/n）を付ける。座標は全欄『未確定』。",
+ "fixed_text_vocabulary": [
+  "別紙",
+  "消火器管理票",
+  "名称",
+  "番号",
+  "設置場所",
+  "種別",
+  "型式番号",
+  "容量",
+  "メーカー",
+  "製造年月",
+  "製造番号",
+  "機能",
+  "年月日",
+  "判定",
+  "備考",
+  "注）判定欄の記入方法",
+  "良好な場合･･･○",
+  "不良な場合･･･×"
+ ],
+ "fields": [
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "site_name",
+   "label": "名称",
+   "input_type": "文字",
+   "layer": "L2",
+   "capacity": {
+    "max_lines": 1
+   },
+   "source": "物件台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_no",
+   "label": "1行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_place",
+   "label": "1行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_kind",
+   "label": "1行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_model_no",
+   "label": "1行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_capacity",
+   "label": "1行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_maker",
+   "label": "1行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_made",
+   "label": "1行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_serial",
+   "label": "1行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_func_date",
+   "label": "1行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_judge",
+   "label": "1行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r1_note",
+   "label": "1行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_no",
+   "label": "2行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_place",
+   "label": "2行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_kind",
+   "label": "2行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_model_no",
+   "label": "2行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_capacity",
+   "label": "2行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_maker",
+   "label": "2行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_made",
+   "label": "2行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_serial",
+   "label": "2行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_func_date",
+   "label": "2行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_judge",
+   "label": "2行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r2_note",
+   "label": "2行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_no",
+   "label": "3行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_place",
+   "label": "3行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_kind",
+   "label": "3行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_model_no",
+   "label": "3行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_capacity",
+   "label": "3行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_maker",
+   "label": "3行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_made",
+   "label": "3行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_serial",
+   "label": "3行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_func_date",
+   "label": "3行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_judge",
+   "label": "3行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r3_note",
+   "label": "3行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_no",
+   "label": "4行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_place",
+   "label": "4行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_kind",
+   "label": "4行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_model_no",
+   "label": "4行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_capacity",
+   "label": "4行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_maker",
+   "label": "4行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_made",
+   "label": "4行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_serial",
+   "label": "4行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_func_date",
+   "label": "4行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_judge",
+   "label": "4行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r4_note",
+   "label": "4行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_no",
+   "label": "5行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_place",
+   "label": "5行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_kind",
+   "label": "5行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_model_no",
+   "label": "5行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_capacity",
+   "label": "5行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_maker",
+   "label": "5行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_made",
+   "label": "5行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_serial",
+   "label": "5行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_func_date",
+   "label": "5行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_judge",
+   "label": "5行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r5_note",
+   "label": "5行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_no",
+   "label": "6行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_place",
+   "label": "6行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_kind",
+   "label": "6行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_model_no",
+   "label": "6行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_capacity",
+   "label": "6行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_maker",
+   "label": "6行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_made",
+   "label": "6行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_serial",
+   "label": "6行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_func_date",
+   "label": "6行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_judge",
+   "label": "6行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r6_note",
+   "label": "6行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_no",
+   "label": "7行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_place",
+   "label": "7行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_kind",
+   "label": "7行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_model_no",
+   "label": "7行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_capacity",
+   "label": "7行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_maker",
+   "label": "7行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_made",
+   "label": "7行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_serial",
+   "label": "7行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_func_date",
+   "label": "7行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_judge",
+   "label": "7行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r7_note",
+   "label": "7行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_no",
+   "label": "8行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_place",
+   "label": "8行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_kind",
+   "label": "8行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_model_no",
+   "label": "8行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_capacity",
+   "label": "8行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_maker",
+   "label": "8行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_made",
+   "label": "8行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_serial",
+   "label": "8行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_func_date",
+   "label": "8行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_judge",
+   "label": "8行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r8_note",
+   "label": "8行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_no",
+   "label": "9行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_place",
+   "label": "9行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_kind",
+   "label": "9行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_model_no",
+   "label": "9行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_capacity",
+   "label": "9行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_maker",
+   "label": "9行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_made",
+   "label": "9行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_serial",
+   "label": "9行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_func_date",
+   "label": "9行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_judge",
+   "label": "9行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r9_note",
+   "label": "9行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_no",
+   "label": "10行目 番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_place",
+   "label": "10行目 設置場所",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_kind",
+   "label": "10行目 種別",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "例：粉末(蓄圧)"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_model_no",
+   "label": "10行目 型式番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_capacity",
+   "label": "10行目 容量",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_maker",
+   "label": "10行目 メーカー",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_made",
+   "label": "10行目 製造年月",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳",
+   "note": "実帳票では年のみの記入例あり。書式は原本で確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_serial",
+   "label": "10行目 製造番号",
+   "input_type": "固定・自動",
+   "layer": "L2",
+   "source": "消火器台帳"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_func_date",
+   "label": "10行目 機能 年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "note": "内部・機能点検の実施日とみられる。L2（前回値の引き継ぎ）か L3 か要確認"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_judge",
+   "label": "10行目 判定",
+   "input_type": "記号",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "○",
+    "×"
+   ],
+   "note": "様式の注記：良好＝○、不良＝×"
+  },
+  {
+   "coord_status": "未確定",
+   "rect": null,
+   "id": "r10_note",
+   "label": "10行目 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "capacity": {
+    "max_lines": 1
+   }
+  }
+ ],
+ "repeat": {
+  "rows_per_sheet": null,
+  "rows_defined": 10,
+  "note": "1シートの行数は原本で実測する。物件の消火器の総数からシート数 n を決める"
+ },
+ "sheet_counter": {
+  "coord_status": "未確定",
+  "x_right": null,
+  "y": null,
+  "size": null,
+  "format": "（{i}/{n}）",
+  "note": "事業側 2026-11-11：各シート右上に（i/n）。原本に枚数欄が既にあるかは実測で確認"
+ },
+ "rules": [
+  {
+   "id": "r1-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r1_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r1_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r1-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r1_judge",
+   "marker_field": "r1_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r2-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r2_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r2_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r2-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r2_judge",
+   "marker_field": "r2_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r3-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r3_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r3_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r3-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r3_judge",
+   "marker_field": "r3_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r4-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r4_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r4_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r4-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r4_judge",
+   "marker_field": "r4_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r5-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r5_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r5_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r5-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r5_judge",
+   "marker_field": "r5_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r6-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r6_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r6_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r6-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r6_judge",
+   "marker_field": "r6_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r7-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r7_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r7_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r7-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r7_judge",
+   "marker_field": "r7_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r8-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r8_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r8_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r8-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r8_judge",
+   "marker_field": "r8_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r9-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r9_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r9_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r9-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r9_judge",
+   "marker_field": "r9_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  },
+  {
+   "id": "r10-defect-note",
+   "kind": "required_if",
+   "if": {
+    "field": "r10_judge",
+    "in": [
+     "×"
+    ]
+   },
+   "then": "r10_note",
+   "reason": "× のため備考（不良の内容）が必須"
+  },
+  {
+   "id": "r10-unconfirmed",
+   "kind": "unconfirmed_if",
+   "field": "r10_judge",
+   "marker_field": "r10_note",
+   "contains": "未確認",
+   "reason": "備考に「未確認」があるため、判定は空欄のまま「未確認」として数える（合格に含めない）",
+   "conflict_reason": "備考に「未確認」があるのに判定が入っている"
+  }
+ ],
+ "equipment": "消火器具"
+}
