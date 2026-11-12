@@ -5,6 +5,8 @@
   n は物件の総数から決まる（事業側 2026-11-11）。表示位置は型の定義 `sheet_counter` に持ち、
   座標が確定していなければ描かずに記録する
 - 様式第1 の設備行から、その設備の点検様式の先頭ページへ PDF 内部リンクを付ける（事業側 2026-11-11）。
+  リンク領域は設備名の文字本体の範囲（追記8）。透明で、見える文字・罫線・欄は変えない。
+  逆方向（設備様式 → 様式第1）のリンクは入れない（見える要素を足すことは様式変更と同義：追記7）
   リンク先が見つからない・リンク元の欄が無い場合は、リンクを作らずに「未解決」として記録する
 
 パッケージ仕様（JSON）:
@@ -70,6 +72,7 @@ def assemble(spec: dict, out_path: str, base_dir: str = ".", ttf: str = fk.DEFAU
     report = {"package_id": spec.get("package_id"), "pages": len(pl["pages"]), "sheets": [], "counters": [], "links": []}
     tmpdir = tempfile.mkdtemp(prefix="yego-pkg-")
     parts = []
+    text_boxes: dict[str, dict] = {}
     for s, pg in zip(spec["sheets"], pl["pages"]):
         defn = copy.deepcopy(_load_ref(s["definition"], base_dir))
         data = _load_ref(s.get("data") or {}, base_dir)
@@ -86,6 +89,7 @@ def assemble(spec: dict, out_path: str, base_dir: str = ".", ttf: str = fk.DEFAU
                 report["counters"].append({"key": s["key"], "text": text, "status": "未描画（枚数表示の座標が未確定）"})
         part = os.path.join(tmpdir, f"{pg['page']:03d}.pdf")
         rep = fk.generate(defn, data, part, ttf=ttf, field_prefix=f"{s['key']}.")
+        text_boxes[s["key"]] = rep["text_boxes"]
         report["sheets"].append({"key": s["key"], "page": pg["page"] + 1, "form_id": defn.get("form_id"),
                                  "version": defn.get("version"), "fields_created": rep["fields_created"],
                                  "fields_skipped": len(rep["fields_skipped"]), "value_issues": rep["value_issues"]})
@@ -115,13 +119,20 @@ def assemble(spec: dict, out_path: str, base_dir: str = ".", ttf: str = fk.DEFAU
             row["status"] = "未解決（リンク元の欄が無い。座標未確定の可能性）"
         elif target is None:
             row["status"] = "未解決（リンク先の設備がパッケージに無い）"
+        elif not text_boxes.get(ln["from"], {}).get(ln["field"]):
+            row["status"] = "未解決（設備名の文字が無い。リンク領域＝文字本体の範囲を決められない）"
         else:
-            pno, rect, readonly = widgets[name]
+            pno, field_rect, readonly = widgets[name]
+            # リンク領域は設備名の文字本体の範囲（行全体・余白に広げない。議題2 追記8、事業側 2026-11-12）。
+            # 複数行なら各行の範囲を包む矩形（設備行は1行の想定。2行になる場合は実測後に再検討）
+            bx = text_boxes[ln["from"]][ln["field"]]
+            rect = [min(b[0] for b in bx), min(b[1] for b in bx), max(b[2] for b in bx), max(b[3] for b in bx)]
             page = writer.pages[pno]
             link = writer._add_object(DictionaryObject({
                 NameObject("/Type"): NameObject("/Annot"), NameObject("/Subtype"): NameObject("/Link"),
                 NameObject("/Rect"): ArrayObject([FloatObject(v) for v in rect]),
                 NameObject("/Border"): ArrayObject([NumberObject(0)] * 3),
+                NameObject("/H"): NameObject("/N"),  # 押したときも見た目を変えない（見える要素を足さない：追記7）
                 NameObject("/Dest"): ArrayObject([writer.pages[target].indirect_reference, NameObject("/Fit")]),
             }))
             # 注釈は後ろにあるものほど上に重なり、クリックを受ける。
@@ -129,7 +140,7 @@ def assemble(spec: dict, out_path: str, base_dir: str = ".", ttf: str = fk.DEFAU
             # 編集できる欄と重なる場合は欄を上にし（編集を妨げない）、リンクが効かない可能性を記録する
             if readonly:
                 page[NameObject("/Annots")] = ArrayObject(list(page["/Annots"]) + [link])
-                row.update(status="作成", from_page=pno + 1, to_page=target + 1)
+                row.update(status="作成", from_page=pno + 1, to_page=target + 1, rect=[round(v, 3) for v in rect])
             else:
                 page[NameObject("/Annots")] = ArrayObject([link] + list(page["/Annots"]))
                 row.update(status="作成（注意：編集できる欄と重なり、クリックでは移動しない可能性）",

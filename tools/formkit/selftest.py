@@ -91,6 +91,19 @@ def run_package(outdir: str, rows: list):
     last = r.pages[0]["/Annots"][-1].get_object().get("/Subtype")
     _run_case("P3 様式第1相当の設備行から先頭ページへのリンク", "消火器具→2ページ、誘導灯→4ページ（2枚目の3ページではない）、リンクが最前面",
               f"links→{links} 最前面 {last}", sorted(links) == [2, 4] and last == "/Link", rows)
+
+    # P3b: リンク領域＝設備名の文字本体の範囲（議題2 追記8）。欄の枠全体ではない
+    cov = fk.load(os.path.join(base, spec["sheets"][0]["definition"]))
+    frect = next(f for f in cov["fields"] if f["id"] == "equip_1")["rect"]
+    lk = next(x for x in rep["links"] if x["field"] == "equip_1")
+    lo = next(a.get_object() for a in r.pages[0]["/Annots"] if a.get_object().get("/Subtype") == "/Link"
+              and [round(float(v), 3) for v in a.get_object()["/Rect"]] == lk["rect"])
+    lr = lk["rect"]; width = lr[2] - lr[0]; height = lr[3] - lr[1]
+    want_w = 4 * 9  # 「消火器具」4字 × 9pt（全角は 1em）
+    inside = frect[0] <= lr[0] and lr[2] <= frect[2] and frect[1] <= lr[1] and lr[3] <= frect[3]
+    _run_case("P3b リンク領域は設備名の文字本体の範囲（追記8）", f"欄の内側・幅≈{want_w}pt（欄幅 {frect[2]-frect[0]:.0f}pt ではない）・高さ≤字の大きさ程度・強調表示なし",
+              f"rect {lr} 幅 {width:.2f} 高さ {height:.2f} 内側 {inside} H {lo.get('/H')} Border {list(lo.get('/Border'))}",
+              inside and abs(width - want_w) < 0.5 and 7 <= height <= 11 and lo.get("/H") == "/N" and all(int(v) == 0 for v in lo["/Border"]), rows)
     with pdfplumber.open(p("package.pdf")) as pdf:
         texts = [pdf.pages[i].extract_text() or "" for i in range(4)]
     want = {1: "（1/2）", 2: "（2/2）", 3: "（1/1）"}
@@ -107,6 +120,24 @@ def run_package(outdir: str, rows: list):
               f"lines matched {m['lines']['matched']}/{m['lines']['orig']} pos {m['lines']['pos'].get('max_pt')} chars missing {m['chars']['missing_in_gen']}",
               m["lines"]["matched"] == m["lines"]["orig"] == m["lines"]["gen"] and m["lines"]["pos"]["max_pt"] == 0 and m["chars"]["missing_in_gen"] == 5
               and m["chars"]["extra_in_gen"] == 0, rows)
+    # P12: 設備名が空ならリンクを作らない（文字本体の範囲が無い）
+    sp = copy.deepcopy(spec); cd = dict(fk.load(os.path.join(base, spec["sheets"][0]["data"])), equip_2="")
+    sp["sheets"][0]["data"] = cd
+    rr = pk.assemble(sp, p("p12.pdf"), base)
+    st = next(x["status"] for x in rr["links"] if x["field"] == "equip_2")
+    _run_case("P12 設備名が空", "リンクを作らず未解決として記録", st, st.startswith("未解決（設備名の文字が無い"), rows)
+
+    # P13: リンクを付けても見た目は変わらない（見える要素を足さない：追記7）。表紙を画素で比べる
+    import subprocess, tempfile
+    fk.generate(cov, fk.load(os.path.join(base, spec["sheets"][0]["data"])), p("p13-standalone.pdf"), field_prefix="cover.")
+    with tempfile.TemporaryDirectory() as td:
+        imgs = []
+        for src, nm in ((p("package.pdf"), "a"), (p("p13-standalone.pdf"), "b")):
+            subprocess.run(["pdftoppm", "-gray", "-r", "100", "-f", "1", "-l", "1", src, os.path.join(td, nm)], check=True, capture_output=True)
+            imgs.append(open(os.path.join(td, [n for n in os.listdir(td) if n.startswith(nm)][0]), "rb").read())
+    diff = sum(1 for x, y in zip(imgs[0], imgs[1]) if x != y) + abs(len(imgs[0]) - len(imgs[1]))
+    _run_case("P13 リンクを付けても表紙の見た目が変わらない", "画素の差 0", f"差 {diff} 画素", diff == 0, rows)
+
     sp = copy.deepcopy(spec); sp["links"].append({"from": "cover", "field": "equip_1", "to_equipment": "自動火災報知設備"})
     rr = pk.assemble(sp, p("p7.pdf"), base)
     _run_case("P7 リンク先の設備がパッケージに無い", "リンクを作らず未解決として記録", f"{rr['links'][-1]['status']}",

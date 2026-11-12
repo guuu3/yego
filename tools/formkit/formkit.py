@@ -302,6 +302,7 @@ class EmbeddedFont:
         self.adv = {c: hmtx[self.cmap[ord(c)]][0] * 1000 / self.upm for c in self.gid}
         ff = StreamObject(); ff.set_data(buf.getvalue()); ff[NameObject("/Length1")] = NumberObject(len(buf.getvalue()))
         head, hhea = self.font["head"], self.font["hhea"]
+        self.ascent, self.descent = hhea.ascent / self.upm, hhea.descent / self.upm  # 字の高さの範囲（em 比）
         sc = lambda v: NumberObject(int(round(v * 1000 / self.upm)))
         base = "/YEGOAA+" + self.font["name"].getDebugName(6)
         desc = DictionaryObject({
@@ -344,7 +345,9 @@ class EmbeddedFont:
         return "".join(f"{self.gid.get(c, 0):04X}" for c in s)
 
 
-def _appearance(writer: PdfWriter, field: dict, value: str, ef: "EmbeddedFont") -> StreamObject:
+def _appearance(writer: PdfWriter, field: dict, value: str, ef: "EmbeddedFont", boxes: list | None = None) -> StreamObject:
+    """欄の外観を作る。boxes を渡すと、描いた文字の範囲（ページ座標の矩形、1行に1つ）を追記する。
+    設備リンクの領域＝設備名の文字本体の範囲（議題2 追記8）に使う。"""
     x0, y0, x1, y1 = field["rect"]
     w, h = x1 - x0, y1 - y0
     size = field.get("font_size", 9)
@@ -359,6 +362,14 @@ def _appearance(writer: PdfWriter, field: dict, value: str, ef: "EmbeddedFont") 
         block = lead * (len(lines) - 1) + size
         ty = (h + block) / 2 - size - i * lead + size * 0.12
         ops += ["BT", f"/FE {size:g} Tf", "0 g", f"{tx:.3f} {ty:.3f} Td", f"<{ef.hex(line)}> Tj", "ET"]
+        if boxes is not None and line.strip():
+            lead_sp = len(line) - len(line.lstrip(" 　"))   # 前後の空白は文字本体に含めない
+            trail = line.rstrip(" 　")
+            bx0 = x0 + tx + ef.width(line[:lead_sp], size)
+            bx1 = x0 + tx + ef.width(trail, size)
+            by0 = max(y0, y0 + ty + ef.descent * size)
+            by1 = min(y1, y0 + ty + ef.ascent * size)
+            boxes.append([round(max(x0, bx0), 3), round(by0, 3), round(min(x1, bx1), 3), round(by1, 3)])
     ops += ["Q", "EMC"]
     st = StreamObject()
     st.set_data("\n".join(ops).encode("latin-1"))
@@ -413,7 +424,7 @@ def generate(defn: dict, data: dict, out_path: str, ttf: str = DEFAULT_TTF, log:
     ef = EmbeddedFont(writer, ttf, "".join(values.values()))
     annots = ArrayObject()
     fields = ArrayObject()
-    report = {"fields_created": 0, "fields_skipped": [], "value_issues": [], "holds": []}
+    report = {"fields_created": 0, "fields_skipped": [], "value_issues": [], "holds": [], "text_boxes": {}}
     for f in defn["fields"]:
         if f.get("input_type") not in INPUT_TYPES:
             report["fields_skipped"].append({"id": f["id"], "reason": f"未知の入力形式 {f.get('input_type')!r}"})
@@ -455,7 +466,10 @@ def generate(defn: dict, data: dict, out_path: str, ttf: str = DEFAULT_TTF, log:
             if (f.get("capacity") or {}).get("max_chars"):
                 widget[NameObject("/MaxLen")] = NumberObject(f["capacity"]["max_chars"])
         widget[NameObject("/Ff")] = NumberObject(flags)
-        widget[NameObject("/AP")] = DictionaryObject({NameObject("/N"): _appearance(writer, f, value, ef)})
+        boxes = []
+        widget[NameObject("/AP")] = DictionaryObject({NameObject("/N"): _appearance(writer, f, value, ef, boxes)})
+        if boxes:
+            report["text_boxes"][f["id"]] = boxes
         ref = writer._add_object(widget)
         annots.append(ref)
         fields.append(ref)
