@@ -1,0 +1,1691 @@
+{
+ "form_id": "BEKKI-3",
+ "title": "消防用設備等（特殊消防用設備等）点検者一覧表",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第3",
+ "family": "共通様式",
+ "links": [],
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決）",
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "$comment": "別記様式第3（点検者一覧表）の帳票定義。初版。原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）。座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fields": [
+  {
+   "id": "b1_equipments",
+   "label": "点検者1 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 12
+   },
+   "rect": null,
+   "note": "その点検者が担当する設備名を列記する欄（実帳票では1行に1設備）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_inspector_address",
+   "label": "点検者1 住所",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_inspector_name",
+   "label": "点検者1 氏名",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "（点検者台帳から。台帳は未作成）"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "他の様式の点検者氏名と同じ台帳を参照する",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_company",
+   "label": "点検者1 社名",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_tel",
+   "label": "点検者1 電話番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_tokurui_issue_date",
+   "label": "点検者1 消防設備士 甲種 特類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_tokurui_issue_no",
+   "label": "点検者1 消防設備士 甲種 特類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_tokurui_governor",
+   "label": "点検者1 消防設備士 甲種 特類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_tokurui_course_ym",
+   "label": "点検者1 消防設備士 甲種 特類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k1_class",
+   "label": "点検者1 消防設備士 甲・乙種 1類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k1_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 1類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k1_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 1類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k1_governor",
+   "label": "点検者1 消防設備士 甲・乙種 1類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k1_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 1類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k2_class",
+   "label": "点検者1 消防設備士 甲・乙種 2類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k2_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 2類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k2_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 2類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k2_governor",
+   "label": "点検者1 消防設備士 甲・乙種 2類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k2_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 2類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k3_class",
+   "label": "点検者1 消防設備士 甲・乙種 3類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k3_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 3類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k3_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 3類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k3_governor",
+   "label": "点検者1 消防設備士 甲・乙種 3類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k3_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 3類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k4_class",
+   "label": "点検者1 消防設備士 甲・乙種 4類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k4_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 4類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k4_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 4類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k4_governor",
+   "label": "点検者1 消防設備士 甲・乙種 4類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k4_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 4類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k5_class",
+   "label": "点検者1 消防設備士 甲・乙種 5類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k5_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 5類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k5_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 5類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k5_governor",
+   "label": "点検者1 消防設備士 甲・乙種 5類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_k5_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 5類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o6_issue_date",
+   "label": "点検者1 消防設備士 乙種 6類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o6_issue_no",
+   "label": "点検者1 消防設備士 乙種 6類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o6_governor",
+   "label": "点検者1 消防設備士 乙種 6類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o6_course_ym",
+   "label": "点検者1 消防設備士 乙種 6類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o7_issue_date",
+   "label": "点検者1 消防設備士 乙種 7類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o7_issue_no",
+   "label": "点検者1 消防設備士 乙種 7類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o7_governor",
+   "label": "点検者1 消防設備士 乙種 7類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_g_o7_course_ym",
+   "label": "点検者1 消防設備士 乙種 7類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_shikaku_note",
+   "label": "点検者1 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "様式の備考4: 誘導灯及び誘導標識の点検を実施した者は、電気工事士免状等の種類・交付番号・交付年月日を記載する",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_tokushu_issue_date",
+   "label": "点検者1 消防設備点検資格者 特種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_tokushu_issue_no",
+   "label": "点検者1 消防設備点検資格者 特種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_tokushu_expiry",
+   "label": "点検者1 消防設備点検資格者 特種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_d1_issue_date",
+   "label": "点検者1 消防設備点検資格者 第1種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_d1_issue_no",
+   "label": "点検者1 消防設備点検資格者 第1種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_d1_expiry",
+   "label": "点検者1 消防設備点検資格者 第1種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_d2_issue_date",
+   "label": "点検者1 消防設備点検資格者 第2種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_d2_issue_no",
+   "label": "点検者1 消防設備点検資格者 第2種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b1_k_d2_expiry",
+   "label": "点検者1 消防設備点検資格者 第2種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_equipments",
+   "label": "点検者2 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 12
+   },
+   "rect": null,
+   "note": "その点検者が担当する設備名を列記する欄（実帳票では1行に1設備）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_inspector_address",
+   "label": "点検者2 住所",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_inspector_name",
+   "label": "点検者2 氏名",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "（点検者台帳から。台帳は未作成）"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "他の様式の点検者氏名と同じ台帳を参照する",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_company",
+   "label": "点検者2 社名",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_tel",
+   "label": "点検者2 電話番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_tokurui_issue_date",
+   "label": "点検者2 消防設備士 甲種 特類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_tokurui_issue_no",
+   "label": "点検者2 消防設備士 甲種 特類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_tokurui_governor",
+   "label": "点検者2 消防設備士 甲種 特類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_tokurui_course_ym",
+   "label": "点検者2 消防設備士 甲種 特類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k1_class",
+   "label": "点検者2 消防設備士 甲・乙種 1類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k1_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 1類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k1_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 1類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k1_governor",
+   "label": "点検者2 消防設備士 甲・乙種 1類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k1_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 1類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k2_class",
+   "label": "点検者2 消防設備士 甲・乙種 2類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k2_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 2類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k2_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 2類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k2_governor",
+   "label": "点検者2 消防設備士 甲・乙種 2類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k2_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 2類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k3_class",
+   "label": "点検者2 消防設備士 甲・乙種 3類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k3_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 3類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k3_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 3類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k3_governor",
+   "label": "点検者2 消防設備士 甲・乙種 3類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k3_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 3類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k4_class",
+   "label": "点検者2 消防設備士 甲・乙種 4類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k4_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 4類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k4_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 4類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k4_governor",
+   "label": "点検者2 消防設備士 甲・乙種 4類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k4_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 4類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k5_class",
+   "label": "点検者2 消防設備士 甲・乙種 5類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": null,
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k5_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 5類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k5_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 5類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k5_governor",
+   "label": "点検者2 消防設備士 甲・乙種 5類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_k5_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 5類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o6_issue_date",
+   "label": "点検者2 消防設備士 乙種 6類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o6_issue_no",
+   "label": "点検者2 消防設備士 乙種 6類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o6_governor",
+   "label": "点検者2 消防設備士 乙種 6類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o6_course_ym",
+   "label": "点検者2 消防設備士 乙種 6類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o7_issue_date",
+   "label": "点検者2 消防設備士 乙種 7類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o7_issue_no",
+   "label": "点検者2 消防設備士 乙種 7類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o7_governor",
+   "label": "点検者2 消防設備士 乙種 7類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_g_o7_course_ym",
+   "label": "点検者2 消防設備士 乙種 7類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_shikaku_note",
+   "label": "点検者2 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "様式の備考4: 誘導灯及び誘導標識の点検を実施した者は、電気工事士免状等の種類・交付番号・交付年月日を記載する",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_tokushu_issue_date",
+   "label": "点検者2 消防設備点検資格者 特種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_tokushu_issue_no",
+   "label": "点検者2 消防設備点検資格者 特種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_tokushu_expiry",
+   "label": "点検者2 消防設備点検資格者 特種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_d1_issue_date",
+   "label": "点検者2 消防設備点検資格者 第1種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_d1_issue_no",
+   "label": "点検者2 消防設備点検資格者 第1種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_d1_expiry",
+   "label": "点検者2 消防設備点検資格者 第1種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_d2_issue_date",
+   "label": "点検者2 消防設備点検資格者 第2種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_d2_issue_no",
+   "label": "点検者2 消防設備点検資格者 第2種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "b2_k_d2_expiry",
+   "label": "点検者2 消防設備点検資格者 第2種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  }
+ ],
+ "rules": [],
+ "not_fields": [
+  {
+   "label": "消防設備点検資格者の保持を示す○印",
+   "reason": "特種・第1種・第2種の行に付けられる楕円は保持の表示で、交付年月日・交付番号の記入と重なる情報のため欄にしない"
+  },
+  {
+   "label": "点検者ブロックの3人目以降",
+   "reason": "1枚に2人分。3人目以降は次シートに続く（台帳系のシート増。枚数表示の扱いは別記様式第11 別紙と同じく原本に表示なし）"
+  }
+ ],
+ "open_questions": [
+  "点検者台帳の形: 氏名は他の様式と同じく選択式（台帳参照）とした。台帳そのものの設計は機能設計側（バトンの申し送り）",
+  "設備名欄: 値が複数行になる（1行1設備）。formkit の複数行の値が落ちる既知の不具合に当たるため、生成時の扱いは申し送り参照",
+  "消防設備士の甲乙の別: 甲・乙種1〜5類のみ欄にした。特類（甲種のみ）・6・7類（乙種のみ）は印字で確定するため欄なし"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3。座標は全欄未確定）。もちが様式と実記入から構築"
+  }
+ ],
+ "version": "0.1",
+ "page_size": null,
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "別記様式第３",
+  "消防用設備等(特殊消防用設備等）点検者一覧表",
+  "点検者設備名",
+  "住所氏名",
+  "社名電話番号",
+  "資格消防設備士",
+  "種類等交付年月日交付番号交付知事講習受講年月",
+  "甲種特類年月日第号年月",
+  "甲・乙種１類年月日第号年月",
+  "甲・乙種２類年月日第号年月",
+  "甲・乙種３類年月日第号年月",
+  "甲・乙種４類年月日第号年月",
+  "甲・乙種５類年月日第号年月",
+  "乙種６類年月日第号年月",
+  "乙種７類年月日第号年月",
+  "備考",
+  "資格消防設備点検資格者",
+  "種類等交付年月日交付番号有効期限",
+  "特種年月日第号年月日",
+  "第１種年月日第号年月日",
+  "第号",
+  "第２種年月日年月日",
+  "点検者設備名",
+  "住所氏名",
+  "社名電話番号",
+  "資格消防設備士",
+  "種類等交付年月日交付番号交付知事講習受講年月",
+  "甲種特類年月日第号年月",
+  "甲・乙種１類年月日第号年月",
+  "甲・乙種２類年月日第号年月",
+  "甲・乙種３類年月日第号年月",
+  "甲・乙種４類年月日第号年月",
+  "甲・乙種５類年月日第号年月",
+  "乙種６類年月日第号年月",
+  "乙種７類年月日第号年月",
+  "備考",
+  "資格消防設備点検資格者",
+  "種類等交付年月日交付番号有効期限",
+  "特種年月日第号年月日",
+  "第１種年月日第号年月日",
+  "第２種年月日第号年月日",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２住所、社名及び電話番号の欄は、点検者が会社（会社以外の法人に所属する場合は当該法人）に所属す",
+  "る場合には、当該所属する会社の住所、社名及び電話番号を記入すること。",
+  "３資格の欄は、消防設備士又は消防設備点検資格者の種類等、交付年月日、交付番号、交付機関、最新の",
+  "講習受講年月、有効期限を記載すること。",
+  "４誘導灯及び誘導標識の点検を実施した者は、備考欄に電気工事士法（昭和35年法律第139号）第３条に規定",
+  "する電気工事士免状又は電気事業法（昭和39年法律第170号）第44条第１項に規定する第一種電気主任技術",
+  "者免状、第二種電気主任技術者免状若しくは第三種電気主任技術者免状のいずれかの免状の種類、交付番",
+  "号及び交付年月日を記載すること。（第二種消防設備点検資格者の免状の交付を受けている者を除く。）"
+ ],
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ]
+}

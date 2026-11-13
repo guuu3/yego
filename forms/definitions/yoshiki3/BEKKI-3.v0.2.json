@@ -1,0 +1,7613 @@
+{
+ "form_id": "BEKKI-3",
+ "title": "消防用設備等（特殊消防用設備等）点検者一覧表",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第3",
+ "family": "共通様式",
+ "links": [],
+ "lineage": "Microsoft Print To PDF 系・配置A（枠左端 x=36.12。用紙 595.32×841.92）。系統の識別値としての確定は議題2 Q3",
+ "geometry_status": "取得済み（2026-11-13、もちが VM 内サンプルで実測。docs/forms/yoshiki1-first-run.md §4 の手順）。配置A の3物件で罫線が完全一致。全数センサス（55件）: 配置A 43件／配置B（x −8.40pt）7件／PDFlib 系 4件／近傍（pdf-lib、−0.56pt）1件（様式第2 と同一の分布）。詳細は results/yoshiki23/report.md",
+ "$comment": "別記様式第3（点検者一覧表）の帳票定義。v0.2：原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）。",
+ "fields": [
+  {
+   "id": "b1_equipments",
+   "label": "点検者1 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 12
+   },
+   "rect": [
+    392.16,
+    496.56,
+    530.04,
+    774.84
+   ],
+   "note": "その点検者が担当する設備名を列記する欄（実帳票では1行に1設備）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_inspector_address",
+   "label": "点検者1 住所",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    89.4,
+    759.36,
+    243.84,
+    774.84
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_inspector_name",
+   "label": "点検者1 氏名",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "（点検者台帳から。台帳は未作成）"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    297.12,
+    759.36,
+    392.16,
+    774.84
+   ],
+   "note": "他の様式の点検者氏名と同じ台帳を参照する",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_company",
+   "label": "点検者1 社名",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    89.4,
+    743.88,
+    243.84,
+    759.36
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_tel",
+   "label": "点検者1 電話番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    297.12,
+    743.88,
+    392.16,
+    759.36
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_tokurui_issue_date",
+   "label": "点検者1 消防設備士 甲種 特類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    697.44,
+    211.08,
+    712.92
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_tokurui_issue_no",
+   "label": "点検者1 消防設備士 甲種 特類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    697.44,
+    270.84,
+    712.92
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_tokurui_governor",
+   "label": "点検者1 消防設備士 甲種 特類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    697.44,
+    323.76,
+    712.92
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_tokurui_course_ym",
+   "label": "点検者1 消防設備士 甲種 特類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    697.44,
+    392.16,
+    712.92
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k1_class",
+   "label": "点検者1 消防設備士 甲・乙種 1類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    681.96,
+    89.76,
+    697.44
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k1_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 1類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    681.96,
+    211.08,
+    697.44
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k1_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 1類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    681.96,
+    270.84,
+    697.44
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k1_governor",
+   "label": "点検者1 消防設備士 甲・乙種 1類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    681.96,
+    323.76,
+    697.44
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k1_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 1類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    681.96,
+    392.16,
+    697.44
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k2_class",
+   "label": "点検者1 消防設備士 甲・乙種 2類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    666.48,
+    89.76,
+    681.96
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k2_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 2類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    666.48,
+    211.08,
+    681.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k2_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 2類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    666.48,
+    270.84,
+    681.96
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k2_governor",
+   "label": "点検者1 消防設備士 甲・乙種 2類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    666.48,
+    323.76,
+    681.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k2_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 2類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    666.48,
+    392.16,
+    681.96
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k3_class",
+   "label": "点検者1 消防設備士 甲・乙種 3類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    651.0,
+    89.76,
+    666.48
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k3_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 3類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    651.0,
+    211.08,
+    666.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k3_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 3類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    651.0,
+    270.84,
+    666.48
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k3_governor",
+   "label": "点検者1 消防設備士 甲・乙種 3類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    651.0,
+    323.76,
+    666.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k3_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 3類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    651.0,
+    392.16,
+    666.48
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k4_class",
+   "label": "点検者1 消防設備士 甲・乙種 4類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    635.52,
+    89.76,
+    651.0
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k4_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 4類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    635.52,
+    211.08,
+    651.0
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k4_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 4類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    635.52,
+    270.84,
+    651.0
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k4_governor",
+   "label": "点検者1 消防設備士 甲・乙種 4類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    635.52,
+    323.76,
+    651.0
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k4_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 4類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    635.52,
+    392.16,
+    651.0
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k5_class",
+   "label": "点検者1 消防設備士 甲・乙種 5類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    620.04,
+    89.76,
+    635.52
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k5_issue_date",
+   "label": "点検者1 消防設備士 甲・乙種 5類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    620.04,
+    211.08,
+    635.52
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k5_issue_no",
+   "label": "点検者1 消防設備士 甲・乙種 5類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    620.04,
+    270.84,
+    635.52
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k5_governor",
+   "label": "点検者1 消防設備士 甲・乙種 5類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    620.04,
+    323.76,
+    635.52
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_k5_course_ym",
+   "label": "点検者1 消防設備士 甲・乙種 5類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    620.04,
+    392.16,
+    635.52
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o6_issue_date",
+   "label": "点検者1 消防設備士 乙種 6類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    604.56,
+    211.08,
+    620.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o6_issue_no",
+   "label": "点検者1 消防設備士 乙種 6類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    604.56,
+    270.84,
+    620.04
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o6_governor",
+   "label": "点検者1 消防設備士 乙種 6類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    604.56,
+    323.76,
+    620.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o6_course_ym",
+   "label": "点検者1 消防設備士 乙種 6類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    604.56,
+    392.16,
+    620.04
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o7_issue_date",
+   "label": "点検者1 消防設備士 乙種 7類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    589.08,
+    211.08,
+    604.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o7_issue_no",
+   "label": "点検者1 消防設備士 乙種 7類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    589.08,
+    270.84,
+    604.56
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o7_governor",
+   "label": "点検者1 消防設備士 乙種 7類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    589.08,
+    323.76,
+    604.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_g_o7_course_ym",
+   "label": "点検者1 消防設備士 乙種 7類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    589.08,
+    392.16,
+    604.56
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_shikaku_note",
+   "label": "点検者1 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    573.6,
+    392.16,
+    589.08
+   ],
+   "note": "様式の備考4: 誘導灯及び誘導標識の点検を実施した者は、電気工事士免状等の種類・交付番号・交付年月日を記載する",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_tokushu_issue_date",
+   "label": "点検者1 消防設備点検資格者 特種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    527.16,
+    211.44,
+    542.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_tokushu_issue_no",
+   "label": "点検者1 消防設備点検資格者 特種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.44,
+    527.16,
+    301.8,
+    542.64
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_tokushu_expiry",
+   "label": "点検者1 消防設備点検資格者 特種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    301.8,
+    527.16,
+    392.16,
+    542.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_d1_issue_date",
+   "label": "点検者1 消防設備点検資格者 第1種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    511.68,
+    211.44,
+    527.16
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_d1_issue_no",
+   "label": "点検者1 消防設備点検資格者 第1種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.44,
+    511.68,
+    301.8,
+    527.16
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_d1_expiry",
+   "label": "点検者1 消防設備点検資格者 第1種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    301.8,
+    511.68,
+    392.16,
+    527.16
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_d2_issue_date",
+   "label": "点検者1 消防設備点検資格者 第2種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    496.56,
+    211.44,
+    511.68
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_d2_issue_no",
+   "label": "点検者1 消防設備点検資格者 第2種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.44,
+    496.56,
+    301.8,
+    511.68
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b1_k_d2_expiry",
+   "label": "点検者1 消防設備点検資格者 第2種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    301.8,
+    496.56,
+    392.16,
+    511.68
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_equipments",
+   "label": "点検者2 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 12
+   },
+   "rect": [
+    392.16,
+    191.28000000000003,
+    530.04,
+    469.56000000000006
+   ],
+   "note": "その点検者が担当する設備名を列記する欄（実帳票では1行に1設備）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_inspector_address",
+   "label": "点検者2 住所",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    89.4,
+    454.08000000000004,
+    243.84,
+    469.56000000000006
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_inspector_name",
+   "label": "点検者2 氏名",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "（点検者台帳から。台帳は未作成）"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    297.12,
+    454.08000000000004,
+    392.16,
+    469.56000000000006
+   ],
+   "note": "他の様式の点検者氏名と同じ台帳を参照する",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_company",
+   "label": "点検者2 社名",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    89.4,
+    438.6,
+    243.84,
+    454.08000000000004
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_tel",
+   "label": "点検者2 電話番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    297.12,
+    438.6,
+    392.16,
+    454.08000000000004
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_tokurui_issue_date",
+   "label": "点検者2 消防設備士 甲種 特類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    392.1600000000001,
+    211.08,
+    407.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_tokurui_issue_no",
+   "label": "点検者2 消防設備士 甲種 特類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    392.1600000000001,
+    270.84,
+    407.64
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_tokurui_governor",
+   "label": "点検者2 消防設備士 甲種 特類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    392.1600000000001,
+    323.76,
+    407.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_tokurui_course_ym",
+   "label": "点検者2 消防設備士 甲種 特類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    392.1600000000001,
+    392.16,
+    407.64
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k1_class",
+   "label": "点検者2 消防設備士 甲・乙種 1類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    376.68000000000006,
+    89.76,
+    392.1600000000001
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k1_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 1類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    376.68000000000006,
+    211.08,
+    392.1600000000001
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k1_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 1類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    376.68000000000006,
+    270.84,
+    392.1600000000001
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k1_governor",
+   "label": "点検者2 消防設備士 甲・乙種 1類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    376.68000000000006,
+    323.76,
+    392.1600000000001
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k1_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 1類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    376.68000000000006,
+    392.16,
+    392.1600000000001
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k2_class",
+   "label": "点検者2 消防設備士 甲・乙種 2類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    361.20000000000005,
+    89.76,
+    376.68000000000006
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k2_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 2類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    361.20000000000005,
+    211.08,
+    376.68000000000006
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k2_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 2類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    361.20000000000005,
+    270.84,
+    376.68000000000006
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k2_governor",
+   "label": "点検者2 消防設備士 甲・乙種 2類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    361.20000000000005,
+    323.76,
+    376.68000000000006
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k2_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 2類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    361.20000000000005,
+    392.16,
+    376.68000000000006
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k3_class",
+   "label": "点検者2 消防設備士 甲・乙種 3類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    345.72,
+    89.76,
+    361.20000000000005
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k3_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 3類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    345.72,
+    211.08,
+    361.20000000000005
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k3_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 3類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    345.72,
+    270.84,
+    361.20000000000005
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k3_governor",
+   "label": "点検者2 消防設備士 甲・乙種 3類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    345.72,
+    323.76,
+    361.20000000000005
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k3_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 3類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    345.72,
+    392.16,
+    361.20000000000005
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k4_class",
+   "label": "点検者2 消防設備士 甲・乙種 4類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    330.24,
+    89.76,
+    345.72
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k4_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 4類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    330.24,
+    211.08,
+    345.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k4_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 4類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    330.24,
+    270.84,
+    345.72
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k4_governor",
+   "label": "点検者2 消防設備士 甲・乙種 4類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    330.24,
+    323.76,
+    345.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k4_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 4類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    330.24,
+    392.16,
+    345.72
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k5_class",
+   "label": "点検者2 消防設備士 甲・乙種 5類 甲乙の別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "甲",
+    "乙"
+   ],
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 1
+   },
+   "rect": [
+    36.12,
+    314.76,
+    89.76,
+    330.24
+   ],
+   "note": "印字された「甲・乙種」の該当する方に○を付す（原本ではベクタの楕円）。値は甲または乙",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k5_issue_date",
+   "label": "点検者2 消防設備士 甲・乙種 5類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    314.76,
+    211.08,
+    330.24
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k5_issue_no",
+   "label": "点検者2 消防設備士 甲・乙種 5類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    314.76,
+    270.84,
+    330.24
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k5_governor",
+   "label": "点検者2 消防設備士 甲・乙種 5類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    314.76,
+    323.76,
+    330.24
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_k5_course_ym",
+   "label": "点検者2 消防設備士 甲・乙種 5類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    314.76,
+    392.16,
+    330.24
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o6_issue_date",
+   "label": "点検者2 消防設備士 乙種 6類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    299.28,
+    211.08,
+    314.76
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o6_issue_no",
+   "label": "点検者2 消防設備士 乙種 6類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    299.28,
+    270.84,
+    314.76
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o6_governor",
+   "label": "点検者2 消防設備士 乙種 6類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    299.28,
+    323.76,
+    314.76
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o6_course_ym",
+   "label": "点検者2 消防設備士 乙種 6類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    299.28,
+    392.16,
+    314.76
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o7_issue_date",
+   "label": "点検者2 消防設備士 乙種 7類 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    283.80000000000007,
+    211.08,
+    299.28
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o7_issue_no",
+   "label": "点検者2 消防設備士 乙種 7類 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.08,
+    283.80000000000007,
+    270.84,
+    299.28
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o7_governor",
+   "label": "点検者2 消防設備士 乙種 7類 交付知事",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    270.84,
+    283.80000000000007,
+    323.76,
+    299.28
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_g_o7_course_ym",
+   "label": "点検者2 消防設備士 乙種 7類 講習受講年月",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    323.76,
+    283.80000000000007,
+    392.16,
+    299.28
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_shikaku_note",
+   "label": "点検者2 備考",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    268.32000000000005,
+    392.16,
+    283.80000000000007
+   ],
+   "note": "様式の備考4: 誘導灯及び誘導標識の点検を実施した者は、電気工事士免状等の種類・交付番号・交付年月日を記載する",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_tokushu_issue_date",
+   "label": "点検者2 消防設備点検資格者 特種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    221.88,
+    211.44,
+    237.36
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_tokushu_issue_no",
+   "label": "点検者2 消防設備点検資格者 特種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.44,
+    221.88,
+    301.8,
+    237.36
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_tokushu_expiry",
+   "label": "点検者2 消防設備点検資格者 特種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    301.8,
+    221.88,
+    392.16,
+    237.36
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_d1_issue_date",
+   "label": "点検者2 消防設備点検資格者 第1種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    206.40000000000003,
+    211.44,
+    221.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_d1_issue_no",
+   "label": "点検者2 消防設備点検資格者 第1種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.44,
+    206.40000000000003,
+    301.8,
+    221.88
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_d1_expiry",
+   "label": "点検者2 消防設備点検資格者 第1種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    301.8,
+    206.40000000000003,
+    392.16,
+    221.88
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_d2_issue_date",
+   "label": "点検者2 消防設備点検資格者 第2種 交付年月日",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    121.8,
+    191.28000000000003,
+    211.44,
+    206.40000000000003
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_d2_issue_no",
+   "label": "点検者2 消防設備点検資格者 第2種 交付番号",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    211.44,
+    191.28000000000003,
+    301.8,
+    206.40000000000003
+   ],
+   "note": "欄内に「第」「号」が印字され、その間に番号を記入（印字は固定文字として復元）",
+   "font_size": 10.08,
+   "coord_status": "確定"
+  },
+  {
+   "id": "b2_k_d2_expiry",
+   "label": "点検者2 消防設備点検資格者 第2種 有効期限",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "format": "元号の頭文字（H・R 等）＋年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": [
+    301.8,
+    191.28000000000003,
+    392.16,
+    206.40000000000003
+   ],
+   "font_size": 10.08,
+   "coord_status": "確定"
+  }
+ ],
+ "rules": [],
+ "not_fields": [
+  {
+   "label": "消防設備点検資格者の保持を示す○印",
+   "reason": "特種・第1種・第2種の行に付けられる楕円は保持の表示で、交付年月日・交付番号の記入と重なる情報のため欄にしない"
+  },
+  {
+   "label": "点検者ブロックの3人目以降",
+   "reason": "1枚に2人分。3人目以降は次シートに続く（台帳系のシート増。枚数表示の扱いは別記様式第11 別紙と同じく原本に表示なし）"
+  }
+ ],
+ "open_questions": [
+  "点検者台帳の形: 氏名は他の様式と同じく選択式（台帳参照）とした。台帳そのものの設計は機能設計側（バトンの申し送り）",
+  "設備名欄: 値が複数行になる（1行1設備）。formkit の複数行の値が落ちる既知の不具合に当たるため、生成時の扱いは申し送り参照",
+  "消防設備士の甲乙の別: 甲・乙種1〜5類のみ欄にした。特類（甲種のみ）・6・7類（乙種のみ）は印字で確定するため欄なし"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3。座標は全欄未確定）。もちが様式と実記入から構築"
+  },
+  {
+   "version": "0.2",
+   "date": "2026-11-13",
+   "change": "原本の実測で全欄の座標を確定（配置A、座標源＋ホールドアウト2物件で照合）"
+  }
+ ],
+ "version": "0.2",
+ "page_size": [
+  595.32,
+  841.92
+ ],
+ "lines": [
+  [
+   "h",
+   191.28,
+   36.12,
+   530.04,
+   0.72
+  ],
+  [
+   "h",
+   206.4,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   221.88,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   237.36,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   252.48,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   268.32,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   283.8,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   299.28,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   314.76,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   330.24,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   345.72,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   361.2,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   376.68,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   392.16,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   407.64,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   423.12,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   438.6,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   454.08,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   469.56,
+   36.12,
+   530.04,
+   0.72
+  ],
+  [
+   "h",
+   484.68,
+   36.12,
+   530.04,
+   0.72
+  ],
+  [
+   "h",
+   496.56,
+   36.12,
+   530.04,
+   0.72
+  ],
+  [
+   "h",
+   511.68,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   527.16,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   542.64,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   557.76,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   573.6,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   589.08,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   604.56,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   620.04,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   635.52,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   651.0,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   666.48,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   681.96,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   697.44,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   712.92,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   728.4,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   743.88,
+   36.12,
+   392.16,
+   0.72
+  ],
+  [
+   "h",
+   759.36,
+   36.12,
+   392.16,
+   0.36
+  ],
+  [
+   "h",
+   774.84,
+   36.12,
+   530.04,
+   0.72
+  ],
+  [
+   "h",
+   789.96,
+   36.12,
+   530.04,
+   0.72
+  ],
+  [
+   "v",
+   36.12,
+   191.28,
+   484.68,
+   0.72
+  ],
+  [
+   "v",
+   36.12,
+   496.56,
+   789.96,
+   0.72
+  ],
+  [
+   "v",
+   89.4,
+   438.6,
+   469.56,
+   0.36
+  ],
+  [
+   "v",
+   89.4,
+   743.88,
+   774.84,
+   0.36
+  ],
+  [
+   "v",
+   89.76,
+   283.8,
+   408.36,
+   0.36
+  ],
+  [
+   "v",
+   89.76,
+   589.08,
+   713.64,
+   0.36
+  ],
+  [
+   "v",
+   121.8,
+   191.28,
+   438.6,
+   0.36
+  ],
+  [
+   "v",
+   121.8,
+   496.56,
+   743.88,
+   0.36
+  ],
+  [
+   "v",
+   211.08,
+   283.08,
+   423.12,
+   0.36
+  ],
+  [
+   "v",
+   211.08,
+   588.36,
+   728.4,
+   0.36
+  ],
+  [
+   "v",
+   211.44,
+   191.28,
+   252.48,
+   0.36
+  ],
+  [
+   "v",
+   211.44,
+   496.56,
+   557.76,
+   0.36
+  ],
+  [
+   "v",
+   243.84,
+   438.6,
+   469.56,
+   0.36
+  ],
+  [
+   "v",
+   243.84,
+   743.88,
+   774.84,
+   0.36
+  ],
+  [
+   "v",
+   270.84,
+   283.8,
+   423.12,
+   0.36
+  ],
+  [
+   "v",
+   270.84,
+   589.08,
+   728.4,
+   0.36
+  ],
+  [
+   "v",
+   297.12,
+   438.6,
+   469.56,
+   0.36
+  ],
+  [
+   "v",
+   297.12,
+   743.88,
+   774.84,
+   0.36
+  ],
+  [
+   "v",
+   301.8,
+   191.28,
+   252.48,
+   0.36
+  ],
+  [
+   "v",
+   301.8,
+   496.56,
+   557.76,
+   0.36
+  ],
+  [
+   "v",
+   323.76,
+   283.8,
+   423.12,
+   0.36
+  ],
+  [
+   "v",
+   323.76,
+   589.08,
+   728.4,
+   0.36
+  ],
+  [
+   "v",
+   392.16,
+   191.28,
+   484.68,
+   0.72
+  ],
+  [
+   "v",
+   392.16,
+   496.56,
+   789.96,
+   0.72
+  ],
+  [
+   "v",
+   530.04,
+   191.28,
+   484.68,
+   0.72
+  ],
+  [
+   "v",
+   530.04,
+   496.56,
+   789.96,
+   0.72
+  ]
+ ],
+ "chars": [
+  {
+   "t": "別",
+   "x": 36.107,
+   "y": 806.168,
+   "size": 10.08
+  },
+  {
+   "t": "記",
+   "x": 45.784,
+   "y": 806.168,
+   "size": 10.08
+  },
+  {
+   "t": "様",
+   "x": 55.158,
+   "y": 806.168,
+   "size": 10.08
+  },
+  {
+   "t": "式",
+   "x": 64.936,
+   "y": 806.168,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 74.31,
+   "y": 806.168,
+   "size": 10.08
+  },
+  {
+   "t": "３",
+   "x": 83.584,
+   "y": 806.168,
+   "size": 10.08
+  },
+  {
+   "t": "消",
+   "x": 144.495,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "防",
+   "x": 157.513,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "用",
+   "x": 170.415,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "設",
+   "x": 183.433,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "備",
+   "x": 196.335,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "等",
+   "x": 209.353,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "(",
+   "x": 222.601,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "特",
+   "x": 229.858,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "殊",
+   "x": 242.761,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "消",
+   "x": 255.778,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "防",
+   "x": 268.681,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "用",
+   "x": 282.044,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "設",
+   "x": 294.946,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "備",
+   "x": 307.964,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "等",
+   "x": 320.866,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "）",
+   "x": 333.884,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "点",
+   "x": 347.132,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "検",
+   "x": 360.149,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "者",
+   "x": 373.052,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "一",
+   "x": 386.069,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "覧",
+   "x": 398.972,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "表",
+   "x": 412.335,
+   "y": 795.235,
+   "size": 11.88
+  },
+  {
+   "t": "点",
+   "x": 156.004,
+   "y": 778.093,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 209.327,
+   "y": 778.093,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 262.549,
+   "y": 778.093,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 434.615,
+   "y": 778.093,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 455.481,
+   "y": 778.093,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 476.447,
+   "y": 778.093,
+   "size": 10.08
+  },
+  {
+   "t": "住",
+   "x": 42.249,
+   "y": 762.973,
+   "size": 10.08
+  },
+  {
+   "t": "所",
+   "x": 73.901,
+   "y": 762.973,
+   "size": 10.08
+  },
+  {
+   "t": "氏",
+   "x": 249.998,
+   "y": 762.973,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 281.649,
+   "y": 762.973,
+   "size": 10.08
+  },
+  {
+   "t": "社",
+   "x": 42.249,
+   "y": 747.853,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 73.901,
+   "y": 747.853,
+   "size": 10.08
+  },
+  {
+   "t": "電",
+   "x": 248.184,
+   "y": 747.853,
+   "size": 10.08
+  },
+  {
+   "t": "話",
+   "x": 259.675,
+   "y": 747.853,
+   "size": 10.08
+  },
+  {
+   "t": "番",
+   "x": 271.569,
+   "y": 747.853,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 283.061,
+   "y": 747.853,
+   "size": 10.08
+  },
+  {
+   "t": "資",
+   "x": 68.867,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "格",
+   "x": 78.947,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "消",
+   "x": 231.256,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "防",
+   "x": 241.336,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 251.416,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 261.496,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "士",
+   "x": 271.576,
+   "y": 732.733,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 63.827,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 73.907,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 83.987,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 141.241,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 151.321,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 161.401,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 171.481,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 181.561,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 221.176,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 231.256,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "番",
+   "x": 241.336,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 251.416,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 277.321,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 287.401,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "知",
+   "x": 297.481,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "事",
+   "x": 307.561,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "講",
+   "x": 327.721,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "習",
+   "x": 337.801,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "受",
+   "x": 347.881,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "講",
+   "x": 357.961,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 368.041,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.121,
+   "y": 717.259,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "特",
+   "x": 93.355,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "１",
+   "x": 93.355,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "２",
+   "x": 93.355,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "３",
+   "x": 93.355,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "４",
+   "x": 93.355,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "５",
+   "x": 93.355,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 42.249,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "６",
+   "x": 93.355,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 42.249,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "７",
+   "x": 93.355,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 64.575,
+   "y": 577.556,
+   "size": 10.08
+  },
+  {
+   "t": "考",
+   "x": 83.626,
+   "y": 577.556,
+   "size": 10.08
+  },
+  {
+   "t": "資",
+   "x": 68.867,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "格",
+   "x": 78.947,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "消",
+   "x": 214.624,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "防",
+   "x": 224.704,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 234.784,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 244.864,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 254.944,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 265.024,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "資",
+   "x": 275.104,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "格",
+   "x": 285.184,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 295.264,
+   "y": 562.082,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 63.827,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 73.907,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 83.987,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 141.241,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 151.321,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 161.401,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 171.481,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 181.561,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 236.598,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 246.678,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "番",
+   "x": 256.758,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 266.838,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "有",
+   "x": 327.016,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "効",
+   "x": 337.096,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "期",
+   "x": 347.176,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "限",
+   "x": 357.256,
+   "y": 546.608,
+   "size": 10.08
+  },
+  {
+   "t": "特",
+   "x": 42.249,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 105.955,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 42.249,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "１",
+   "x": 73.901,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 105.955,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 42.249,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "２",
+   "x": 73.901,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 105.955,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 156.004,
+   "y": 472.819,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 209.327,
+   "y": 472.819,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 262.549,
+   "y": 472.819,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 434.615,
+   "y": 472.819,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 455.481,
+   "y": 472.819,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 476.447,
+   "y": 472.819,
+   "size": 10.08
+  },
+  {
+   "t": "住",
+   "x": 42.249,
+   "y": 457.699,
+   "size": 10.08
+  },
+  {
+   "t": "所",
+   "x": 73.901,
+   "y": 457.699,
+   "size": 10.08
+  },
+  {
+   "t": "氏",
+   "x": 249.998,
+   "y": 457.699,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 281.649,
+   "y": 457.699,
+   "size": 10.08
+  },
+  {
+   "t": "社",
+   "x": 42.249,
+   "y": 442.579,
+   "size": 10.08
+  },
+  {
+   "t": "名",
+   "x": 73.901,
+   "y": 442.579,
+   "size": 10.08
+  },
+  {
+   "t": "電",
+   "x": 248.184,
+   "y": 442.579,
+   "size": 10.08
+  },
+  {
+   "t": "話",
+   "x": 259.675,
+   "y": 442.579,
+   "size": 10.08
+  },
+  {
+   "t": "番",
+   "x": 271.569,
+   "y": 442.579,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 283.061,
+   "y": 442.579,
+   "size": 10.08
+  },
+  {
+   "t": "資",
+   "x": 68.867,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "格",
+   "x": 78.947,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "消",
+   "x": 231.256,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "防",
+   "x": 241.336,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 251.416,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 261.496,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "士",
+   "x": 271.576,
+   "y": 427.459,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 63.827,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 73.907,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 83.987,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 141.241,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 151.321,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 161.401,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 171.481,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 181.561,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 221.176,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 231.256,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "番",
+   "x": 241.336,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 251.416,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 277.321,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 287.401,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "知",
+   "x": 297.481,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "事",
+   "x": 307.561,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "講",
+   "x": 327.721,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "習",
+   "x": 337.801,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "受",
+   "x": 347.881,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "講",
+   "x": 357.961,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 368.041,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.121,
+   "y": 411.945,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "特",
+   "x": 93.355,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "１",
+   "x": 93.355,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "２",
+   "x": 93.355,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "３",
+   "x": 93.355,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "４",
+   "x": 93.355,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "５",
+   "x": 93.355,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 42.249,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "６",
+   "x": 93.355,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 42.249,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "７",
+   "x": 93.355,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 108.173,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 64.575,
+   "y": 272.282,
+   "size": 10.08
+  },
+  {
+   "t": "考",
+   "x": 83.626,
+   "y": 272.282,
+   "size": 10.08
+  },
+  {
+   "t": "資",
+   "x": 68.867,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "格",
+   "x": 78.947,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "消",
+   "x": 214.624,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "防",
+   "x": 224.704,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "設",
+   "x": 234.784,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 244.864,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "点",
+   "x": 254.944,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "検",
+   "x": 265.024,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "資",
+   "x": 275.104,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "格",
+   "x": 285.184,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "者",
+   "x": 295.264,
+   "y": 256.808,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 63.827,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "類",
+   "x": 73.907,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "等",
+   "x": 83.987,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 141.241,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 151.321,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 161.401,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 171.481,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 181.561,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "交",
+   "x": 236.598,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "付",
+   "x": 246.678,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "番",
+   "x": 256.758,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 266.838,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "有",
+   "x": 327.016,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "効",
+   "x": 337.096,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "期",
+   "x": 347.176,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "限",
+   "x": 357.256,
+   "y": 241.333,
+   "size": 10.08
+  },
+  {
+   "t": "特",
+   "x": 42.249,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 105.955,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 42.249,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "１",
+   "x": 73.901,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 105.955,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 42.249,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "２",
+   "x": 73.901,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 105.955,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "備",
+   "x": 35.775,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "考",
+   "x": 44.415,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "１",
+   "x": 61.695,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 78.975,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 87.615,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "用",
+   "x": 96.255,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "紙",
+   "x": 104.895,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 113.535,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "大",
+   "x": 122.175,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "き",
+   "x": 130.815,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "さ",
+   "x": 139.455,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 148.095,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 156.735,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "日",
+   "x": 165.375,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "本",
+   "x": 174.015,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "産",
+   "x": 182.655,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "業",
+   "x": 191.295,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "規",
+   "x": 199.935,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "格",
+   "x": 208.575,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "Ａ",
+   "x": 217.215,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "４",
+   "x": 225.855,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 234.495,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 243.135,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 251.775,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 260.415,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 269.055,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 277.695,
+   "y": 170.294,
+   "size": 9.0
+  },
+  {
+   "t": "２",
+   "x": 61.695,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "住",
+   "x": 78.975,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "所",
+   "x": 87.615,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 96.255,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "社",
+   "x": 104.895,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "名",
+   "x": 113.535,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "及",
+   "x": 122.175,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "び",
+   "x": 130.815,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 139.455,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "話",
+   "x": 148.095,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "番",
+   "x": 156.735,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "号",
+   "x": 165.375,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 174.015,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 182.655,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 191.295,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 199.935,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "点",
+   "x": 208.575,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "検",
+   "x": 217.215,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 225.855,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "が",
+   "x": 234.495,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "会",
+   "x": 243.135,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "社",
+   "x": 251.775,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "（",
+   "x": 260.415,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "会",
+   "x": 269.055,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "社",
+   "x": 277.695,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "以",
+   "x": 286.335,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "外",
+   "x": 294.975,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 303.615,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "法",
+   "x": 312.255,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "人",
+   "x": 320.895,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 329.535,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "所",
+   "x": 338.175,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "属",
+   "x": 346.815,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 355.455,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 364.095,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "場",
+   "x": 372.735,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "合",
+   "x": 381.375,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 390.015,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "当",
+   "x": 398.655,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "該",
+   "x": 407.295,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "法",
+   "x": 415.935,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "人",
+   "x": 424.575,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "）",
+   "x": 433.215,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 441.855,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "所",
+   "x": 450.495,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "属",
+   "x": 459.135,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 467.775,
+   "y": 159.466,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 70.335,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "場",
+   "x": 78.975,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "合",
+   "x": 87.615,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 96.255,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 104.895,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 113.535,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "当",
+   "x": 122.175,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "該",
+   "x": 130.815,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "所",
+   "x": 139.455,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "属",
+   "x": 148.095,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 156.735,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 165.375,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "会",
+   "x": 174.015,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "社",
+   "x": 182.655,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 191.295,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "住",
+   "x": 199.935,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "所",
+   "x": 208.575,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 217.215,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "社",
+   "x": 225.855,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "名",
+   "x": 234.495,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "及",
+   "x": 243.135,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "び",
+   "x": 251.775,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 260.415,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "話",
+   "x": 269.055,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "番",
+   "x": 277.695,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "号",
+   "x": 286.335,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 294.975,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 303.615,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "入",
+   "x": 312.255,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 320.895,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 329.535,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 338.175,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 346.815,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 355.455,
+   "y": 148.673,
+   "size": 9.0
+  },
+  {
+   "t": "３",
+   "x": 61.695,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "資",
+   "x": 78.975,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "格",
+   "x": 87.615,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 96.255,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 104.895,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 113.535,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 122.175,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "消",
+   "x": 130.815,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "防",
+   "x": 139.455,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "設",
+   "x": 148.095,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "備",
+   "x": 156.735,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "士",
+   "x": 165.375,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "又",
+   "x": 174.015,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 182.655,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "消",
+   "x": 191.295,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "防",
+   "x": 199.935,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "設",
+   "x": 208.575,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "備",
+   "x": 217.215,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "点",
+   "x": 225.855,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "検",
+   "x": 234.495,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "資",
+   "x": 243.135,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "格",
+   "x": 251.775,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 260.415,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 269.055,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 277.695,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "類",
+   "x": 286.335,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "等",
+   "x": 294.975,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 303.615,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "交",
+   "x": 312.255,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 320.895,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "年",
+   "x": 329.535,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "月",
+   "x": 338.175,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "日",
+   "x": 346.815,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 355.455,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "交",
+   "x": 364.095,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 372.735,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "番",
+   "x": 381.375,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "号",
+   "x": 390.015,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 398.655,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "交",
+   "x": 407.295,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 415.935,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "機",
+   "x": 424.575,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "関",
+   "x": 433.215,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 441.855,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "最",
+   "x": 450.495,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "新",
+   "x": 459.135,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 467.775,
+   "y": 137.88,
+   "size": 9.0
+  },
+  {
+   "t": "講",
+   "x": 70.335,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "習",
+   "x": 78.975,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "受",
+   "x": 87.615,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "講",
+   "x": 96.255,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "年",
+   "x": 104.895,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "月",
+   "x": 113.535,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 122.175,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "有",
+   "x": 130.815,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "効",
+   "x": 139.455,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "期",
+   "x": 148.095,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "限",
+   "x": 156.735,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 165.375,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 174.015,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "載",
+   "x": 182.655,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 191.295,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 199.935,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 208.575,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 217.215,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 225.855,
+   "y": 127.087,
+   "size": 9.0
+  },
+  {
+   "t": "４",
+   "x": 61.695,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "誘",
+   "x": 78.975,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "導",
+   "x": 87.615,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "灯",
+   "x": 96.255,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "及",
+   "x": 104.895,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "び",
+   "x": 113.535,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "誘",
+   "x": 122.175,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "導",
+   "x": 130.815,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "標",
+   "x": 139.455,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "識",
+   "x": 148.095,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 156.735,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "点",
+   "x": 165.375,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "検",
+   "x": 174.015,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 182.655,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "実",
+   "x": 191.295,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "施",
+   "x": 199.935,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "し",
+   "x": 208.575,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "た",
+   "x": 217.215,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 225.855,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 234.495,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 243.135,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "備",
+   "x": 251.775,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "考",
+   "x": 260.415,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "欄",
+   "x": 269.055,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 277.695,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 286.335,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "気",
+   "x": 294.975,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "工",
+   "x": 303.615,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "事",
+   "x": 312.255,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "士",
+   "x": 320.895,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "法",
+   "x": 329.535,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "（",
+   "x": 338.175,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "昭",
+   "x": 346.815,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "和",
+   "x": 355.455,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "3",
+   "x": 364.095,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "5",
+   "x": 368.415,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "年",
+   "x": 372.735,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "法",
+   "x": 381.375,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "律",
+   "x": 390.015,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 398.655,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "1",
+   "x": 407.295,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "3",
+   "x": 411.615,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "9",
+   "x": 415.935,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "号",
+   "x": 420.255,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "）",
+   "x": 428.895,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 437.535,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "３",
+   "x": 446.175,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "条",
+   "x": 454.815,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 463.455,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "規",
+   "x": 472.095,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "定",
+   "x": 480.735,
+   "y": 116.294,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 70.335,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 78.975,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 87.615,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "気",
+   "x": 96.255,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "工",
+   "x": 104.895,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "事",
+   "x": 113.535,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "士",
+   "x": 122.175,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "免",
+   "x": 130.815,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "状",
+   "x": 139.455,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "又",
+   "x": 148.095,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 156.735,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 165.375,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "気",
+   "x": 174.015,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "事",
+   "x": 182.655,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "業",
+   "x": 191.295,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "法",
+   "x": 199.935,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "（",
+   "x": 208.575,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "昭",
+   "x": 217.215,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "和",
+   "x": 225.855,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "3",
+   "x": 234.495,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "9",
+   "x": 238.815,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "年",
+   "x": 243.135,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "法",
+   "x": 251.775,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "律",
+   "x": 260.415,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 269.055,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "1",
+   "x": 277.695,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "7",
+   "x": 282.015,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "0",
+   "x": 286.335,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "号",
+   "x": 290.655,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "）",
+   "x": 299.295,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 307.935,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "4",
+   "x": 316.575,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "4",
+   "x": 320.895,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "条",
+   "x": 325.215,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 333.855,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "１",
+   "x": 342.495,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "項",
+   "x": 351.135,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "に",
+   "x": 359.775,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "規",
+   "x": 368.415,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "定",
+   "x": 377.055,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 385.695,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 394.335,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 402.975,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "一",
+   "x": 411.615,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 420.255,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 428.895,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "気",
+   "x": 437.535,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "主",
+   "x": 446.175,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "任",
+   "x": 454.815,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "技",
+   "x": 463.455,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "術",
+   "x": 472.095,
+   "y": 105.466,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 70.335,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "免",
+   "x": 78.975,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "状",
+   "x": 87.615,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 96.255,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 104.895,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "二",
+   "x": 113.535,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 122.175,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 130.815,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "気",
+   "x": 139.455,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "主",
+   "x": 148.095,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "任",
+   "x": 156.735,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "技",
+   "x": 165.375,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "術",
+   "x": 174.015,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 182.655,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "免",
+   "x": 191.295,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "状",
+   "x": 199.935,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "若",
+   "x": 208.575,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "し",
+   "x": 217.215,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "く",
+   "x": 225.855,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "は",
+   "x": 234.495,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 243.135,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "三",
+   "x": 251.775,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 260.415,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "電",
+   "x": 269.055,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "気",
+   "x": 277.695,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "主",
+   "x": 286.335,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "任",
+   "x": 294.975,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "技",
+   "x": 303.615,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "術",
+   "x": 312.255,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 320.895,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "免",
+   "x": 329.535,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "状",
+   "x": 338.175,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 346.815,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "い",
+   "x": 355.455,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "ず",
+   "x": 364.095,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "れ",
+   "x": 372.735,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "か",
+   "x": 381.375,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 390.015,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "免",
+   "x": 398.655,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "状",
+   "x": 407.295,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 415.935,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 424.575,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "類",
+   "x": 433.215,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "、",
+   "x": 441.855,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "交",
+   "x": 450.495,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 459.135,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "番",
+   "x": 467.775,
+   "y": 94.673,
+   "size": 9.0
+  },
+  {
+   "t": "号",
+   "x": 70.335,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "及",
+   "x": 78.975,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "び",
+   "x": 87.615,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "交",
+   "x": 96.255,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 104.895,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "年",
+   "x": 113.535,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "月",
+   "x": 122.175,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "日",
+   "x": 130.815,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 139.455,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "記",
+   "x": 148.095,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "載",
+   "x": 156.735,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "す",
+   "x": 165.375,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 174.015,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "こ",
+   "x": 182.655,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "と",
+   "x": 191.295,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 199.935,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "（",
+   "x": 208.575,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "第",
+   "x": 217.215,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "二",
+   "x": 225.855,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "種",
+   "x": 234.495,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "消",
+   "x": 243.135,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "防",
+   "x": 251.775,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "設",
+   "x": 260.415,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "備",
+   "x": 269.055,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "点",
+   "x": 277.695,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "検",
+   "x": 286.335,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "資",
+   "x": 294.975,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "格",
+   "x": 303.615,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 312.255,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 320.895,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "免",
+   "x": 329.535,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "状",
+   "x": 338.175,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "の",
+   "x": 346.815,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "交",
+   "x": 355.455,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "付",
+   "x": 364.095,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 372.735,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "受",
+   "x": 381.375,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "け",
+   "x": 390.015,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "て",
+   "x": 398.655,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "い",
+   "x": 407.295,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "る",
+   "x": 415.935,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "者",
+   "x": 424.575,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "を",
+   "x": 433.215,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "除",
+   "x": 441.855,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "く",
+   "x": 450.495,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "。",
+   "x": 459.135,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "）",
+   "x": 467.775,
+   "y": 83.88,
+   "size": 9.0
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 701.391,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 685.916,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 670.442,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 654.968,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 639.493,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 624.019,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 608.505,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 593.031,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.424,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 288.101,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 332.049,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 355.133,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 378.518,
+   "y": 531.133,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.424,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 288.101,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 332.049,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 355.133,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 378.518,
+   "y": 515.659,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 177.221,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.606,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.381,
+   "y": 500.539,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 288.058,
+   "y": 500.539,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 332.049,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 355.133,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 378.518,
+   "y": 500.145,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 396.116,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 380.642,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 365.168,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 349.693,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 334.219,
+   "size": 10.08
+  },
+  {
+   "t": "甲",
+   "x": 42.249,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "・",
+   "x": 52.733,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "乙",
+   "x": 63.115,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "種",
+   "x": 73.901,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 318.705,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 303.231,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.021,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 257.558,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 352.915,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 378.115,
+   "y": 287.756,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.424,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 288.101,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 332.049,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 355.133,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 378.518,
+   "y": 225.859,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.424,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 288.101,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 332.049,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 355.133,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 378.518,
+   "y": 210.345,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 153.835,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 176.918,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 200.304,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "第",
+   "x": 215.381,
+   "y": 195.225,
+   "size": 10.08
+  },
+  {
+   "t": "号",
+   "x": 288.058,
+   "y": 195.225,
+   "size": 10.08
+  },
+  {
+   "t": "年",
+   "x": 332.049,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "月",
+   "x": 355.133,
+   "y": 194.871,
+   "size": 10.08
+  },
+  {
+   "t": "日",
+   "x": 378.518,
+   "y": 194.871,
+   "size": 10.08
+  }
+ ],
+ "fixed_text_vocabulary": [
+  "別記様式第３",
+  "消防用設備等(特殊消防用設備等）点検者一覧表",
+  "点検者設備名",
+  "住所氏名",
+  "社名電話番号",
+  "資格消防設備士",
+  "種類等交付年月日交付番号交付知事講習受講年月",
+  "甲種特類年月日第号年月",
+  "甲・乙種１類年月日第号年月",
+  "甲・乙種２類年月日第号年月",
+  "甲・乙種３類年月日第号年月",
+  "甲・乙種４類年月日第号年月",
+  "甲・乙種５類年月日第号年月",
+  "乙種６類年月日第号年月",
+  "乙種７類年月日第号年月",
+  "備考",
+  "資格消防設備点検資格者",
+  "種類等交付年月日交付番号有効期限",
+  "特種年月日第号年月日",
+  "第１種年月日第号年月日",
+  "第号",
+  "第２種年月日年月日",
+  "点検者設備名",
+  "住所氏名",
+  "社名電話番号",
+  "資格消防設備士",
+  "種類等交付年月日交付番号交付知事講習受講年月",
+  "甲種特類年月日第号年月",
+  "甲・乙種１類年月日第号年月",
+  "甲・乙種２類年月日第号年月",
+  "甲・乙種３類年月日第号年月",
+  "甲・乙種４類年月日第号年月",
+  "甲・乙種５類年月日第号年月",
+  "乙種６類年月日第号年月",
+  "乙種７類年月日第号年月",
+  "備考",
+  "資格消防設備点検資格者",
+  "種類等交付年月日交付番号有効期限",
+  "特種年月日第号年月日",
+  "第１種年月日第号年月日",
+  "第２種年月日第号年月日",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２住所、社名及び電話番号の欄は、点検者が会社（会社以外の法人に所属する場合は当該法人）に所属す",
+  "る場合には、当該所属する会社の住所、社名及び電話番号を記入すること。",
+  "３資格の欄は、消防設備士又は消防設備点検資格者の種類等、交付年月日、交付番号、交付機関、最新の",
+  "講習受講年月、有効期限を記載すること。",
+  "４誘導灯及び誘導標識の点検を実施した者は、備考欄に電気工事士法（昭和35年法律第139号）第３条に規定",
+  "する電気工事士免状又は電気事業法（昭和39年法律第170号）第44条第１項に規定する第一種電気主任技術",
+  "者免状、第二種電気主任技術者免状若しくは第三種電気主任技術者免状のいずれかの免状の種類、交付番",
+  "号及び交付年月日を記載すること。（第二種消防設備点検資格者の免状の交付を受けている者を除く。）"
+ ]
+}

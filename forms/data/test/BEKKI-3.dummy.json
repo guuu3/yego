@@ -1,0 +1,17 @@
+{
+ "$comment": "BEKKI-3 再生成テスト用の匿名ダミーデータ（実データではない）",
+ "b1_equipments": "試験設備（ダミー）",
+ "b1_inspector_address": "試験県試験市試験1丁目1-1",
+ "b1_inspector_name": "試験 太郎",
+ "b1_company": "試験点検株式会社",
+ "b1_tel": "00-0000-0000",
+ "b1_g_k1_class": "甲",
+ "b1_g_k1_issue_date": "H31年3月18日",
+ "b1_g_k1_issue_no": "00211",
+ "b1_g_k1_governor": "試験県",
+ "b1_g_k1_course_ym": "R7年12月",
+ "b1_k_d1_issue_date": "R5年1月30日",
+ "b1_k_d1_issue_no": "142802612",
+ "b1_k_d1_expiry": "R10年3月31日",
+ "b2_inspector_name": "試験 太郎"
+}

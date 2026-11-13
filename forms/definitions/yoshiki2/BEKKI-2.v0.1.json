@@ -1,0 +1,647 @@
+{
+ "form_id": "BEKKI-2",
+ "title": "消防用設備等（特殊消防用設備等）点検結果総括表（その１）",
+ "legal_basis": "平成14年消防庁告示第14号 別記様式第2",
+ "family": "共通様式",
+ "links": [],
+ "lineage": "未識別（系統の識別値は議題2 Q3 で未決）",
+ "geometry_status": "未取得（原本 PDF の実測前。docs/forms/yoshiki1-first-run.md §4 と同じ手順で取る）",
+ "$comment": "別記様式第2（点検結果総括表（その１））の帳票定義。初版。原本の実測で座標を確定（Microsoft Print To PDF 系・配置A、3物件で照合）。座標は全欄『未確定』で、生成器はフィールドを作らない。",
+ "fields": [
+  {
+   "id": "site_name",
+   "label": "名称",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "fire_manager",
+   "label": "防火管理者",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "site_address",
+   "label": "所在地",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspection_supervisor",
+   "label": "点検実施責任者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検者台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "note": "社名＋責任者名を記入（実帳票では2行の例あり）",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspect_type",
+   "label": "点検種別",
+   "input_type": "選択式",
+   "layer": "L3",
+   "allowed": [
+    "機器点検",
+    "総合点検",
+    "設備等設置維持計画による点検"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "選択肢（機器点検・総合点検・（設備等設置維持計画による点検））が欄内に印字され、該当するものに○を付す（原本ではベクタの楕円）。値は選択した種別。印字文は固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspect_from",
+   "label": "点検年月日（自）",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "format": "年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "実測: スロット 年 x=325.6・月 x=360.5・日 x=394.3（3物件で一致）。矩形は～の手前まで",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "inspect_to",
+   "label": "点検年月日（至）",
+   "input_type": "日付",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "format": "年・月・日を欄内印字の位置に記入（split_ymd）",
+   "parts": [
+    "year",
+    "month",
+    "day"
+   ],
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "note": "実測: ～ x=406.2、至のスロット 年 x=451.2・月 x=485.4・日 x=519.6",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row1_equip",
+   "label": "1行目 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row1_judge",
+   "label": "1行目 判定",
+   "input_type": "選択式",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "良",
+    "不良"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 2
+   },
+   "rect": null,
+   "note": "様式の備考2: 正常の場合は「良」に、不良の場合は「不良」に○印を付す（原本ではベクタの楕円）。欄内に「良・不良」が印字され固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row1_defect",
+   "label": "1行目 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row1_action",
+   "label": "1行目 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row1_witness",
+   "label": "1行目 立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row2_equip",
+   "label": "2行目 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row2_judge",
+   "label": "2行目 判定",
+   "input_type": "選択式",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "良",
+    "不良"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 2
+   },
+   "rect": null,
+   "note": "様式の備考2: 正常の場合は「良」に、不良の場合は「不良」に○印を付す（原本ではベクタの楕円）。欄内に「良・不良」が印字され固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row2_defect",
+   "label": "2行目 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row2_action",
+   "label": "2行目 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row2_witness",
+   "label": "2行目 立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row3_equip",
+   "label": "3行目 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row3_judge",
+   "label": "3行目 判定",
+   "input_type": "選択式",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "良",
+    "不良"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 2
+   },
+   "rect": null,
+   "note": "様式の備考2: 正常の場合は「良」に、不良の場合は「不良」に○印を付す（原本ではベクタの楕円）。欄内に「良・不良」が印字され固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row3_defect",
+   "label": "3行目 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row3_action",
+   "label": "3行目 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row3_witness",
+   "label": "3行目 立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row4_equip",
+   "label": "4行目 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row4_judge",
+   "label": "4行目 判定",
+   "input_type": "選択式",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "良",
+    "不良"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 2
+   },
+   "rect": null,
+   "note": "様式の備考2: 正常の場合は「良」に、不良の場合は「不良」に○印を付す（原本ではベクタの楕円）。欄内に「良・不良」が印字され固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row4_defect",
+   "label": "4行目 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row4_action",
+   "label": "4行目 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row4_witness",
+   "label": "4行目 立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row5_equip",
+   "label": "5行目 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row5_judge",
+   "label": "5行目 判定",
+   "input_type": "選択式",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "良",
+    "不良"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 2
+   },
+   "rect": null,
+   "note": "様式の備考2: 正常の場合は「良」に、不良の場合は「不良」に○印を付す（原本ではベクタの楕円）。欄内に「良・不良」が印字され固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row5_defect",
+   "label": "5行目 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row5_action",
+   "label": "5行目 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row5_witness",
+   "label": "5行目 立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row6_equip",
+   "label": "6行目 設備名",
+   "input_type": "文字",
+   "layer": "L2",
+   "source": "物件台帳",
+   "capacity": {
+    "max_lines": 2
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row6_judge",
+   "label": "6行目 判定",
+   "input_type": "選択式",
+   "layer": "L3",
+   "judgment": true,
+   "allowed": [
+    "良",
+    "不良"
+   ],
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1,
+    "max_chars": 2
+   },
+   "rect": null,
+   "note": "様式の備考2: 正常の場合は「良」に、不良の場合は「不良」に○印を付す（原本ではベクタの楕円）。欄内に「良・不良」が印字され固定文字として復元",
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row6_defect",
+   "label": "6行目 不良内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row6_action",
+   "label": "6行目 措置内容",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 3
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  },
+  {
+   "id": "row6_witness",
+   "label": "6行目 立会者",
+   "input_type": "文字",
+   "layer": "L3",
+   "source": "点検ごとに入力",
+   "capacity": {
+    "max_lines": 1
+   },
+   "rect": null,
+   "coord_status": "未確定"
+  }
+ ],
+ "rules": [
+  {
+   "id": "row1-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "row1_judge",
+    "in": [
+     "不良"
+    ]
+   },
+   "then": "row1_defect",
+   "reason": "判定が不良のため、不良内容が必須（様式の備考2）"
+  },
+  {
+   "id": "row2-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "row2_judge",
+    "in": [
+     "不良"
+    ]
+   },
+   "then": "row2_defect",
+   "reason": "判定が不良のため、不良内容が必須（様式の備考2）"
+  },
+  {
+   "id": "row3-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "row3_judge",
+    "in": [
+     "不良"
+    ]
+   },
+   "then": "row3_defect",
+   "reason": "判定が不良のため、不良内容が必須（様式の備考2）"
+  },
+  {
+   "id": "row4-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "row4_judge",
+    "in": [
+     "不良"
+    ]
+   },
+   "then": "row4_defect",
+   "reason": "判定が不良のため、不良内容が必須（様式の備考2）"
+  },
+  {
+   "id": "row5-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "row5_judge",
+    "in": [
+     "不良"
+    ]
+   },
+   "then": "row5_defect",
+   "reason": "判定が不良のため、不良内容が必須（様式の備考2）"
+  },
+  {
+   "id": "row6-defect-required",
+   "kind": "required_if",
+   "if": {
+    "field": "row6_judge",
+    "in": [
+     "不良"
+    ]
+   },
+   "then": "row6_defect",
+   "reason": "判定が不良のため、不良内容が必須（様式の備考2）"
+  }
+ ],
+ "not_fields": [],
+ "open_questions": [
+  "総括表（その2）: サンプル55件すべて（その１）のみで、その2 は観測されなかった。設備行が6行を超える物件でその2 が使われる可能性は残る",
+  "点検種別: 機器点検と総合点検の両方を実施した場合に両方へ○が付く運用があり得る。現行の選択式は単一選択のため、実帳票で複数選択の例が現れたら欄の持ち方の見直しが要る",
+  "判定の○は原本ではベクタの楕円。再生成では選択式の値（良／不良）として保持し、楕円そのものは描かない（他の様式の○印と同じ扱い）"
+ ],
+ "changelog": [
+  {
+   "version": "0.1",
+   "date": "2026-11-13",
+   "change": "初版（欄の意味・入力形式・L2/L3・連動ルール。座標は全欄未確定）。もちが様式と実記入から構築"
+  }
+ ],
+ "version": "0.1",
+ "page_size": null,
+ "lines": [],
+ "chars": [],
+ "fixed_text_vocabulary": [
+  "別記様式第2",
+  "消防用設備等（特殊消防用設備等）点検結果総括表",
+  "（その１）",
+  "防火",
+  "名称",
+  "管理者",
+  "点検実施",
+  "所在地",
+  "責任者",
+  "機器点検・総合点検・",
+  "年月日年月",
+  "点検種別（設備等設置維持計画点検年月日日",
+  "による点検）",
+  "点検結果",
+  "設備名措置内容立会者",
+  "判定不良内容",
+  "良・不良",
+  "良・不良",
+  "良・不良",
+  "良・不良",
+  "良・不良",
+  "良・不良",
+  "備考１この用紙の大きさは、日本産業規格Ａ４とすること。",
+  "２判定欄は、正常の場合は「良」に、不良の場合には「不良」に○印を付し、不良内容欄にその内容を記入すること。",
+  "３措置内容欄には、点検の際措置した内容を記入すること。"
+ ],
+ "page_size_candidates": [
+  [
+   595,
+   842
+  ],
+  [
+   595,
+   880
+  ]
+ ]
+}
