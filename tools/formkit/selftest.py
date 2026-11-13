@@ -166,6 +166,23 @@ def run_package(outdir: str, rows: list):
     _run_case("P11 編集できる欄にリンク", "作成するが注意を記録（欄の編集を優先）", f"{rr['links'][0]['status']}", "注意" in rr["links"][0]["status"], rows)
 
 
+def latest_definitions(include_test: bool = False) -> dict:
+    """forms/definitions の各 form_id の最新版（版番号の大きいもの）の場所を返す。"""
+    base = os.path.join(REPO, "forms", "definitions")
+    best = {}
+    for d in sorted(os.listdir(base)):
+        if d == "test" and not include_test:
+            continue
+        for n in os.listdir(os.path.join(base, d)):
+            if not n.endswith(".json") or ".v" not in n:
+                continue
+            fid, ver = n[:-5].rsplit(".v", 1)
+            key = tuple(int(x) for x in ver.split("."))
+            if fid not in best or key > best[fid][0]:
+                best[fid] = (key, os.path.join(base, d, n))
+    return {k: v[1] for k, v in sorted(best.items())}
+
+
 def run_rules(outdir: str, rows: list, d2: dict, data: dict):
     """判定（個数）・連動ルール・未確認の数え方・判定保留・完了可否の試験。"""
     p = lambda n: os.path.join(outdir, n)
@@ -212,12 +229,21 @@ def run_rules(outdir: str, rows: list, d2: dict, data: dict):
               any("存在しない欄" in e for e in errs) and any("reason" in e for e in errs), rows)
     sk = os.path.join(REPO, "forms", "definitions", "shokaki")
     res = []
-    for n in sorted(os.listdir(sk)):
+    for n in sorted(x for x in os.listdir(sk) if x.endswith(".v0.1.json")):  # v0.2 以降は座標確定済み（C1 で確かめる）
         dd = fk.load(os.path.join(sk, n)); dd["page_size"] = [595, 842]
         rr = fk.generate(dd, {}, p("r-s1.pdf"))
         res.append((n, rr["fields_created"], len(rr["fields_skipped"]), rr["finalizable"]))
     _run_case("S1 消火器具の型 v0.1（座標未確定）", "欄を1つも作らず、全欄を理由つきで記録、完了不可", f"{res}",
               all(c == 0 and sk_n > 100 and not fin for _, c, sk_n, fin in res), rows)
+
+    # C1: 確定済みの全型（各 form_id の最新版）で、全欄がフィールドになるか（座標未確定で落ちる欄が無いこと）
+    res = []
+    for fid, path in latest_definitions().items():
+        dd = fk.load(path)
+        rr = fk.generate(dd, {}, p("r-c1.pdf"))
+        res.append((fid, rr["fields_created"], len(dd["fields"]), len(rr["fields_skipped"])))
+    _run_case("C1 確定済みの全型で全欄がフィールドになる", "作られなかった欄 0（全型）", f"{res}",
+              res and all(c == t and sk_n == 0 for _, c, t, sk_n in res), rows)
 
 
 def run(outdir: str) -> int:

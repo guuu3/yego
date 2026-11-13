@@ -1,0 +1,161 @@
+{
+ "BEKKI-1": {
+  "value_issues": [
+   {
+    "id": "equipment_rows",
+    "value_len": 12,
+    "issues": [
+     "フォントに無い字: ['\\n']"
+    ]
+   }
+  ],
+  "not_shown": [],
+  "judgments": {
+   "合格": 0,
+   "不良": 0,
+   "該当なし": 0,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 0
+  }
+ },
+ "BEKKI-2": {
+  "value_issues": [],
+  "not_shown": [],
+  "judgments": {
+   "合格": 0,
+   "不良": 0,
+   "該当なし": 0,
+   "要確認": 6,
+   "未確認": 0,
+   "未入力": 0
+  }
+ },
+ "BEKKI-3": {
+  "value_issues": [
+   {
+    "id": "b1_inspector_name",
+    "value_len": 5,
+    "issues": [
+     "許容値外: '試験 太郎' not in ['（点検者台帳から。台帳は未作成）']"
+    ]
+   },
+   {
+    "id": "b2_inspector_name",
+    "value_len": 5,
+    "issues": [
+     "許容値外: '試験 太郎' not in ['（点検者台帳から。台帳は未作成）']"
+    ]
+   }
+  ],
+  "not_shown": [],
+  "judgments": {
+   "合格": 0,
+   "不良": 0,
+   "該当なし": 0,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 0
+  }
+ },
+ "JIHOKAI-BESSHI": {
+  "value_issues": [],
+  "not_shown": [],
+  "judgments": {
+   "合格": 3,
+   "不良": 0,
+   "該当なし": 0,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 10
+  }
+ },
+ "KOKUJI-01-1": {
+  "value_issues": [
+   {
+    "id": "inspector_name",
+    "value_len": 5,
+    "issues": [
+     "許容値外: '試験 太郎' not in ['（点検者台帳から。台帳は未作成）']"
+    ]
+   }
+  ],
+  "not_shown": [],
+  "judgments": {
+   "合格": 1,
+   "不良": 1,
+   "該当なし": 1,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 16
+  }
+ },
+ "KOKUJI-01-2": {
+  "value_issues": [],
+  "not_shown": [],
+  "judgments": {
+   "合格": 1,
+   "不良": 0,
+   "該当なし": 1,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 19
+  }
+ },
+ "KOKUJI-11-1": {
+  "value_issues": [
+   {
+    "id": "inspector_name",
+    "value_len": 5,
+    "issues": [
+     "許容値外: '試験 太郎' not in ['（点検者台帳から。台帳は未作成）']"
+    ]
+   }
+  ],
+  "not_shown": [],
+  "judgments": {
+   "合格": 26,
+   "不良": 1,
+   "該当なし": 1,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 0
+  }
+ },
+ "KOKUJI-11-2": {
+  "value_issues": [],
+  "not_shown": [],
+  "judgments": {
+   "合格": 24,
+   "不良": 0,
+   "該当なし": 1,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 0
+  }
+ },
+ "KOKUJI-11-3": {
+  "value_issues": [],
+  "not_shown": [],
+  "judgments": {
+   "合格": 11,
+   "不良": 0,
+   "該当なし": 0,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 0
+  }
+ },
+ "SHOKAKI-KANRI": {
+  "value_issues": [],
+  "not_shown": [],
+  "judgments": {
+   "合格": 2,
+   "不良": 1,
+   "該当なし": 0,
+   "要確認": 0,
+   "未確認": 0,
+   "未入力": 32
+  }
+ }
+}
